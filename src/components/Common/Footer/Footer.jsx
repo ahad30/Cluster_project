@@ -1,16 +1,115 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
+import Image from "next/image";
+import Logo from "../../../../public/logo-2.png";
 
-const Footer = props => {
-    return (
-        <div>
-           Footer 
+const Footer = (props) => {
+  return (
+    <div>
+      <footer className="bg-[#0b1219]">
+        <div className="mx-auto max-w-7xl space-y-8 px-4 py-8 sm:px-6 lg:space-y-16 lg:px-10">
+          <div className="grid grid-cols-1 text-center lg:text-left lg:grid-cols-3">
+            <div className="mb-5 lg:mb-0">
+              <div className="text-teal-600 flex lg:justify-start justify-center">
+                <Image src={Logo} alt="Cluster" className="w-[120px] h-[30px]" />
+              </div>
+              <div>
+                <p className="mt-4 max-w-2xl lg:max-w-xs text-white text-xs">
+                  Copyright © 2020-2021
+                  <br />
+                  Cluster Technologies
+                  <br />
+                  License agreement
+                  <br />
+                  Privacy policy
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col lg:flex-row gap-16 lg:col-span-2">
+              <div>
+                <p className="font-medium text-green-500">Our Partner Program</p>
+
+                <ul className="mt-6 space-y-2 text-xs">
+                  <li>
+                    <a href="#" className="text-white transition hover:opacity-75">
+                      Distributor
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" className="text-white transition hover:opacity-75">
+                      Reseller
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" className="text-white transition hover:opacity-75">
+                      Affiliate
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <p className="font-medium text-green-500">Products</p>
+
+                <ul className="mt-6 space-y-2 text-xs">
+                  <li>
+                    <a href="#" className="text-white transition hover:opacity-75">
+                      Cluster! Antivirus
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" className="text-white transition hover:opacity-75">
+                      Cluster! Internet Security
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" className="text-white transition hover:opacity-75">
+                      Cluster! Total Security
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" className="text-white transition hover:opacity-75">
+                      Antivirus for Business
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <p className="font-medium text-green-500  w-full">Contact Information</p>
+
+                <ul className="mt-6 space-y-2 text-xs">
+                  <li className="text-white">
+                    <span>+380 63 233 0522</span>
+                  </li>
+
+                  <li className="text-white">
+                    <span>help@clusterantivirus.com</span>
+                  </li>
+
+                  <li className="text-white">
+                    <span>
+                    WQ Tower, Road#2, Plot 306, Agrabad CDA,
+                      <br />
+                      Chittagong - 4000, Bangladesh
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-    );
+      </footer>
+    </div>
+  );
 };
 
-Footer.propTypes = {
-    
-};
+Footer.propTypes = {};
 
 export default Footer;
