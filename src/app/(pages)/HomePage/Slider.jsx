@@ -46,7 +46,7 @@ const Slider = () => {
                 <Image
                   src={Image1}
                   alt=""
-                  className="w-full lg:w-[600px] h-[500px] object-cover"
+                  className="w-full h-[350px] lg:w-[600px] lg:h-[500px] object-cover"
                 />
               </div>
 
@@ -140,10 +140,10 @@ const Slider = () => {
         <SwiperSlide>
         
         <section
-            className="bg-primary  mb-10  bg-no-repeat bg-cover 
+            className="bg-primary mb-10 bg-no-repeat bg-cover 
        h-[800px] lg:h-[500px] bg-center"
           >
-            <div className="lg:max-w-[1000px] mx-auto lg:py-[80px] gap-[80px] lg:flex lg:items-center">
+            <div className="w-[90%] lg:max-w-[1200px] mx-auto pt-[50px] lg:pt-[80px] gap-[100px] lg:px-[100px] lg:flex">
          
 
               <div>
