@@ -1,12 +1,14 @@
 "use client";
 
-import Login from "./Login/page";
+import HomePage from "./(pages)/HomePage/pages";
 
 export default function Home() {
 
 return (
       <>
-        <Login/>
+      <div className="">
+      <HomePage/>
+      </div>
       </>
   );
 }

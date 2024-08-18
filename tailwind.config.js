@@ -9,7 +9,10 @@ module.exports = withMT({
   theme: {
     extend: {
       colors: {
-        primary: "#1e466a",
+        primary: "#44bd32",
+      },
+      fontFamily: {
+        zcool: ['"ZCOOL QingKe HuangYou"', 'cursive'],
       },
     },
   },
