@@ -6,7 +6,7 @@ import Logo from "../../../../public/logo-2.png";
 const Footer = (props) => {
   return (
     <div>
-      <footer className="bg-[#0b1219]">
+      <footer className="bg-[#0b1219] mt-8">
         <div className="mx-auto max-w-7xl space-y-8 px-4 py-8 sm:px-6 lg:space-y-16 lg:px-10">
           <div className="grid grid-cols-1 text-center lg:text-left lg:grid-cols-3">
             <div className="mb-5 lg:mb-0">

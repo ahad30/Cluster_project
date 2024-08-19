@@ -30,7 +30,7 @@ const AboutProduct = () => {
                     {products.map((product, index) => (
                         <div 
                             key={index} 
-                            className="rounded-lg py-28 px-5 shadow-lg relative text-white bg-green-500 h-[300px]"
+                            className="rounded-lg py-28 px-5 shadow-lg relative text-white bg-primary h-[300px]"
                        
                         >
                             <div className="">
@@ -38,7 +38,7 @@ const AboutProduct = () => {
                                 <p className="text-sm">{product.description}</p>
                             </div>
                             <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
+        className="absolute inset-0 bg-cover bg-center opacity-10"
         style={{ backgroundImage: `url(${product?.image?.src})` }}
       ></div>
 

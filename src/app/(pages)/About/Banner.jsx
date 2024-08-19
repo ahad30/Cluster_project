@@ -16,7 +16,7 @@ const Banner = () => {
     const flags = [Flag1, Flag2, Flag3, Flag4, Flag5, Flag6, Flag7, Flag8, Flag9];
 
   return (
-    <section className="bg-green-500 text-white py-16 relative">
+    <section className="bg-primary text-white py-16 relative">
       <div className="container mx-auto text-center">
         <h1 className="text-4xl font-bold mb-4">Cluster! Antivirus</h1>
         <h2 className="lg:text-5xl font-semibold mb-6">The only Antivirus Laboratory in<br/> Bangladesh</h2>
@@ -33,7 +33,7 @@ const Banner = () => {
         </div>
       </div>
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
+        className="absolute inset-0 bg-cover bg-center opacity-30"
         style={{ backgroundImage: `url(${BackImage.src})` }}
       ></div>
     </section>

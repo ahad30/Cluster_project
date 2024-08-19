@@ -4,7 +4,7 @@ import protectionImage from '../../../../public/About us/About us Elements/Prote
 import professionalismImage from '../../../../public/About us/About us Elements/Profession.png' ;
 import Image from 'next/image';
 
-const PartnerProgram = () => {
+const AboutPartnerProgram = () => {
   const programs = [
     {
       title: 'Usability',
@@ -46,4 +46,4 @@ const PartnerProgram = () => {
   );
 };
 
-export default PartnerProgram;
+export default AboutPartnerProgram;

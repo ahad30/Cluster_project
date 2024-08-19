@@ -29,7 +29,7 @@ const Header = () => {
         { href: "/", label: "Home" },
         { href: "/About", label: "About Us" },
         { href: "/Product", label: "Product" },
-        { href: "/PartnerProduct", label: "Partner Product" },
+        { href: "/PartnerProgram", label: "Partner Program" },
         { href: "/News", label: "News" },
       ].map(({ href, label }) => (
         <Typography
