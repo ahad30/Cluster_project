@@ -75,7 +75,7 @@ const Stepper = () => {
                 <Image
                   src={program.icon}
                   alt={program.title}
-                  className="w-[20px] h-[20px] hidden md:block"
+                  className="w-[25px] h-[25px] hidden md:block"
                   />
               </div>
             )}

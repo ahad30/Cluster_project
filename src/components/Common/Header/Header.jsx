@@ -30,7 +30,6 @@ const Header = () => {
         { href: "/About", label: "About Us" },
         { href: "/Product", label: "Product" },
         { href: "/PartnerProgram", label: "Partner Program" },
-        { href: "/News", label: "News" },
       ].map(({ href, label }) => (
         <Typography
           key={href}
