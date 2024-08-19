@@ -1,9 +1,18 @@
 "use client"
 import React from 'react'
+import Banner from './Banner'
+import PartnerProgram from './PartnerProgram'
+import SelectCountry from './SelectCountry'
+import AboutProduct from './AboutProduct'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      <Banner/>
+      <PartnerProgram/>
+      <AboutProduct/>
+      <SelectCountry/>
+    </div>
   )
 }
 

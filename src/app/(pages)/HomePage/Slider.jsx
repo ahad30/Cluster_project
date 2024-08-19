@@ -153,7 +153,7 @@ const Slider = () => {
                 <h1 className=" text-white lg:text-[20px]  font-semibold mb-5">
                   Maximum protection against cyber threats!
                 </h1>
-                <div className="flex items-center gap-7 mb-8 flex-wrap">
+                <div className="flex items-center gap-5 mb-8 flex-wrap">
                   <div className="">
                     <div className="flex justify-center">
                     <Image
@@ -162,7 +162,9 @@ const Slider = () => {
                       className="w-[20px] h-[20px]"
                     />
                     </div>
-                    <p className="mt-2 text-white text-[10px] lg:text-sm">Anti Fishing</p>
+                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">
+                    Process Manager
+                      </p>
                   </div>
                   <div className="">
                   <div className="flex justify-center">
@@ -172,7 +174,7 @@ const Slider = () => {
                       className="w-[30px] h-[20px]"
                     />
                     </div>
-                    <p className="mt-2 text-white text-[10px] lg:text-sm">Virtual Keyboard</p>
+                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">Parental Control</p>
                   </div>
                   <div className="">
                   <div className="flex justify-center">
@@ -182,7 +184,7 @@ const Slider = () => {
                       className="w-[20px] h-[20px]"
                     />
                     </div>
-                    <p className="mt-2 text-white text-[10px] lg:text-sm">Anti Spam</p>
+                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">Privacy Protection</p>
                   </div>
                   <div className="">
                   <div className="flex justify-center">
@@ -192,14 +194,14 @@ const Slider = () => {
                       className="w-[20px] h-[20px]"
                     />
                     </div>
-                    <p className="mt-2 text-white text-[10px] lg:text-sm">Self Defense</p>
+                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">Startup Manager</p>
                   </div>
                 </div>
 
                 <h1 className=" text-white lg:text-[15px]  font-semibold mb-5 mt-5">
                   Improved internal functionality.
                 </h1>
-                <div className="flex items-center gap-7  mb-5">
+                <div className="flex items-center gap-8  mb-5">
                   <div className="">
                     <div className="flex justify-center">
                     <Image
@@ -208,7 +210,7 @@ const Slider = () => {
                       className="w-[20px] h-[20px]"
                     />
                     </div>
-                    <p className="mt-2 text-white text-[10px] lg:text-sm">Anti-virus Scanner</p>
+                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">Anti-virus Scanner</p>
                   </div>
                   <div className="">
                   <div className="flex justify-center">
@@ -218,7 +220,7 @@ const Slider = () => {
                       className="w-[30px] h-[20px]"
                     />
                     </div>
-                    <p className="mt-2 text-white text-[10px] lg:text-sm">Farewell</p>
+                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">Farewell</p>
                   </div>
                   <div className="">
                   <div className="flex justify-center">
@@ -228,7 +230,7 @@ const Slider = () => {
                       className="w-[20px] h-[20px]"
                     />
                     </div>
-                    <p className="mt-2 text-white text-[10px] lg:text-sm">Pc Optimizer</p>
+                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">Pc Optimizer</p>
                   </div>
                   <div className="">
                   <div className="flex justify-center">
@@ -238,7 +240,7 @@ const Slider = () => {
                       className="w-[20px] h-[20px]"
                     />
                     </div>
-                    <p className="mt-2 text-white text-[10px] lg:text-sm">Pc Optimizer</p>
+                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">Pc Optimizer</p>
                   </div>
                  
                 </div>

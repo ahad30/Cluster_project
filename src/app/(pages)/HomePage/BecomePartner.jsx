@@ -27,7 +27,7 @@ const BecomePartner = () => {
 
   return (
     <section className="py-16 bg-white">
-      <div className="container mx-auto text-center">
+      <div className="max-w-7xl lg:px-10 mx-auto text-center">
         <h2 className="text-4xl font-bold mb-8">BECOME OUR PARTNER!</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {partners.map((partner, index) => (
@@ -36,7 +36,7 @@ const BecomePartner = () => {
                 <Image
                   src={partner.image}
                   alt={partner.title}
-                  className="w-[50px] h-[50px] mb-4 bg-green-400 p-3 rounded-full"
+                  className="w-[53px] h-[50px] mb-4 bg-green-400 p-3 rounded-full"
                 />
               <div>
               <h3 className="text-lg font-semibold mb-2 text-left">{partner.title}</h3>
