@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Image from "next/image";
 import Logo from "../../../../public/logo-2.png";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Footer = (props) => {
   return (
@@ -85,22 +85,25 @@ const Footer = (props) => {
                 <p className="font-medium text-green-500  w-full">Contact Information</p>
 
                 <ul className="mt-6 space-y-2 text-xs">
-                  <li className="text-white">
-                    <span>+380 63 233 0522</span>
-                  </li>
+      <li className="flex items-center text-white">
+        <FaPhoneAlt className="text-green-500 mr-2" />
+        <span className="text-green-500">+380 63 233 0522</span>
+      </li>
 
-                  <li className="text-white">
-                    <span>help@clusterantivirus.com</span>
-                  </li>
+      <li className="flex items-center text-white">
+        <FaEnvelope className="text-green-500 mr-2" />
+        <span className="text-green-500">help@clusterantivirus.com</span>
+      </li>
 
-                  <li className="text-white">
-                    <span>
-                    WQ Tower, Road#2, Plot 306, Agrabad CDA,
-                      <br />
-                      Chittagong - 4000, Bangladesh
-                    </span>
-                  </li>
-                </ul>
+      <li className="flex items-center text-white">
+        <FaMapMarkerAlt className="text-green-500 mr-2" />
+        <span className="text-green-500">
+          WQ Tower, Road#2, Plot 306, Agrabad CDA,
+          <br />
+          Chittagong - 4000, Bangladesh
+        </span>
+      </li>
+    </ul>
               </div>
             </div>
           </div>
