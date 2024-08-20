@@ -8,20 +8,26 @@ import {
   Collapse,
 } from "@material-tailwind/react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Logo from "../../../../public/logo.png"
 import { FaHeadphones } from "react-icons/fa";
 
+
 const Header = () => {
   const [openNav, setOpenNav] = React.useState(false);
   const pathName = usePathname();
+  const router = useRouter()
 
   React.useEffect(() => {
     const handleResize = () => window.innerWidth >= 960 && setOpenNav(false);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const handleClick = () => {
+    router.push('/Support')
+  }
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -75,7 +81,7 @@ const Header = () => {
           <div className="flex items-center gap-2">
           <div className="mr-2  text-sm flex items-center gap-2">
           <FaHeadphones className="text-green-500"/>
-          <p className="text-[#131313]">Support</p>          
+          <button onClick={handleClick}><p className="text-[#131313]">Support</p></button>   
           </div>
             <IconButton
               variant="text"

@@ -6,7 +6,7 @@ const QuickStartForm = () => {
       <h2 className="lg:text-3xl font-semibold mb-10 text-center">Quick Start</h2>
 
         <form>
-       <div className="divide-y divide-gray-200">
+       <div className="">
                 <div className="py-8 px-5 text-base  gap-8 text-gray-700 sm:text-lg  grid grid-cols-1 sm:grid-cols-2">
 
                   <div className="relative">

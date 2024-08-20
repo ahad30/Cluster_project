@@ -6,6 +6,7 @@ import FeaturesTable from "./FeaturesTable/FeaturesTable";
 import product1Image from "../../../../public/Products/Elements/Product-1.png"
 import product2Image from "../../../../public/Products/Elements/Product-2.png"
 import product3Image from "../../../../public/Products/Elements/Product-3.png"
+import BecomePartner from "../HomePage/BecomePartner";
 
 const products = [
   {
@@ -146,6 +147,9 @@ const page = () => {
       </div>
       <div className="hidden lg:block">
       <FeaturesTable features={features} products={products} />
+      </div>
+      <div>
+        <BecomePartner/>
       </div>
     </div>
   );

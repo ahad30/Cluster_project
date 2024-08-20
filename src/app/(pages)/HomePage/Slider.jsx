@@ -39,7 +39,7 @@ const Slider = () => {
         <SwiperSlide>
           <section
             className="bg-primary  mb-10  bg-no-repeat bg-cover 
-    h-[800px] lg:h-[500px] bg-center"
+    h-[700px] lg:h-[500px] bg-center"
           >
             <div className="mx-auto  px-4  lg:flex lg:items-center">
               <div>
@@ -141,7 +141,7 @@ const Slider = () => {
         
         <section
             className="bg-primary mb-10 bg-no-repeat bg-cover 
-       h-[800px] lg:h-[500px] bg-center"
+       h-[700px] lg:h-[500px] bg-center"
           >
             <div className="w-[90%] lg:max-w-[1200px] mx-auto pt-[50px] lg:pt-[80px] gap-[100px] lg:px-[100px] lg:flex">
          
