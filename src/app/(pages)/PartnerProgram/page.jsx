@@ -1,7 +1,8 @@
 import React from 'react'
 import PartnerBanner from './PartnerBanner'
 import Stepper from './Stepper'
-import PartnerTabs from './PartnerTabs'
+import PartnerTabs from './PartnerTabs/PartnerTabs'
+import QuickStartForm from './QuickStartForm'
 
 const PartnerProgram = () => {
   return (
@@ -9,6 +10,7 @@ const PartnerProgram = () => {
       <PartnerBanner/>
       <Stepper/>
       <PartnerTabs/>
+      <QuickStartForm/>
     </div>
   )
 }
