@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Image1 from '../../../../public/Products/Elements/Icon metro-windows.png'; // Replace with actual path
-import Image2 from '../../../../public/Products/Elements/Icon simple-android.png'; // Replace with actual path
+import Image1 from '../../../../public/Products/Elements/Icon metro-windows.png';
+import Image2 from '../../../../public/Products/Elements/Icon simple-android.png';
 import Image from 'next/image';
 
 const TABS = [
@@ -27,7 +27,7 @@ export default function ProductTab({ selectedTab, setSelectedTab }) {
       {TABS.map((tab) => (
         <button
           key={tab.name}
-          className={`flex items-center p-4 font-semibold ${
+          className={`flex items-center px-4 py-2 font-semibold ${
             selectedTab === tab.name ? 'border border-black' : 'text-gray-700'
           }`}
           onClick={() => setSelectedTab(tab.name)}
@@ -35,11 +35,11 @@ export default function ProductTab({ selectedTab, setSelectedTab }) {
           <Image
             src={tab.image}
             alt={tab.name}
-            className="w-8 h-8 mr-4" // Adjust size as needed
+            className="w-8 h-8 mr-4" 
           />
           <div>
             <div className="text-lg">{tab.name}</div>
-            <div className={`text-sm ${selectedTab === tab.name ? 'text-green-500' : 'text-gray-500'}`}>
+            <div className={`text-sm text-start ${selectedTab === tab.name ? 'text-green-500' : 'text-gray-500'}`}>
               {tab.title}
             </div>
           </div>

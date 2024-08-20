@@ -12,7 +12,7 @@ const products = [
     image: product1Image,
     title: "Cluster Antivirus",
     description: "Advanced Security for small and medium companies.",
-    price: "490 BDT",
+    price: "490",
     features: [
       "Guard (File Monitor)",
       "Inspector Security (Behavioral Analyzer)",
@@ -25,7 +25,7 @@ const products = [
     image: product2Image,
     title: "Cluster! Internet Security",
     description: "Solution which is ideal for active internet users",
-    price: "1099 BDT",
+    price: "1099",
     features: [
       "Guard (File Monitor)",
       "Inspector Security (Behavioral Analyzer)",
@@ -45,7 +45,7 @@ const products = [
     title: "Cluster! Total Security",
     description:
       "Product which will provide you the highest level of protection",
-    price: "1450 BDT",
+    price: "1450",
     features: [
       "Guard (File Monitor)",
       "Inspector Security (Behavioral Analyzer)",
@@ -137,7 +137,7 @@ const page = () => {
 
   return (
     <div className="max-w-7xl px-10 mx-auto p-6">
-       <h1 className="font-bold">Select the antivirus protection that right for you</h1> 
+       <h1 className="font-bold">Select the antivirus protection that right for you!</h1> 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-2">
         <ProductTab selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
         <div className="col-span-3">

@@ -15,8 +15,8 @@ const ProductCard = ({products}) => {
       </div>
       <h3 className="text-xl font-bold mb-2">{product.title}</h3>
       <p className="text-gray-600 mb-4 text-sm flex-grow">{product.description}</p>
-      <p className="text-green-600 text-lg font-semibold mb-4">Only {product.price} BDT</p>
-      <button className="text-primary border border-primary px-8 py-1 mt-auto">DETAILS</button>
+      <p className="text-green-600 text-lg font-semibold mb-4">Only <span className='text-2xl font-bold'> {product.price}</span> BDT</p>
+      <button className="text-primary border border-primary px- py-1 mt-auto hover:bg-primary hover:text-white">DETAILS</button>
     </div>
   ))}
 </div>
