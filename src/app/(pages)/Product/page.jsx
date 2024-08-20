@@ -136,7 +136,7 @@ const page = () => {
   const [selectedTab, setSelectedTab] = useState("Endpoint Security");
 
   return (
-    <div className="max-w-7xl px-10 mx-auto p-6">
+    <div className="lg:max-w-7xl lg:px-10 mx-auto p-6">
        <h1 className="font-bold">Select the antivirus protection that right for you!</h1> 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-2">
         <ProductTab selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
@@ -144,7 +144,9 @@ const page = () => {
           <ProductCard products={products} />
         </div>
       </div>
+      <div className="hidden lg:block">
       <FeaturesTable features={features} products={products} />
+      </div>
     </div>
   );
 };

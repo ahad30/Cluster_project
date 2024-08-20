@@ -38,7 +38,7 @@ export default function ProductTab({ selectedTab, setSelectedTab }) {
             className="w-8 h-8 mr-4" 
           />
           <div>
-            <div className="text-lg">{tab.name}</div>
+            <div className="text-sm lg:text-lg">{tab.name}</div>
             <div className={`text-sm text-start ${selectedTab === tab.name ? 'text-green-500' : 'text-gray-500'}`}>
               {tab.title}
             </div>

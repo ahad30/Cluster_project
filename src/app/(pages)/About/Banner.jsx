@@ -33,7 +33,7 @@ const Banner = () => {
         </div>
       </div>
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-30"
+        className="absolute inset-0 bg-cover bg-center opacity-25"
         style={{ backgroundImage: `url(${BackImage.src})` }}
       ></div>
     </section>

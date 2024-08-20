@@ -29,10 +29,10 @@ const Slider = () => {
         navigation
         loop={true}
 
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{ clickable: true }}
         className="mySwiper"
       >

@@ -2,12 +2,12 @@ import React from 'react'
 
 const FeatureRow = ({ feature, products }) => {
   return (
-    <tr>
+    <tr className='overflow-x-scroll'>
       <td className="p-4 w-[320px] border border-gray-200 bg-gray-100 ">
-        <p className='font-bold text-base'>
+        <p className='font-bold text-[12px] lg:text-base'>
         {feature.name}
           </p>
-      <p className='text-sm'>{feature.description}</p>
+      <p className='text-sm hidden lg:block'>{feature.description}</p>
 
       </td>
       {products.map((product, index) => (
