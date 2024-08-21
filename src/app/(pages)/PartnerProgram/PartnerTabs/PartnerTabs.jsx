@@ -1,13 +1,15 @@
 "use client";
-import React from 'react';
+import { PartnerContext } from '@/components/PartnerProvider';
+import React, { useContext } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
 const PartnerTabs = () => {
+  const { activeTab, setActiveTab } = useContext(PartnerContext);
   return (
     <div className='lg:max-w-7xl px-10 mx-auto mt-10'>
       <h2 className="lg:text-3xl font-semibold mb-14 text-center">PARTNER PROGRAMS</h2>
-      <Tabs>
+      <Tabs selectedIndex={activeTab} onSelect={(index) => setActiveTab(index)}>
         <div className='lg:flex gap-5'>
           <div className='lg:border-r-2 lg:border-r-blue-gray-600 lg:h-[550px] me-5'>
             <TabList className='flex flex-col gap-y-2 me-4'>

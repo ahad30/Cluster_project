@@ -18,7 +18,7 @@ const Footer = (props) => {
                 />
               </div>
               <div>
-                <p className="mt-4  lg:max-w-xs text-white text-xs">
+                <p className="mt-4  lg:max-w-xs text-white text-sm">
                   Copyright © 2020-2021
                   <br />
                   Cluster Technologies
@@ -36,7 +36,7 @@ const Footer = (props) => {
                   Our Partner Program
                 </p>
 
-                <ul className="mt-6 space-y-2 text-xs">
+                <ul className="mt-6 space-y-2 text-sm">
                   <li>
                     <a
                       href="#"
@@ -69,7 +69,7 @@ const Footer = (props) => {
               <div>
                 <p className="font-medium text-green-500">Products</p>
 
-                <ul className="mt-6 space-y-2 text-xs">
+                <ul className="mt-6 space-y-2 text-sm">
                   <li>
                     <a
                       href="#"
@@ -113,7 +113,7 @@ const Footer = (props) => {
                   Contact Information
                 </p>
 
-                <ul className="mt-6 space-y-2 text-xs">
+                <ul className="mt-6 space-y-2 text-sm">
                   <li className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 items-center text-white justify-center lg:justify-start">
                     <FaPhoneAlt className="text-green-500 mr-2" />
                     <span className="">+380 63 233 0522</span>

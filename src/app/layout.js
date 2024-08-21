@@ -2,6 +2,7 @@
 import Header from "@/components/Common/Header/Header";
 import "./globals.css";
 import Footer from "@/components/Common/Footer/Footer";
+import { PartnerProvider } from "@/components/PartnerProvider";
 
 
 
@@ -17,9 +18,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
          <> 
-         <Header/>
-        <div className="min-h-screen">{children}</div>
+        <PartnerProvider>
+        <Header/>
+        <div className="min-h-screen">
+          {children}
+        </div>
         <Footer/>
+        </PartnerProvider>
         </>
 
       </body>

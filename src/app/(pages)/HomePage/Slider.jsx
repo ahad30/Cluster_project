@@ -54,7 +54,7 @@ const Slider = () => {
                 <h1 className="font-zcool text-white text-center lg:text-start text-[20px] lg:text-[50px] mb-5">
                   Cluster Internal Security.
                 </h1>
-                <div className="flex items-center gap-7 mb-8 flex-wrap">
+                <div className="flex justify-center lg:justify-start items-center gap-7 mb-8 flex-wrap">
                   <div className="">
                     <div className="flex justify-center">
                     <Image
@@ -100,7 +100,7 @@ const Slider = () => {
                 <h1 className=" text-white lg:text-[15px] text-center lg:text-end font-semibold mb-5 mt-5">
                   Improved internal functionality.
                 </h1>
-                <div className="flex items-center gap-7 justify-end mb-5">
+                <div className="flex items-center gap-7 justify-center lg:justify-end mb-5">
                   <div className="">
                     <div className="flex justify-center">
                     <Image
@@ -150,10 +150,10 @@ const Slider = () => {
                 <h1 className="font-zcool text-white text-center lg:text-start text-[20px] lg:text-[40px]">
                   Cluster Total Security.
                 </h1>
-                <h1 className=" text-white lg:text-[20px]  font-semibold mb-5">
+                <h1 className=" text-white text-sm text-center lg:text-start lg:text-[20px]  font-semibold mb-5 mt-3 lg:mt-0">
                   Maximum protection against cyber threats!
                 </h1>
-                <div className="flex items-center gap-5 mb-8 flex-wrap">
+                <div className="flex items-center justify-center lg:justify-start  gap-5 mb-8 flex-wrap">
                   <div className="">
                     <div className="flex justify-center">
                     <Image
@@ -198,7 +198,7 @@ const Slider = () => {
                   </div>
                 </div>
 
-                <h1 className=" text-white lg:text-[15px]  font-semibold mb-5 mt-5">
+                <h1 className=" text-white lg:text-[15px] text-center lg:text-start  font-semibold mb-5 mt-5">
                   Improved internal functionality.
                 </h1>
                 <div className="flex items-center gap-8  mb-5">
