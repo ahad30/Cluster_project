@@ -102,17 +102,17 @@ const HomeProduct = () => {
             alt=""
             className="w-[20px] h-[20px]"
           />
-          <h4 className="text-gray-600 text-sm font-medium">
+          <h4 className="text-gray-600 text-sm text-center lg:text-start font-medium">
             {product.category}
           </h4>
         </div>
-        <h2 className="text-base font-bold mt-8 text-start  mb-4">
+        <h2 className="text-base font-bold mt-8 text-center lg:text-start  mb-4">
           {product.title}
         </h2>
-        <p className="text-gray-700 mb-4 mt-16 text-sm text-start">
+        <p className="text-gray-700 mb-4 mt-16 text-sm text-center lg:text-start">
           {product.description}
         </p>
-        <ul className="list-disc text-left px-5">
+        <ul className="list-disc lg:text-left text-center px-5">
                   {product.features.map((feature, idx) => (
                     <li key={idx}>{feature}</li>
                   ))}
