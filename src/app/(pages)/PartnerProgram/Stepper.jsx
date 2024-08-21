@@ -56,8 +56,8 @@ const Stepper = () => {
             <>
           <div 
             key={index} 
-            className={`text-center border-2 py-6 px-3
-          ${index === 0 ? 'border-green-500 lg:w-[180px] lg:h-[215px]' : 'border-gray-400'}`}
+            className={`text-center border-2 py-6 px-3 transition-all duration-300 transform hover:-translate-y-3 hover:shadow-lg hover:border-primary cursor-pointer border-gray-400
+          ${index === 0 ? 'lg:w-[180px] lg:h-[215px]' : ''}`}
           >
             <Image
               src={program.image}
