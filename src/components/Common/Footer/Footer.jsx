@@ -18,7 +18,7 @@ const Footer = (props) => {
                 />
               </div>
               <div>
-                <p className="mt-4 max-w-2xl lg:max-w-xs text-white text-xs">
+                <p className="mt-4  lg:max-w-xs text-white text-xs">
                   Copyright © 2020-2021
                   <br />
                   Cluster Technologies
@@ -30,7 +30,7 @@ const Footer = (props) => {
               </div>
             </div>
 
-            <div className="flex flex-col lg:flex-row gap-16 lg:col-span-2">
+            <div className="flex flex-col lg:flex-row gap-7 lg:gap-16 lg:col-span-2">
               <div>
                 <p className="font-medium text-green-500">
                   Our Partner Program
