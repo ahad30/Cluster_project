@@ -114,17 +114,17 @@ const Footer = (props) => {
                 </p>
 
                 <ul className="mt-6 space-y-2 text-xs">
-                  <li className="flex  flex-col lg:flex-row space-y-2 items-center text-white justify-center lg:justify-start">
+                  <li className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 items-center text-white justify-center lg:justify-start">
                     <FaPhoneAlt className="text-green-500 mr-2" />
                     <span className="">+380 63 233 0522</span>
                   </li>
 
-                  <li className="flex flex-col lg:flex-row space-y-2 items-center text-white justify-center lg:justify-start">
+                  <li className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 items-center text-white justify-center lg:justify-start">
                     <FaEnvelope className="text-green-500 mr-2" />
                     <span className="">help@clusterantivirus.com</span>
                   </li>
 
-                  <li className="flex flex-col lg:flex-row space-y-2 items-center text-white justify-center lg:justify-start">
+                  <li className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 items-center text-white justify-center lg:justify-start">
                     <FaMapMarkerAlt className="text-green-500 mr-2" />
                     <span className="">
                       WQ Tower, Road#2, Plot 306, Agrabad CDA,
