@@ -19,7 +19,7 @@ const QuickStartForm = () => {
                       name="email"
                       type="text"
                       className="peer  h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-b-primary focus:borer-rose-600"
-                      placeholder="Enter your email"
+              
                     />
                   </div>
 
@@ -33,7 +33,7 @@ const QuickStartForm = () => {
                       type="text"
                       className="peer  h-10 w-full border-b-2 border-gray-300 text-gray-900 
                                     focus:outline-none focus:border-b-primary"
-                      placeholder="Enter your first name"
+                      
                     />
                   </div>
 
@@ -47,8 +47,7 @@ const QuickStartForm = () => {
                       type="text"
                       className="peer  h-10 w-full border-b-2 border-gray-300 text-gray-900 
                                     focus:outline-none focus:border-b-primary"
-                      placeholder="Enter your last name"
-                    />
+                                          />
                   </div>
                   <div className="relative">
                   <label htmlFor="">Telephone *</label>
@@ -60,8 +59,7 @@ const QuickStartForm = () => {
                       type="number"
                       className="peer  h-10 w-full border-b-2 border-gray-300 text-gray-900 
                                     focus:outline-none focus:border-b-primary"
-                      placeholder="Enter your number "
-                    />
+                                        />
                   </div>
 
                   <div className="relative">
@@ -74,8 +72,7 @@ const QuickStartForm = () => {
                       type="text"
                       className="peer  h-10 w-full border-b-2 border-gray-300 text-gray-900 
                                     focus:outline-none focus:border-b-primary"
-                      placeholder="Enter your company"
-                    />
+                                        />
                   </div>
                   <div className="relative">
                   <label htmlFor="">Address *</label>
@@ -87,8 +84,7 @@ const QuickStartForm = () => {
                       type="text"
                       className="peer  h-10 w-full border-b-2 border-gray-300 text-gray-900 
                                     focus:outline-none focus:border-b-primary"
-                      placeholder="Enter your address"
-                    />
+                                        />
                   </div>
                 </div>
                   <div className="flex justify-center mb-5">
