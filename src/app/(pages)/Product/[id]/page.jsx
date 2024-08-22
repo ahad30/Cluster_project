@@ -84,7 +84,7 @@ const {title , image} = products.find((product)=> product?.id == params.id );
   return (
     <>
     <section className='bg-primary mb-10 bg-no-repeat bg-cover 
-       h-[720px] lg:h-[500px] bg-center'>
+       h-[750px] lg:h-[500px] bg-center'>
     <div
       className=" py-10 max-w-7xl mx-auto"
           >
