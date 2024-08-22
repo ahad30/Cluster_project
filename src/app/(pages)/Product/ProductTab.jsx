@@ -27,7 +27,7 @@ export default function ProductTab({ selectedTab, setSelectedTab }) {
       {TABS.map((tab) => (
         <button
           key={tab.name}
-          className={`flex items-center px-4 py-2 font-semibold ${
+          className={`flex items-center justify-center px-4 py-2 font-semibold w-full ${
             selectedTab === tab.name ? 'border border-black' : 'text-gray-700'
           }`}
           onClick={() => setSelectedTab(tab.name)}
