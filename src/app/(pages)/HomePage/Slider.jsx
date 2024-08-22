@@ -54,7 +54,7 @@ const Slider = () => {
                 <h1 className="font-zcool text-white text-center lg:text-start text-[20px] lg:text-[50px] mb-5">
                   Cluster Internal Security.
                 </h1>
-                <div className="flex justify-center lg:justify-start items-center gap-7 mb-8 flex-wrap">
+                <div className="flex justify-center lg:justify-start items-center gap-7 mb-8">
                   <div className="">
                     <div className="flex justify-center">
                     <Image
@@ -145,7 +145,6 @@ const Slider = () => {
           >
             <div className="w-[90%] lg:max-w-[1200px] mx-auto pt-[50px] lg:pt-[80px] gap-[100px] lg:px-[100px] lg:flex">
          
-
               <div>
                 <h1 className="font-zcool text-white text-center lg:text-start text-[20px] lg:text-[40px]">
                   Cluster Total Security.
@@ -201,7 +200,7 @@ const Slider = () => {
                 <h1 className=" text-white lg:text-[15px] text-center lg:text-start  font-semibold mb-5 mt-5">
                   Improved internal functionality.
                 </h1>
-                <div className="flex items-center gap-8  mb-5">
+                <div className="flex items-center gap-8 justify-center lg:justify-start  mb-5">
                   <div className="">
                     <div className="flex justify-center">
                     <Image
