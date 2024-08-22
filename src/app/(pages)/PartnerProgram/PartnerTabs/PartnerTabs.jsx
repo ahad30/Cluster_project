@@ -11,8 +11,8 @@ const PartnerTabs = () => {
       <h2 className="lg:text-3xl font-semibold mb-14 text-center">PARTNER PROGRAMS</h2>
       <Tabs selectedIndex={activeTab} onSelect={(index) => setActiveTab(index)}>
         <div className='lg:flex gap-5'>
-          <div className='lg:border-r-2 lg:border-r-blue-gray-600 lg:h-[550px] me-5'>
-            <TabList className='flex flex-col gap-y-2 me-4'>
+          <div className='lg:border-r-2 lg:border-r-blue-gray-600 lg:h-[550px] lg:me-5'>
+            <TabList className='flex flex-col gap-y-2 lg:me-4 text-center lg:text-start'>
               <Tab className='py-2 px-4 border-2 border-gray-300  cursor-pointer outline-none lg:w-[250px]' selectedClassName='bg-green-500 text-white '>Cluster! Distributor</Tab>
               <Tab className='py-2 px-4 border-2 border-gray-300 cursor-pointer outline-none' selectedClassName='bg-green-500 text-white'>Cluster! Reseller</Tab>
               <Tab className='py-2 px-4 border-2 border-gray-300 cursor-pointer outline-none' selectedClassName='bg-green-500 text-white'>Cluster affiliate</Tab>

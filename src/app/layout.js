@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "@/components/Common/Header/Header";
 import Footer from "@/components/Common/Footer/Footer";
 import { PartnerProvider } from "@/components/PartnerProvider";
@@ -7,13 +7,31 @@ import "./globals.css";
 import Image from "next/image";
 import Image1 from "../../public/logo.png"
 import Image2 from "../../public/Objects.png"
+import { Spin } from "antd";
 
 export default function RootLayout({ children }) {
-  const [country, setCountry] = useState(""); 
+  const [country, setCountry] = useState("");
+  // const [loading, setLoading] = useState(true); 
+
+  useEffect(() => {
+
+    const storedCountry = localStorage.getItem("selectedCountry");
+    if (storedCountry) {
+      setCountry(storedCountry);
+    }
+    // setLoading(false);
+  }, []);
 
   const handleCountryChange = (e) => {
-    setCountry(e.target.value);
+    const selectedCountry = e.target.value;
+    setCountry(selectedCountry);
+    localStorage.setItem("selectedCountry", selectedCountry);
+    
   };
+
+// if(loading) {
+//   return <div>loading..........</div>
+// }
 
   return (
     <html lang="en">
@@ -50,7 +68,7 @@ export default function RootLayout({ children }) {
           ) : (
             <>
               <Header />
-              <div className="">{children}</div>
+              <div className="min-h-screen">{children}</div>
               <Footer />
             </>
           )}

@@ -10,6 +10,7 @@ import BecomePartner from "../HomePage/BecomePartner";
 
 const products = [
   {
+    id:1,
     image: product1Image,
     title: "Cluster Antivirus",
     description: "Advanced Security for small and medium companies.",
@@ -23,6 +24,7 @@ const products = [
     ],
   },
   {
+    id:2,
     image: product2Image,
     title: "Cluster! Internet Security",
     description: "Solution which is ideal for active internet users",
@@ -41,7 +43,8 @@ const products = [
       "File-shredder",
     ],
   },
-  {
+  { 
+    id:3,
     image: product3Image,
     title: "Cluster! Total Security",
     description:
@@ -66,6 +69,7 @@ const products = [
     ],
   },
 ];
+
 
 const features = [
   {
@@ -145,7 +149,7 @@ const page = () => {
           <ProductCard products={products} />
         </div>
       </div>
-      <div className="hidden lg:block">
+      <div className="">
       <FeaturesTable features={features} products={products} />
       </div>
       <div>

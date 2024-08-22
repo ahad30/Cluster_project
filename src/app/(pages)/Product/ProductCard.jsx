@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const ProductCard = ({products}) => {
@@ -16,7 +17,13 @@ const ProductCard = ({products}) => {
       <h3 className="text-xl font-bold mb-2">{product.title}</h3>
       <p className="text-gray-600 mb-4 text-sm flex-grow">{product.description}</p>
       <p className="text-green-600 text-lg font-semibold mb-4">Only <span className='text-2xl font-bold'> {product.price}</span> BDT</p>
-      <button className="text-primary border border-primary px- py-1 mt-auto hover:bg-primary hover:text-white">DETAILS</button>
+      
+      <Link href={`/Product/${product.id}`}>
+      <button className="text-primary border border-primary px- py-1 mt-auto hover:bg-primary w-full hover:text-white">
+      DETAILS
+      </button>
+      </Link>
+  
     </div>
   ))}
 </div>
