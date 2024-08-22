@@ -82,16 +82,15 @@ const ProductDetails = ({params}) => {
 const {title , image} = products.find((product)=> product?.id == params.id );
 
   return (
-    <section>
+    <>
+    <section className='bg-primary mb-10 bg-no-repeat bg-cover 
+       h-[720px] lg:h-[500px] bg-center'>
     <div
-            className="bg-primary mb-10 bg-no-repeat bg-cover 
-       h-[720px] lg:h-[500px] bg-center py-10"
+      className=" py-10 max-w-7xl mx-auto"
           >
             <div className="lg:px-[50px] grid grid-cols-1 lg:grid-cols-3 gap-3 items-center">
-         
-
-  
-            <div className='w-[]'>
+        
+            <div className=''>
             <h1 className="font-zcool text-white text-center lg:text-start text-[20px] lg:text-[35px]">
                  {title}
                 </h1>
@@ -105,7 +104,7 @@ const {title , image} = products.find((product)=> product?.id == params.id );
 
             </div>
 
-                <div className="grid grid-cols-4  mb-8 w-[] gap-5 mt-4 lg:mt-0">
+                <div className="grid grid-cols-4  mb-8  gap-5 mt-4 lg:mt-0">
                   <div className="">
                     <div className="flex justify-center">
                     <Image
@@ -199,10 +198,11 @@ const {title , image} = products.find((product)=> product?.id == params.id );
               </div>
         </div>
     </div>
-
+</section>
 
 <ProductDetailsTab/>
-</section>
+    </>
+
   )
 }
 

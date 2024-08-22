@@ -5,7 +5,7 @@ import "react-tabs/style/react-tabs.css";
 
 const ProductDetailsTab = () => {
   return (
-    <div className="space-y-4 w-[90%] lg:max-w-[90%] mx-auto">
+    <div className="space-y-4 px-5 lg:px-10 w-full lg:max-w-7xl mx-auto">
       <Tabs>
         <div className="lg:flex gap-5">
           <div className="lg:border-r-2 lg:border-r-blue-gray-100 lg:h-[550px] lg:me-5">
@@ -179,7 +179,7 @@ const ProductDetailsTab = () => {
               >
                 <summary className="flex cursor-pointer items-center justify-between gap-1.5">
                   <h2 className="text-lg font-medium text-gray-900">
-                    Reliable protection against viruses
+                  Behavioral analyzer (HIPS)
                   </h2>
 
                   <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
@@ -213,7 +213,7 @@ const ProductDetailsTab = () => {
                 <summary className="flex w-full cursor-pointer items-center justify-between 
                 gap-1.5">
                   <h2 className="text-lg font-medium text-gray-900">
-                  Low level of PC download
+                  Function of self-defense
                   </h2>
 
                   <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
@@ -247,7 +247,7 @@ const ProductDetailsTab = () => {
                 <summary className="flex w-full cursor-pointer items-center justify-between 
                 gap-1.5">
                   <h2 className="text-lg font-medium text-gray-900">
-                  Complete and free technical support
+                  Using heuristic analysis technology - detection of new and unknown threats
                   </h2>
 
                   <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
@@ -281,7 +281,40 @@ const ProductDetailsTab = () => {
                 <summary className="flex w-full cursor-pointer items-center justify-between 
                 gap-1.5">
                   <h2 className="text-lg font-medium text-gray-900">
-                  Daily updates of antivirus databases for full protection of your PC
+                  USB – protection
+                  </h2>
+
+                  <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="size-5 shrink-0 transition duration-300 group-open:-rotate-45"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </summary>
+
+                <p className="mt-4 leading-relaxed text-gray-700">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab
+                  hic veritatis molestias culpa in, recusandae laboriosam neque
+                  aliquid libero nesciunt voluptate dicta quo officiis explicabo
+                  consequuntur distinctio corporis earum similique!
+                </p>
+              </details>
+              <details
+                className="group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
+             
+              >
+                <summary className="flex w-full cursor-pointer items-center justify-between 
+                gap-1.5">
+                  <h2 className="text-lg font-medium text-gray-900">
+                  Three types of scanning
                   </h2>
 
                   <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
