@@ -41,7 +41,7 @@ const Slider = () => {
             className="bg-primary  mb-10  bg-no-repeat bg-cover 
     h-[700px] lg:h-[500px] bg-center"
           >
-            <div className="mx-auto  px-4  lg:flex lg:items-center">
+            <div className="w-[90%] lg:max-w-[1200px] mx-auto  px-4  lg:flex lg:items-center">
               <div>
                 <Image
                   src={Image1}
