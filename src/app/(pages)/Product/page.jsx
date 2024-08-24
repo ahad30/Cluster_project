@@ -22,6 +22,7 @@ const products = [
       "USB-protection",
       "Heuristic analyzer",
     ],
+    
   },
   {
     id:2,

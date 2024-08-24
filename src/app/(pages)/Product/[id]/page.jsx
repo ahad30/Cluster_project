@@ -11,9 +11,8 @@ import Icon4 from "../../../../../public/Products/Elements/Icon-4.png";
 import Icon5 from "../../../../../public/Products/Elements/Icon-5.png";
 import Icon6 from "../../../../../public/Products/Elements/Icon-6.png";
 import Icon7 from "../../../../../public/Products/Elements/Icon-7.png";
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
 import ProductDetailsTab from '../ProductDetailsTab';
+import { FaCartShopping } from "react-icons/fa6";
 
 const ProductDetails = ({params}) => {
     
@@ -79,7 +78,7 @@ const ProductDetails = ({params}) => {
   },
 ];
 
-const {title , image} = products.find((product)=> product?.id == params.id );
+const {title ,image , price} = products.find((product)=> product?.id == params.id );
 
   return (
     <>
@@ -101,6 +100,23 @@ const {title , image} = products.find((product)=> product?.id == params.id );
                 </p>
                <p className='text-white  text-center lg:text-start text-sm lg:text-base'>  If you are looking for reliable and simple antivirus, this product will be ideal for you.</p>
                 <p className='text-white mt-5  text-center lg:text-start text-sm lg:text-base'>15 days trial period available </p>
+             
+             <div>
+             <button className="border text-primary bg-white px-5 py-1 mt-4 hover:bg-green-500   rounded-md font-semibold hover:text-white transition-all duration-300">
+             <div className='flex items-center gap-x-2'>
+             <FaCartShopping className=''/>
+             <p className=''>ONLY {price} USD</p>
+             </div>
+             </button>
+             </div>
+             <div>
+             <button className="border  px-12 text-white py-1 mt-4 hover:bg-green-500   rounded-md font-semibold  transition-all duration-300">
+    
+             <p className='uppercase'>Try Trial</p>
+
+             </button>
+             </div>
+                
 
             </div>
 
@@ -196,6 +212,7 @@ const {title , image} = products.find((product)=> product?.id == params.id );
                   className={`w-[500px] lg:w-[600px] object-cover lg:h-[400px]`}
                 />
               </div>
+
         </div>
     </div>
 </section>
