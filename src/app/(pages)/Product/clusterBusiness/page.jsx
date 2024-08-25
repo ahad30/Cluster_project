@@ -4,7 +4,6 @@ import { FaCartShopping } from 'react-icons/fa6';
 import product1Image from "../../../../../public/Products/Elements/zfb.png"
 import ProductDetailsTab from '../ProductDetailsTab';
 
-
 const page = () => {
     const products = [
         {

@@ -15,7 +15,6 @@ import ProductDetailsTab from '../ProductDetailsTab';
 import { FaCartShopping } from "react-icons/fa6";
 
 const ProductDetails = ({params}) => {
-  const [hoveredImage, setHoveredImage] = useState(null);
     
     const products = [
   {
@@ -131,42 +130,25 @@ const {title ,image , price} = products.find((product)=> product?.id == params.i
 
             </div>
 
-            <div>
-      <div className={`grid grid-cols-4 mb-8 gap-5 mt-4 lg:mt-0 ${hoveredImage ? '' : ''}`}>
+      <div className={`grid grid-cols-4 mb-8 gap-5 mt-4 lg:mt-0 sibling-fade`}>
         {images.map((image, index) => (
           <div
             key={index}
-            className="relative"
-            // onMouseEnter={() => setHoveredImage(image)}
-            // onMouseLeave={() => setHoveredImage(null)}
+            className=""
           >
             <div className="flex justify-center">
               <Image
                 src={image.src}
                 alt={image.alt}
-                className="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px]"
+                className="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] transition-transform duration-300"
               />
             </div>
             <p className="mt-2 text-white text-[7px] text-center lg:text-[12px]">{image.title}</p>
+
           </div>
         ))}
       </div>
-      
-      {/* {hoveredImage && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
-          <div className="relative">
-            <Image
-              src={hoveredImage.src}
-              alt={hoveredImage.alt}
-              className="w-[300px] h-[200px] lg:w-[400px] lg:h-[300px] object-cover"
-            />
-            <p className="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white text-lg bg-black bg-opacity-75 px-4 py-2 rounded">
-              {hoveredImage.title}
-            </p>
-          </div>
-        </div>
-      )} */}
-    </div>
+
 
               <div>
                 <Image
