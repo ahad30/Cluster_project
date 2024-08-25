@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import product1Image from "../../../../../public/Products/Elements/Product-1.png"
 import product2Image from "../../../../../public/Products/Elements/Security-1.png"
 import product3Image from "../../../../../public/Products/Elements/Product-3.png"
@@ -13,9 +13,11 @@ import Icon6 from "../../../../../public/Products/Elements/Icon-6.png";
 import Icon7 from "../../../../../public/Products/Elements/Icon-7.png";
 import ProductDetailsTab from '../ProductDetailsTab';
 import { FaCartShopping } from "react-icons/fa6";
+import { Modal } from 'antd';
 
 const ProductDetails = ({params}) => {
-    
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [modalContent, setModalContent] = useState('');
     const products = [
   {
     id:1,
@@ -79,14 +81,28 @@ const ProductDetails = ({params}) => {
 ];
 
 const images = [
-  { src: Icon1, alt: 'Icon 1', title: 'Process Manager' },
-  { src: Icon2, alt: 'Icon 2', title: 'Parental Control' },
-  { src: Icon3, alt: 'Icon 3', title: 'Privacy Protection' },
-  { src: Icon4, alt: 'Icon 4', title: 'Startup Manager' },
-  { src: Icon5, alt: 'Icon 5', title: 'Anti-virus Scanner' },
-  { src: Icon6, alt: 'Icon 6', title: 'Farewell' },
-  { src: Icon7, alt: 'Icon 7', title: 'Pc Optimizer' },
-];
+  { id: 1, src: Icon1, alt: 'Icon 1', title: 'Process Manager' },
+  { id: 2, src: Icon2, alt: 'Icon 2', title: 'Parental Control' },
+  { id: 3, src: Icon3, alt: 'Icon 3', title: 'Privacy Protection' },
+  { id: 4, src: Icon4, alt: 'Icon 4', title: 'Startup Manager' },
+  { id: 5, src: Icon5, alt: 'Icon 5', title: 'Anti-virus Scanner' },
+  { id: 6, src: Icon6, alt: 'Icon 6', title: 'Farewell' },
+  { id: 7, src: Icon7, alt: 'Icon 7', title: 'Pc Optimizer' },
+]
+
+const handleMouseEnter = (image) => {
+  setModalContent({
+    title: image.title,
+    src: image.src
+  });
+  setIsModalVisible(true);
+};
+
+const handleMouseLeave = () => {
+  setIsModalVisible(false);
+};
+
+
 
 const {title ,image , price} = products.find((product)=> product?.id == params.id );
 
@@ -130,25 +146,41 @@ const {title ,image , price} = products.find((product)=> product?.id == params.i
 
             </div>
 
-      <div className={`grid grid-cols-4 mb-8 gap-5 mt-4 lg:mt-0 sibling-fade`}>
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className=""
-          >
-            <div className="flex justify-center">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                className="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] transition-transform duration-300"
-              />
-            </div>
-            <p className="mt-2 text-white text-[7px] text-center lg:text-[12px]">{image.title}</p>
-
+            <div>
+    <div className="grid grid-cols-4 mb-8 gap-5 mt-4 lg:mt-0 sibling-fade">
+      {images.map((image) => (
+        <div
+          key={image.id}
+          className="hidden lg:block"
+          onMouseOver={() => handleMouseEnter(image)}
+          onMouseDown={handleMouseLeave}
+        >
+          <div className="flex justify-center">
+            <Image src={image.src} alt={image.alt} className="" />
           </div>
-        ))}
-      </div>
+          <p className="mt-2 text-white text-[7px] text-center lg:text-[12px]">
+            {image.title}
+          </p>
+        </div>
+      ))}
+    </div>
 
+    <Modal
+  open={isModalVisible}
+  centered
+  footer={null}
+  closable={false}
+  onCancel={handleMouseLeave}
+  className="custom-modal"
+>
+  {modalContent && (
+    <div className="flex flex-col items-center mt-[60px]">
+      <Image src={modalContent.src} alt={modalContent.title} className="mb-4 w-[40px] h-[40px]" />
+      <p className="text-white text-[16px] font-bold">{modalContent.title}</p>
+    </div>
+  )}
+</Modal>
+  </div>
 
               <div>
                 <Image
