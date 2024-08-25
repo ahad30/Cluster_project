@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
 import product1Image from "../../../../../public/Products/Elements/Product-1.png"
 import product2Image from "../../../../../public/Products/Elements/Security-1.png"
 import product3Image from "../../../../../public/Products/Elements/Product-3.png"
@@ -15,6 +15,7 @@ import ProductDetailsTab from '../ProductDetailsTab';
 import { FaCartShopping } from "react-icons/fa6";
 
 const ProductDetails = ({params}) => {
+  const [hoveredImage, setHoveredImage] = useState(null);
     
     const products = [
   {
@@ -78,6 +79,16 @@ const ProductDetails = ({params}) => {
   },
 ];
 
+const images = [
+  { src: Icon1, alt: 'Icon 1', title: 'Process Manager' },
+  { src: Icon2, alt: 'Icon 2', title: 'Parental Control' },
+  { src: Icon3, alt: 'Icon 3', title: 'Privacy Protection' },
+  { src: Icon4, alt: 'Icon 4', title: 'Startup Manager' },
+  { src: Icon5, alt: 'Icon 5', title: 'Anti-virus Scanner' },
+  { src: Icon6, alt: 'Icon 6', title: 'Farewell' },
+  { src: Icon7, alt: 'Icon 7', title: 'Pc Optimizer' },
+];
+
 const {title ,image , price} = products.find((product)=> product?.id == params.id );
 
   return (
@@ -101,7 +112,7 @@ const {title ,image , price} = products.find((product)=> product?.id == params.i
                <p className='text-white  text-center lg:text-start text-sm lg:text-base'>  If you are looking for reliable and simple antivirus, this product will be ideal for you.</p>
                 <p className='text-white mt-5  text-center lg:text-start text-sm lg:text-base'>15 days trial period available </p>
              
-             <div>
+             <div className='flex justify-center lg:justify-start'>
              <button className="border text-primary bg-white px-5 py-1 mt-4 hover:bg-green-500   rounded-md font-semibold hover:text-white transition-all duration-300">
              <div className='flex items-center gap-x-2'>
              <FaCartShopping className=''/>
@@ -109,7 +120,7 @@ const {title ,image , price} = products.find((product)=> product?.id == params.i
              </div>
              </button>
              </div>
-             <div>
+             <div className='flex justify-center lg:justify-start'>
              <button className="border  px-12 text-white py-1 mt-4 hover:bg-green-500   rounded-md font-semibold  transition-all duration-300">
     
              <p className='uppercase'>Try Trial</p>
@@ -120,90 +131,42 @@ const {title ,image , price} = products.find((product)=> product?.id == params.i
 
             </div>
 
-                <div className="grid grid-cols-4  mb-8  gap-5 mt-4 lg:mt-0">
-                  <div className="">
-                    <div className="flex justify-center">
-                    <Image
-                      src={Icon1}
-                      alt="Icon 1"
-                      className="w-[20px] h-[20px]"
-                    />
-                    </div>
-                    <p className="mt-2 text-white text-[7px] text-center lg:text-[12px]">
-                    Process Manager
-                      </p>
-                  </div>
-                  <div className="">
-                  <div className="flex justify-center">
-                    <Image
-                      src={Icon2}
-                      alt="Icon 1"
-                      className="w-[30px] h-[20px]"
-                    />
-                    </div>
-                    <p className="mt-2 text-white text-[7px] text-center lg:text-[12px]">Parental Control</p>
-                  </div>
-                  <div className="">
-                  <div className="flex justify-center">
-                    <Image
-                      src={Icon3}
-                      alt="Icon 1"
-                      className="w-[20px] h-[20px]"
-                    />
-                    </div>
-                    <p className="mt-2 text-white text-[7px] text-center lg:text-[12px]">Privacy Protection</p>
-                  </div>
-                  <div className="">
-                  <div className="flex justify-center">
-                    <Image
-                      src={Icon4}
-                      alt="Icon 1"
-                      className="w-[20px] h-[20px]"
-                    />
-                    </div>
-                    <p className="mt-2 text-white text-[7px] text-center lg:text-[12px]">Startup Manager</p>
-                  </div>
-                  <div className="">
-                    <div className="flex justify-center">
-                    <Image
-                      src={Icon5}
-                      alt="Icon 1"
-                      className="w-[20px] h-[20px]"
-                    />
-                    </div>
-                    <p className="mt-2 text-white text-[7px] text-center lg:text-[12px]">Anti-virus Scanner</p>
-                  </div>
-                  <div className="">
-                  <div className="flex justify-center">
-                    <Image
-                      src={Icon6}
-                      alt="Icon 1"
-                      className="w-[30px] h-[20px]"
-                    />
-                    </div>
-                    <p className="mt-2 text-white text-[7px] text-center lg:text-[12px]">Farewell</p>
-                  </div>
-                  <div className="">
-                  <div className="flex justify-center">
-                    <Image
-                      src={Icon7}
-                      alt="Icon 1"
-                      className="w-[20px] h-[20px]"
-                    />
-                    </div>
-                    <p className="mt-2 text-white text-[7px] text-center lg:text-[12px]">Pc Optimizer</p>
-                  </div>
-                  <div className="">
-                  <div className="flex justify-center">
-                    <Image
-                      src={Icon7}
-                      alt="Icon 1"
-                      className="w-[20px] h-[20px]"
-                    />
-                    </div>
-                    <p className="mt-2 text-center text-white text-[7px] lg:text-[12px]">Pc Optimizer</p>
-                  </div>
-                </div>
+            <div>
+      <div className={`grid grid-cols-4 mb-8 gap-5 mt-4 lg:mt-0 ${hoveredImage ? '' : ''}`}>
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className="relative"
+            // onMouseEnter={() => setHoveredImage(image)}
+            // onMouseLeave={() => setHoveredImage(null)}
+          >
+            <div className="flex justify-center">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                className="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px]"
+              />
+            </div>
+            <p className="mt-2 text-white text-[7px] text-center lg:text-[12px]">{image.title}</p>
+          </div>
+        ))}
+      </div>
+      
+      {/* {hoveredImage && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
+          <div className="relative">
+            <Image
+              src={hoveredImage.src}
+              alt={hoveredImage.alt}
+              className="w-[300px] h-[200px] lg:w-[400px] lg:h-[300px] object-cover"
+            />
+            <p className="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white text-lg bg-black bg-opacity-75 px-4 py-2 rounded">
+              {hoveredImage.title}
+            </p>
+          </div>
+        </div>
+      )} */}
+    </div>
 
               <div>
                 <Image

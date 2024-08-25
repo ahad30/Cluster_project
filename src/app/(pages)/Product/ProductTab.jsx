@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Image1 from '../../../../public/Products/Elements/Icon metro-windows.png';
 import Image2 from '../../../../public/Products/Elements/Icon simple-android.png';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const TABS = [
   {
@@ -12,7 +13,8 @@ const TABS = [
   {
     name: 'Corporate Security',
     image: Image1,
-    title: 'OS WINDOWS'
+    title: 'OS WINDOWS',
+    link : '/Product/clusterBusiness',
   },
   {
     name: 'Mobile Security',
@@ -25,7 +27,9 @@ export default function ProductTab({ selectedTab, setSelectedTab }) {
   return (
     <div className="lg:flex lg:flex-col  space-y-4 mb-8 mt-5">
       {TABS.map((tab) => (
-        <button
+       <>
+       <Link href={`${tab?.link ? tab?.link : "/Product"}`}>
+       <button
           key={tab.name}
           className={`flex items-center justify-center px-4 py-2 font-semibold w-full ${
             selectedTab === tab.name ? 'border border-black' : 'text-gray-700'
@@ -44,6 +48,8 @@ export default function ProductTab({ selectedTab, setSelectedTab }) {
             </div>
           </div>
         </button>
+       </Link>
+       </>
       ))}
     </div>
   );
