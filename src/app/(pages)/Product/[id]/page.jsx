@@ -169,7 +169,7 @@ const {title ,image , price} = products.find((product)=> product?.id == params.i
   open={isModalVisible}
   centered
   footer={null}
-  closable={false}
+  closable={true}
   onCancel={handleMouseLeave}
   className="custom-modal"
 >

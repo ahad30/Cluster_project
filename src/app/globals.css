@@ -28,7 +28,7 @@
 
 .custom-modal .ant-modal-content {
   background-color: transparent;
-  /* box-shadow: transparent; */
+  box-shadow: none;
   width: 380px;
   height: 220px;
   margin: 0 auto;
