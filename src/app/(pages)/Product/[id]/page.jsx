@@ -111,7 +111,7 @@ const ProductDetails = ({ params }) => {
     <>
       <section
         className="bg-primary mb-10 bg-no-repeat bg-cover 
-       h-[750px] lg:h-[500px] bg-center"
+       h-[950px] lg:h-[500px] bg-center"
       >
         <div className=" py-10 max-w-7xl mx-auto">
           <div className="lg:px-[50px] grid grid-cols-1 lg:grid-cols-3 gap-3 items-center">
@@ -191,7 +191,7 @@ const ProductDetails = ({ params }) => {
                 )}
               </Modal>
             </div> */}
-            <div>
+            <div className="mt-3 lg:mt-0">
               <IconList/>
             </div>
 
