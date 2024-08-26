@@ -8,30 +8,21 @@ import Image from "next/image";
 import Image1 from "../../public/logo.png"
 import Image2 from "../../public/Objects.png"
 import { Spin } from "antd";
+import { useRouter } from "next/navigation";
 
 export default function RootLayout({ children }) {
   const [country, setCountry] = useState("");
-  // const [loading, setLoading] = useState(true); 
-
-  // useEffect(() => {
-
-  //   const storedCountry = localStorage.getItem("selectedCountry");
-  //   if (storedCountry) {
-  //     setCountry(storedCountry);
-  //   }
-  //   // setLoading(false);
-  // }, []);
+  const router = useRouter();
 
   const handleCountryChange = (e) => {
     const selectedCountry = e.target.value;
     setCountry(selectedCountry);
-    // localStorage.setItem("selectedCountry", selectedCountry);
+    if (selectedCountry) {
+      router.push("/");
+    }
     
   };
 
-// if(loading) {
-//   return <div>loading..........</div>
-// }
 
   return (
     <html lang="en">
