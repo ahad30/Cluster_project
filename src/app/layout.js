@@ -13,19 +13,19 @@ export default function RootLayout({ children }) {
   const [country, setCountry] = useState("");
   // const [loading, setLoading] = useState(true); 
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const storedCountry = localStorage.getItem("selectedCountry");
-    if (storedCountry) {
-      setCountry(storedCountry);
-    }
-    // setLoading(false);
-  }, []);
+  //   const storedCountry = localStorage.getItem("selectedCountry");
+  //   if (storedCountry) {
+  //     setCountry(storedCountry);
+  //   }
+  //   // setLoading(false);
+  // }, []);
 
   const handleCountryChange = (e) => {
     const selectedCountry = e.target.value;
     setCountry(selectedCountry);
-    localStorage.setItem("selectedCountry", selectedCountry);
+    // localStorage.setItem("selectedCountry", selectedCountry);
     
   };
 
