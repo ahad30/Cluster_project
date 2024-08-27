@@ -85,7 +85,7 @@ const IconList = () => {
 
     return (
       <div className="absolute top-[30%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center p-4 w-[80%]">
-        <Image src={icon.descriptionIcon} className="mx-auto mb-2" />
+        <Image src={icon.descriptionIcon} alt='' className="mx-auto mb-2" />
         <p className="text-white text-lg mb-4">{icon.descriptionTitle}</p>
         <span className="text-white text-[12px]">{icon.descriptionText}</span>
       </div>

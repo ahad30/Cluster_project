@@ -3,6 +3,7 @@ import React from 'react'
 import { FaCartShopping } from 'react-icons/fa6';
 import product1Image from "../../../../../public/Products/Elements/zfb.png"
 import ProductDetailsTab from '../ProductDetailsTab';
+import BusinessTab from './BusinessTab';
 
 const page = () => {
     const products = [
@@ -28,20 +29,15 @@ const page = () => {
         <div className="py-10 max-w-7xl mx-auto">
           <div className="lg:px-[50px] grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
             <div className='col-span-2'>
-              <h1 className="font-zcool text-white text-center lg:text-start text-[20px] lg:text-[35px]">
+              <h1 className="font-zcool text-white text-center lg:text-start text-[20px] lg:text-[35px] lg:mb-10">
                 {title}
               </h1>
-              <h1 className="text-white text-sm text-center lg:text-start lg:text-[20px] font-semibold mb-5 mt-3 lg:mt-5">
-                Maximum protection against cyber threats!
-              </h1>
               <p className="text-white mb-5 text-center lg:text-start text-sm lg:text-base">
-                Proactive technology of protection will defend your PC from malicious software and scams.
+              Total protection of organizations against all types of cyber threats with possibility of centralized management of antivirus software.
               </p>
-              <p className="text-white text-center lg:text-start text-sm lg:text-base">
-                If you are looking for reliable and simple antivirus, this product will be ideal for you.
-              </p>
+
               <p className="text-white mt-5 text-center lg:text-start text-sm lg:text-base">
-                15 days trial period available
+                30 days trial period available
               </p>
 
               <div className='flex justify-center lg:justify-start'>
@@ -71,7 +67,7 @@ const page = () => {
       </section>
     ))}
     <div>
-        <ProductDetailsTab/>
+         <BusinessTab/>
     </div>
   </>
   )

@@ -13,12 +13,10 @@ import Icon6 from "../../../../../public/Products/Elements/Icon-6.png";
 import Icon7 from "../../../../../public/Products/Elements/Icon-7.png";
 import ProductDetailsTab from "../ProductDetailsTab";
 import { FaCartShopping } from "react-icons/fa6";
-import { Modal } from "antd";
 import IconList from "../IconList";
 
 const ProductDetails = ({ params }) => {
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const [modalContent, setModalContent] = useState("");
+
   const products = [
     {
       id: 1,
@@ -26,13 +24,104 @@ const ProductDetails = ({ params }) => {
       title: "Cluster Antivirus",
       description: "Advanced Security for small and medium companies.",
       price: "490",
-      features: [
-        "Guard (File Monitor)",
-        "Inspector Security (Behavioral Analyzer)",
-        "Mail-filter",
-        "USB-protection",
-        "Heuristic analyzer",
-      ],
+      description1: {
+        title: "Reliable protection against viruses",
+        childDescription: `The antivirus protects your PC from viruses, spyware, Trojans, and other malicious programs.
+      
+      The core of data protection against all types of malware is built on an up-to-date virus database containing over 15 million malware signatures, along with an advanced proactive protection module.
+      
+      This module forms the backbone of the entire security system, based on the Cluster! Internet Security product. A unique feature of this module is its modern virus signature database, which is updated daily. Notably, this data does not overload either the server or the local PC, as the database is optimized and modernized. As a result, it does not affect the computer's performance or cause it to hang or slow down.`
+      },
+
+  description2: {
+  title: "Low System Resource Consumption",
+  childDescription: `The antivirus utilities will not overload your PC, as they consume no more than 512 MB of RAM.
+
+This level of resource consumption is acceptable not only for modern personal computers but also for those manufactured 3-5 years ago. While Cluster Anti-Virus is running, it does not block or slow down even the most basic computers.`
+}
+,
+description3: {
+  title: "Complete and Free Technical Support",
+  childDescription: `Cluster operates under the principle that "Anti-virus protection is, above all, high-quality service." Successful tech support is built on in-depth product knowledge and a genuine desire to listen to users and communicate at their level of understanding.
+
+The key to effective technical support lies in the willingness to understand and assist the user. While advice from a highly qualified specialist, filled with technical jargon, may be confusing, providing help in simple, clear terms is often the most effective solution. This approach not only resolves users' problems but also reinforces professionalism in their eyes.`
+},
+description4: {
+  title: "Daily Antivirus Database Updates for Full PC Protection",
+  childDescription: `The Cluster Antivirus Lab releases daily updates to its antivirus database, ensuring protection against thousands of new threats. 
+
+To safeguard your important data and sensitive information, the development team constantly analyzes emerging threats and devises new detection methods. Currently, the Cluster Antivirus database includes over 15 million virus signatures, providing comprehensive protection for your PC.`
+},
+
+description5: {
+  title: "Behavioral Analyzer (HIPS)",
+  childDescription: `The new line of Cluster antivirus products features innovative proactive technologies, including the cutting-edge Behavioral Analyzer (HIPS).
+
+This advanced technology is one of the most sophisticated solutions in the global antivirus industry. It works by scanning and analyzing programs to detect potential malicious behavior. If HIPS notices that a program may perform actions harmful to your PC, it blocks the program even before it can launch, ensuring your system remains secure.`
+}
+,
+description6: {
+  title: "Function of Self-Defense",
+  childDescription: `Cluster's new line of antivirus products includes a self-defense function designed to protect your PC from unauthorized attempts to disable its protection.
+
+This feature prevents the forced shutdown of the antivirus using the "Task Manager," a common tactic employed by modern Trojans. These Trojans can gain administrative rights on an infected PC and block the operation of installed programs, including outdated antiviruses. Cluster's self-defense mechanism ensures that your PC remains protected, even against such advanced threats.`
+}
+,
+description7: {
+  title: "Heuristic Analysis Technology - Detection of New and Unknown Threats",
+  childDescription: `Cluster Antivirus employs heuristic analysis technology to detect new and unknown threats, even those not yet added to the antivirus database.
+
+The heuristic analyzer scans files with similar characteristics to known malware. When it identifies a certain number of these characteristics in a file, it determines that the file may be malicious. This proactive approach allows Cluster Antivirus to detect and block potential threats before they cause harm.
+
+With its built-in heuristic analyzer, Cluster Antivirus ensures that your system is protected from emerging threats, offering a defense against malware that hasn't yet been discovered.`
+}
+,
+description8: {
+  title: "Guard (Patrol) - Real-Time File Monitoring",
+  childDescription: `Guard (Patrol) is a real-time file monitoring system designed to detect viruses and other malicious programs as they attempt to infiltrate your computer.
+
+By continuously scanning files, Guard (Patrol) ensures that any potential threats are identified and neutralized before they can cause harm, providing an additional layer of security to your system.`
+}
+,
+description9: {
+  title: "USB Protection",
+  childDescription: `The USB protection module monitors and controls the connection of any USB drives to your computer. It conducts a preliminary analysis and informs the user, effectively preventing the automatic execution of malicious objects from the drive. Cluster ensures that even new, unknown viruses or worms attempting to launch from a flash drive are blocked.
+
+Upon detecting a new USB drive, Cluster performs a quick analysis, informs the user about the security level of the disk, and prompts for action if viruses or suspicious objects are found.`
+
+},
+
+description10: {
+  title: "Mail Filter",
+  childDescription: `Cluster Mail Filter scans all incoming and outgoing emails for malicious content, preventing potential threats from infiltrating your system via email.`
+
+},
+
+description11: {
+  title: "Three Types of Scanning",
+  childDescription: `Cluster Antivirus offers three types of scans that can run simultaneously:
+  
+- **Fast Scan**: Checks critical areas of the system for threats.
+- **Full Scan**: Scans all existing files on the computer.
+- **Selective Scan**: Allows the user to scan specific files or folders.`
+
+},
+
+description12: {
+  title: "Scan Scheduler",
+  childDescription: `With Cluster Antivirus, you don't need to remember to scan your computer daily. The Scan Scheduler feature allows you to configure automatic scans at your convenience, whether one-time, daily, hourly, weekly, or monthly.`
+}
+,
+
+      systemRequirements: {
+        processorSpeed: "1 GHz and higher",
+        ram: "1GB and more",
+        hardDiskSpace: "1500 MB",
+        operatingSystem: "Windows XP (SP3), Windows 7 (x32, x64) (+SP1), Windows 8, 8.1 (x32, x64), Windows 10 (x32, x64), Windows 11 (x32, x64)",
+        screenResolution: "1024 x 768 or higher",
+        note: "For correct display of texts in the antivirus, the font size should not exceed 100% (the parameter is specified in the operating system settings in the display settings section). One PC means one operating system (OS)",
+        programVersion: "3.0.2368.0"
+      }
     },
     {
       id: 2,
@@ -40,46 +129,103 @@ const ProductDetails = ({ params }) => {
       title: "Cluster! Internet Security",
       description: "Solution which is ideal for active internet users",
       price: "1099",
-      features: [
-        "Guard (File Monitor)",
-        "Inspector Security (Behavioral Analyzer)",
-        "Mail-filter",
-        "USB-protection",
-        "Heuristic analyzer",
-        "Firewall",
-        "Anti-fishing",
-        "Anti-spam",
-        "Virtual keyboard",
-        "Optimizer PC",
-        "File-shredder",
-      ],
+        description1: {
+          title: "Reliable protection against viruses",
+          childDescription: "Antivirus protects your PC from viruses, spyware, Trojans and other malicious programs.\n\nThe basis of data protection against all types of malicious software is built on the use of the actual virus database, containing over 15 million malware's signatures and advanced module of proactive protection.\n\nThis module is the core of the entire security system, which is based on the basis of Cluster Internet Security product. A unique feature of this module is modern virus signature database that is updated every day. It should be noted that such data do not overload neither server nor local PC, as the database is optimized and modernized. Thus, work with it does not affect the computer's performance and does not lead to hanging or slowing down of PC."
+        },
+        description2: {
+          title: "The complexity of Internet protection",
+          childDescription: "It is performed by means of a powerful firewall and WEB-filter, capable of up-to-date data check that come on the user's PC and to block sites with detected threats.\n\nThe presence of a firewall in the modern version of antivirus is a critical necessity. This module allows to significantly reduce the possibility of infection by malware via the Internet surfing. In addition, the firewall blocks the actions of malware that might get on the PC as unauthorized attempt to upload information from the Internet, reception of additional malicious components, new fraudulent or spyware capabilities.\n\nThe module allows to create your own \"black lists\" of undesirable Internet resources containing dubious or frankly objectionable materials. Web filter can also be used as an important part of anti-phishing security system based on databases of known spyware sites or suspicious sites that could potentially be involved in fraudulent activity."
+        },
+        description3: {
+          title: "Low level of PC download",
+          childDescription: "Utilities will not overload your PC, because anti-virus consumes no more than 512 MB of PC's RAM.\n\nIt should be noted that such level of consumption is acceptable not only for modern personal computers, but also for those, which were manufactured 3-5 years ago. During Cluster Internet Security work, it does not block nor slow down the most unpretentious computers."
+        },
+        description4: {
+          title: "Complete and free technical support",
+          childDescription: "The main rule of Cluster is \"Anti-virus protection is, above all, high-quality service\".\n\nThe basis of a successful tech support is in-depth knowledge of the products, the desire to \"listen\" to user, to present information on the level at which it is clear to them. The secret of success is in the desire, the ability will also come.\n\nThe desire to understand the user and to help him or her is one of the tenets of the successful technical support. Recommendations of highly qualified specialist, described by \"cool\" slang, may be \"empty words\" for the client. While the help provided in simple terms, are a recipe for the solution of user's problems and the key to professionalism in the eyes of the user."
+        },
+        description5: {
+          title: "Additional modules of the product",
+          childDescription: "Optimizer is a tool that speeds up your PC. The software module allows to find unnecessary files and programs that overload operating system, and to remove them. The principle of its work is based on check of certain computer memory locations where temporary files are stored. To such categories optimizer attributes browsers' cache, search history, which they store, OS updates, \"service\" files and so on.\n\nAfter scanning, the tool displays a list of all files, which are offered to be removed, and - most importantly, - their size alone, and the total amount of memory that will be released. The decision about removal takes user directly.\n\nFile Shredder is a special program that allows to safely remove the most unwanted sensitive files without the possibility of their recovery.\n\nThe way of operation of programs-shredders is that the file that is planned to be removed, is subjected to multi wipe-off. In fact, it is filled with meaningless information garbage (random numbers, characters, symbols etc.), which completely distorts its contents, without the restoration possibility. After this, it is removed from the hard drive. Even if such file would ever be found by hackers and they would try to restore it, they would not receive any benefit from such actions."
+        },
+          description6: {
+            title: "A complete set of antivirus functionality",
+            childDescription: "<p><span style=font-size:14px>Zillya! Internet Security performs all the functions of antivirus protection, and contains:</span><br />&nbsp;</p>\n\n<ul>\n\t<li><span style=font-size:14px>System File Checker in real time, which is designed to detect viruses and other malicious programs that try to penetrate the PC;</span></li>\n\t<li><span style=font-size:14px>Mail-filter - Mail filter checks all incoming and outgoing email messages for malicious objects, thus avoiding possible threats of infiltration in the system by means of e-mail.</span></li>\n\t<li><span style=font-size:14px>The heuristic analyzer that identifies new viruses, the detection entries for which are absent in the antivirus database;</span></li>\n\t<li><span style=font-size:14px>Three types of scanning:<span style=font-size:14px>​</span></span></li>\n</ul>\n\n<p><span style=font-size:14px><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Fast.</strong> To check the critical areas of the system;</span></p>\n\n<p><span style=font-size:14px><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Full.</strong> To scan all existing files on the computer;</span></p>\n\n<p><span style=font-size:14px><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Selective.</strong> To scan files according to the user's desire.</span></p>\n\n<p>&nbsp;</p>\n\n<ul>\n\t<li><span style=font-size:14px>Daily updates of antivirus databases for full protection of your PC.</span></li>\n</ul>"
+          },
+
+          description7: {
+            title: "Program-level firewall",
+            childDescription: "<ul>\n\t<li><span style=font-size:14px>The automatic operative mode.</span></li>\n</ul>\n\n<p><span style=font-size:14px>For users who do not have certain knowledge and skills to work with a firewall and its settings, has been implemented the automatic operative mode. In this mode, for applications that require for their work access to the network, automatically created rules that allow only outgoing traffic. This allows to optimally configure the security of the system, without any action from the user.</span><br />&nbsp;</p>\n\n<ul>\n\t<li><span style=font-size:14px>Interactive mode is for experienced users.</span></li>\n</ul>\n\n<p><span style=font-size:14px>In that case, if the user knows how to create firewall rules correctly, the product has an interactive mode. In this mode, user has 4 options:<br />&nbsp;<br />&nbsp;&nbsp;&nbsp; <strong>Block all </strong>- completely blocks incoming and outgoing traffic for all applications;<br />&nbsp;<br />&nbsp;&nbsp;&nbsp; <strong>Allow all</strong> - allows all incoming and outgoing traffic;<br />&nbsp;<br />&nbsp;&nbsp;&nbsp; <strong>Allow only outgoing</strong> - allows the application to have only outgoing traffic;<br />&nbsp;<br />&nbsp;&nbsp;&nbsp; <strong>Create a separate rule</strong> - allows to fully customize individual access parameters:<br />&nbsp;<br />&nbsp;&nbsp; - to enable or disable a specific address (single address, range of addresses, the IP-addresses’ mask);<br />&nbsp;<br />&nbsp;&nbsp; - to open or close specific ports (or to apply the rule to all ports for the application, to select the direction of traffic for these settings, to specify the protocol).</span><br />&nbsp;</p>\n\n<ul>\n\t<li><span style=font-size:14px>&nbsp;Control of applications’ access to the network.</span></li>\n</ul>\n\n<p><span style=font-size:14px>The firewall keeps track of all applications that attempt to access the network - both incoming and outgoing traffic;</span><br />&nbsp;</p>\n\n<ul>\n\t<li><span style=font-size:14px>&nbsp;Protection against external attacks.</span></li>\n</ul>\n\n<p><span style=font-size:14px>By default, the firewall allows applications only outgoing traffic. This allows to protect the system from attempts to access to it from the outside, since any incoming requests will be blocked.</span><br />&nbsp;</p>\n\n<ul>\n\t<li><span style=font-size:14px>&nbsp;Built-in set of rules.</span></li>\n</ul>\n\n<p><span style=font-size:14px>The program has a built-in database containing all the necessary rules to allow or to block (defined by the user) standard system services and protocols (NetBios, DHCP, DNS etc.) for work with the network. With their help, user can allow or block network activity on such protocols, leaving aside the intricacies of their work.</span><br />&nbsp;</p>\n\n<ul>\n\t<li><span style=font-size:14px>&nbsp;The ability to set general settings for all applications in the system.</span></li>\n</ul>\n\n<p><span style=font-size:14px>Zillya! Internet Security is able to set general settings for all applications. For example, the user requires that all applications had access to a particular server. To do this, in the settings must be a rule that will allow access to a specific IP-address and to a specific port. And no longer will be necessary to create separate rules for access to this server for each application."
+          },
+
+          description8: {
+            title: "Inspector security (Behavioral analyzer)",
+            childDescription: "<p><span style=font-size:14px>Products of new line have received innovative proactive technologies. One of the most important modules of all rage of antiviruses by Zillya! is the presence of so-called behavioral analyzer (HIPS).<br />&nbsp;<br />This unique technology is the most advanced solution, which is implemented in the world's anti-virus industry. The essence of its work is scanning and analysis of programs, to determine likelihood of malicious behavior. If HIPS eoul notive that some program performs actions that could potentially harm your PC, it will be blocked even before its launch.</span></p>"
+          },
+          description9: {
+            title: "Function of self-defense",
+            childDescription: "<p><span style=font-size:14px>The new line of antiviruses by Zillya! has a function of self-defense.<br />&nbsp;<br />It eliminates the possibility of disabling the protection of your PC as a result of the forced stop using the \"Task Manager\". This feature is implemented as a response to modern Trojans that are able to get administrative rights on the infected PC and block the work of installed programs, including non-modern antiviruses.</span></p>"
+          },
+          description10: {
+            title: "WEB-filter (protection of HTTP-traffic)",
+            childDescription: "<ul>\n\t<li><span style=font-size:14px>Blocking of dangerous sites.</span></li>\n</ul>\n\n<p><span style=font-size:14px>Zillya! Internet Security has the ability to block access to potentially dangerous sites, stopping them from loading when viewed in a browser. In this case, the user sees a message;</span><br />&nbsp;</p>\n\n<ul>\n\t<li><span style=font-size:14px>Block of potentially dangerous content from suspicious sites.</span></li>\n</ul>\n\n<p><span style=font-size:14px>Some sites are added to the base of Zillya! Internet Security as suspicious, or sites that have malicious content. If a site is in the list, you will be able to visit it, to view the pages, images, but you will not be able to download from this resource programs, files, documents and other files that may harm your computer.</span><br />&nbsp;</p>\n\n<ul>\n\t<li><span style=font-size:14px>Create your own list of blocked sites.</span></li>\n</ul>\n\n<p><span style=font-size:14px>In the WEB-filter, there is a possibility, in addition to the built-in database of blocked sites, to create your own list of sites that the user, for whatever reason, considers undesirable. To this personal base subjected the same rules that apply to the built-in base.</span></p>"
+          },
+          description11: {
+            title: "USB - protection",
+            childDescription: "<p><span style=font-size:14px>Security module of USB-drives controls the connection of any drive to the USB-ports. Preliminary analysis with following informing of user reliably protects the computer from automatically downloaded objects on disks. So now Zillya! will protect you from the automatic start from the flash drive of a potentially malicious program.</span></p>"
+          },
+          
+          description12: {
+            title: "Mail Filter",
+            childDescription: "<p>Mail filter checks all incoming and outgoing email messages for malicious objects, thus avoiding possible threats of infiltration in the system by means of e-mail.</p>"
+          },
+          description13: {
+            title: "Anti-Spam",
+            childDescription: "<p>The modules are built on the principle of proactive technologies. They allow to set up a \"black list\" of e-mail addresses and websites that have been seen in spam mailings and phishing activity.<br><br>For example, Anti-Spam allows to make flexible adjustment of blocked messages. You can set the filter by sender, recipient, title, or subject. This will significantly reduce the probability of receiving unwanted emails. </p>"
+          },
+          description14: {
+            title: "Anti-fishing",
+            childDescription: "Anti-fishing allows to avoid sites that have phishing activity, steal user data and are used by cybercriminals for illegal enrichment."
+          },
+          description15: {
+            title: "PC Optimization",
+            childDescription: "Optimizer is a tool that speeds up your PC. The software module allows to find unnecessary files and programs that overload operating system, and to remove them.<br><br>The principle of its work is based on check of certain computer memory locations where temporary files are stored. To such categories optimizer attributes browsers' cache, search history, which they store, OS updates, \"service\" files and so on.<br><br>After scanning, the tool displays a list of all files, which are offered to be removed, and - most importantly, - their size alone, and the total amount of memory that will be released. The decision about removal takes user directly."
+          },
+          description16: {
+            title: "File Shredder",
+            childDescription: "It is a special program that allows to safely remove the most unwanted sensitive files without the possibility of their recovery.<br><br>The way of operation of programs-shredders is that the file that is planned to be removed, is subjected to multi wipe-off. In fact, it is filled with meaningless information garbage (random numbers, characters, symbols etc.), which completely distorts its contents, without the restoration possibility. After this, it is removed from the hard drive. Even if such file would ever be found by hackers and they would try to restore it, they would not receive any benefit from such actions."
+          }
+         ,
+             
+      systemRequirements: {
+        processorSpeed: "1 GHz and higher",
+        ram: "1GB and more",
+        hardDiskSpace: "1500 MB",
+        operatingSystem: "Windows XP (SP3), Windows 7 (x32, x64) (+SP1), Windows 8, 8.1 (x32, x64), Windows 10 (x32, x64), Windows 11 (x32, x64)",
+        screenResolution: "1024 x 768 or higher",
+        note: "For correct display of texts in the antivirus, the font size should not exceed 100% (the parameter is specified in the operating system settings in the display settings section). One PC means one operating system (OS)",
+        programVersion: "3.0.2368.0"
+      }
     },
     {
       id: 3,
       image: product3Image,
       title: "Cluster! Total Security",
-      description:
-        "Product which will provide you the highest level of protection",
+      description: "Product which will provide you the highest level of protection",
       price: "1450",
-      features: [
-        "Guard (File Monitor)",
-        "Inspector Security (Behavioral Analyzer)",
-        "Mail-filter",
-        "USB-protection",
-        "Heuristic analyzer",
-        "Firewall",
-        "Anti-fishing",
-        "Anti-spam",
-        "Virtual keyboard",
-        "Optimizer PC",
-        "File-shredder",
-        "Parental Control",
-        "Process Manager",
-        "Startup Manager",
-        "Privacy Protection",
-      ],
-    },
+      systemRequirements: {
+        processorSpeed: "1 GHz and higher",
+        ram: "1GB and more",
+        hardDiskSpace: "1500 MB",
+        operatingSystem: "Windows XP (SP3), Windows 7 (x32, x64) (+SP1), Windows 8, 8.1 (x32, x64), Windows 10 (x32, x64), Windows 11 (x32, x64)",
+        screenResolution: "1024 x 768 or higher",
+        note: "For correct display of texts in the antivirus, the font size should not exceed 100% (the parameter is specified in the operating system settings in the display settings section). One PC means one operating system (OS)",
+        programVersion: "3.0.2368.0"
+      }
+    }
   ];
+  
 
   const images = [
     { id: 1, src: Icon1, alt: "Icon 1", title: "Process Manager" },
@@ -91,21 +237,10 @@ const ProductDetails = ({ params }) => {
     { id: 7, src: Icon7, alt: "Icon 7", title: "Pc Optimizer" },
   ];
 
-  const handleMouseEnter = (image) => {
-    setModalContent({
-      title: image.title,
-      src: image.src,
-    });
-    setIsModalVisible(true);
-  };
 
-  const handleMouseLeave = () => {
-    setIsModalVisible(false);
-  };
 
-  const { title, image, price } = products.find(
-    (product) => product?.id == params.id
-  );
+  const product = products.find((product) => product?.id == params.id);
+  // const { title, image, price } = product || {};
 
   return (
     <>
@@ -117,7 +252,7 @@ const ProductDetails = ({ params }) => {
           <div className="lg:px-[50px] grid grid-cols-1 lg:grid-cols-3 gap-3 items-center">
             <div className="">
               <h1 className="font-zcool text-white text-center lg:text-start text-[20px] lg:text-[35px]">
-                {title}
+                {product?.title}
               </h1>
               <h1 className=" text-white text-sm text-center lg:text-start lg:text-[20px]  font-semibold mb-5 mt-3 lg:mt-5">
                 Maximum protection against cyber threats!
@@ -139,7 +274,7 @@ const ProductDetails = ({ params }) => {
                 <button className="border text-primary bg-white px-5 py-1 mt-4 hover:bg-green-500   rounded-md font-semibold hover:text-white transition-all duration-300">
                   <div className="flex items-center gap-x-2">
                     <FaCartShopping className="" />
-                    <p className="">ONLY {price} USD</p>
+                    <p className="">ONLY {product.price} USD</p>
                   </div>
                 </button>
               </div>
@@ -150,54 +285,13 @@ const ProductDetails = ({ params }) => {
               </div>
             </div>
 
-            {/* <div className="relative">
-              <div className="grid grid-cols-4 mb-8 gap-5 mt-4 lg:mt-0 sibling-fade">
-                {images.map((image) => (
-                  <div
-                    key={image.id}
-                    className="hidden lg:block"
-                    onMouseOver={() => handleMouseEnter(image)}
-                    onMouseDown={handleMouseLeave}
-                  >
-                    <div className="flex justify-center">
-                      <Image src={image.src} alt={image.alt} className="" />
-                    </div>
-                    <p className="mt-2 text-white text-[7px] text-center lg:text-[12px]">
-                      {image.title}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <Modal
-                open={isModalVisible}
-                centered
-                footer={null}
-                closable={true}
-                onCancel={handleMouseLeave}
-                className="custom-modal"
-              >
-                {modalContent && (
-                  <div className="flex flex-col items-center mt-[60px]">
-                    <Image
-                      src={modalContent.src}
-                      alt={modalContent.title}
-                      className="mb-4 w-[40px] h-[40px]"
-                    />
-                    <p className="text-white text-[16px] font-bold">
-                      {modalContent.title}
-                    </p>
-                  </div>
-                )}
-              </Modal>
-            </div> */}
             <div className="mt-3 lg:mt-0">
               <IconList/>
             </div>
 
             <div>
               <Image
-                src={image}
+                src={product?.image}
                 alt=""
                 className={`w-[500px] lg:w-[600px] object-cover lg:h-[400px]`}
               />
@@ -206,7 +300,7 @@ const ProductDetails = ({ params }) => {
         </div>
       </section>
 
-      <ProductDetailsTab />
+      <ProductDetailsTab product={product}/>
     </>
   );
 };
