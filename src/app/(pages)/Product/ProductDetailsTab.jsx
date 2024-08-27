@@ -158,7 +158,7 @@ const ProductDetailsTab = ({product}) => {
     </details>
     
     {
-      product?.id == 2 || product?.id == 3 ?
+      product?.id === 2 || product?.id === 3 ?
       <>
           <details
       className="group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
@@ -188,8 +188,7 @@ const ProductDetailsTab = ({product}) => {
         {product.description5.childDescription}
       </p>
     </details>
-      </>
-      : {}
+      </> : <></>
     }
 
   </div>
