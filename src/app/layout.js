@@ -12,14 +12,14 @@ import { useRouter } from "next/navigation";
 
 export default function RootLayout({ children }) {
   const [country, setCountry] = useState("");
-  const router = useRouter();
+  // const router = useRouter();
 
   const handleCountryChange = (e) => {
     const selectedCountry = e.target.value;
     setCountry(selectedCountry);
-    if (selectedCountry) {
-      router.push("/");
-    }
+    // if (selectedCountry) {
+    //   router.push("/");
+    // }
     
   };
 

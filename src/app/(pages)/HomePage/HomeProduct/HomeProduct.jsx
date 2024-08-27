@@ -22,13 +22,13 @@ const HomeProduct = () => {
       ],
     },
     {
-      icon: Icon2,
+      icon: Icon1,
       category: "Endpoint Security",
-      title: "Cluster! Total Security",
+      title: "Cluster Total Security",
       description:
         "The product with the highest level of protection! Additionally, it has instruments of computer's control.",
       price: "only 1450 BDT",
-      detailsText: "DETAILS",
+      detailsText: "Buy now",
       image: product2Image,
       features: [
         "Real-time protection",
@@ -37,9 +37,9 @@ const HomeProduct = () => {
       ],
     },
     {
-      icon: Icon1,
+      icon: Icon2,
       category: "Mobile Security",
-      title: "Cluster! Internet Security for Android",
+      title: "Cluster Internet Security for Android",
       description:
         "A complete antivirus that provides the daily protection for active users of Android devices.",
       price: "Flexible Price",
@@ -89,8 +89,10 @@ const HomeProduct = () => {
             {product.price}
           </p>
         )}
+        
         <button
-          className="text-white px-7 py-2 font-semibold mt-4 bg-green-500 hover:bg-green-600 transition-colors duration-300 text-sm uppercase"
+        className={` ${index === 0 ? 'mt-5' : ""} ${index === 2 ? 'mt-5' : ""}
+          text-white px-7 py-2 font-semibold  bg-green-500 hover:bg-green-600 transition-colors duration-300 text-sm  uppercase`}
         >
           {product.detailsText} &gt;
         </button>

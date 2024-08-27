@@ -18,7 +18,7 @@ const Banner = () => {
   return (
     <section className="bg-primary text-white py-16 relative -z-40">
       <div className="container mx-auto text-center">
-        <h1 className="text-4xl font-bold mb-4">Cluster! Antivirus</h1>
+        <h1 className="text-4xl font-bold mb-4">Cluster Antivirus</h1>
         <h2 className="lg:text-5xl font-semibold mb-6">The only Antivirus Laboratory in<br/> Bangladesh</h2>
         <p className="text-[14px]  mb-6 lg:px-[190px]">
           We successfully develop cyber security and antivirus software since 2020. Our experience is in working with B2C and B2B markets. In 2020, we have created and set up (from idea to product) our own antivirus engine with our own virus laboratory.

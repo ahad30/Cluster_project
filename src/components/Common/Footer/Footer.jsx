@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Logo from "../../../../public/logo-2.png";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = (props) => {
   return (
@@ -19,11 +20,9 @@ const Footer = (props) => {
               </div>
               <div>
                 <p className="mt-4  lg:max-w-xs text-white text-sm">
-                  Copyright © 2020-2021
+                  Copyright © 2020-2024
                   <br />
-                  Cluster Technologies
-                  <br />
-                  License agreement
+                  Cluster Technologies Ltd.
                   <br />
                   Privacy policy
                 </p>
@@ -38,30 +37,27 @@ const Footer = (props) => {
 
                 <ul className="mt-6 space-y-2 text-sm">
                   <li>
-                    <a
-                      href="#"
-                      className="text-white transition hover:opacity-75"
-                    >
-                      Distributor
-                    </a>
+                    <Link href="/PartnerProgram">
+                      <div className="text-white transition hover:opacity-75">
+                        Distributor
+                      </div>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      href="#"
-                      className="text-white transition hover:opacity-75"
-                    >
-                      Reseller
-                    </a>
+                    <Link href="/PartnerProgram">
+                      <div className="text-white transition hover:opacity-75">
+                        Reseller
+                      </div>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      href="#"
-                      className="text-white transition hover:opacity-75"
-                    >
-                      Affiliate
-                    </a>
+                    <Link href="/PartnerProgram">
+                      <div className="text-white transition hover:opacity-75">
+                        Affiliate
+                      </div>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -71,39 +67,35 @@ const Footer = (props) => {
 
                 <ul className="mt-6 space-y-2 text-sm">
                   <li>
-                    <a
-                      href="#"
-                      className="text-white transition hover:opacity-75"
-                    >
-                      Cluster! Antivirus
-                    </a>
+                    <Link href="/Product" passHref>
+                      <div className="text-white transition hover:opacity-75 cursor-pointer">
+                        Cluster Antivirus
+                      </div>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      href="#"
-                      className="text-white transition hover:opacity-75"
-                    >
-                      Cluster! Internet Security
-                    </a>
+                    <Link href="/Product" passHref>
+                      <div className="text-white transition hover:opacity-75 cursor-pointer">
+                        Cluster Internet Security
+                      </div>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      href="#"
-                      className="text-white transition hover:opacity-75"
-                    >
-                      Cluster! Total Security
-                    </a>
+                    <Link href="/Product" passHref>
+                      <div className="text-white transition hover:opacity-75 cursor-pointer">
+                        Cluster Total Security
+                      </div>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      href="#"
-                      className="text-white transition hover:opacity-75"
-                    >
-                      Antivirus for Business
-                    </a>
+                    <Link href="/Product/clusterBusiness" passHref>
+                      <div className="text-white transition hover:opacity-75 cursor-pointer">
+                        Antivirus for Business
+                      </div>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -116,20 +108,20 @@ const Footer = (props) => {
                 <ul className="mt-6 space-y-2 text-sm">
                   <li className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 items-center text-white justify-center lg:justify-start">
                     <FaPhoneAlt className="text-green-500 mr-2" />
-                    <span className="">+380 63 233 0522</span>
+                    <span className=""> +8809614502010</span>
                   </li>
 
                   <li className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 items-center text-white justify-center lg:justify-start">
                     <FaEnvelope className="text-green-500 mr-2" />
-                    <span className="">help@clusterantivirus.com</span>
+                    <span className="">info@clusterantivirus.com</span>
                   </li>
 
                   <li className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 items-center text-white justify-center lg:justify-start">
                     <FaMapMarkerAlt className="text-green-500 mr-2" />
-                    <span className="">
-                      WQ Tower, Road#2, Plot 306, Agrabad CDA,
+                    <span className="text-[12px]">
+                    C/O Merger Group, Road: 2, Plot: 308, Agrabad CDA,
                       <br />
-                      Chittagong - 4000, Bangladesh
+                      Chittagong - 4100, Bangladesh
                     </span>
                   </li>
                 </ul>

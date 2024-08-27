@@ -20,7 +20,7 @@ const ProductCard = ({products}) => {
       
       <Link href={`/Product/${product.id}`}>
       <button className="text-primary border border-primary px- py-1 mt-auto hover:bg-primary w-full hover:text-white">
-      DETAILS
+      BUY NOW
       </button>
       </Link>
   

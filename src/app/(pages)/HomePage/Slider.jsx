@@ -19,6 +19,16 @@ import Icon4 from "../../../../public/Homepage/Elements/Icon-4.png";
 import Icon5 from "../../../../public/Homepage/Elements/Icon-5.png";
 import Icon6 from "../../../../public/Homepage/Elements/Icon-6.png";
 import Icon7 from "../../../../public/Homepage/Elements/Icon-7.png";
+import Icon10 from "../../../../public/Homepage/Elements/Icon-10.png";
+import Icon11 from "../../../../public/Homepage/Elements/Icon-11.png";
+import Icon12 from "../../../../public/Homepage/Elements/Icon-12.png";
+import Icon13 from "../../../../public/Homepage/Elements/Icon-13.png";
+import Icon14 from "../../../../public/Homepage/Elements/Icon-14.png";
+import Icon15 from "../../../../public/Homepage/Elements/Icon-15.png";
+import Icon16 from "../../../../public/Homepage/Elements/Icon-16.png";
+import Icon17 from "../../../../public/Homepage/Elements/Icon-17.png";
+
+
 
 const Slider = () => {
   return (
@@ -52,7 +62,7 @@ const Slider = () => {
 
               <div>
                 <h1 className="font-zcool text-white text-center lg:text-start text-[20px] lg:text-[50px] mb-5">
-                  Cluster Internal Security.
+                  Cluster Internet Security.
                 </h1>
                 <div className="flex justify-center lg:justify-start items-center gap-7 mb-8">
                   <div className="">
@@ -119,7 +129,7 @@ const Slider = () => {
                       className="w-[30px] h-[20px]"
                     />
                     </div>
-                    <p className="mt-2 text-white text-[10px] lg:text-sm">Farewell</p>
+                    <p className="mt-2 text-white text-[10px] lg:text-sm">Firewell</p>
                   </div>
                   <div className="">
                   <div className="flex justify-center">
@@ -156,7 +166,7 @@ const Slider = () => {
                   <div className="">
                     <div className="flex justify-center">
                     <Image
-                      src={Icon1}
+                      src={Icon10}
                       alt="Icon 1"
                       className="w-[20px] h-[20px]"
                     />
@@ -168,7 +178,7 @@ const Slider = () => {
                   <div className="">
                   <div className="flex justify-center">
                     <Image
-                      src={Icon2}
+                      src={Icon11}
                       alt="Icon 1"
                       className="w-[30px] h-[20px]"
                     />
@@ -178,7 +188,7 @@ const Slider = () => {
                   <div className="">
                   <div className="flex justify-center">
                     <Image
-                      src={Icon3}
+                      src={Icon12}
                       alt="Icon 1"
                       className="w-[20px] h-[20px]"
                     />
@@ -188,7 +198,7 @@ const Slider = () => {
                   <div className="">
                   <div className="flex justify-center">
                     <Image
-                      src={Icon4}
+                      src={Icon13}
                       alt="Icon 1"
                       className="w-[20px] h-[20px]"
                     />
@@ -204,42 +214,45 @@ const Slider = () => {
                   <div className="">
                     <div className="flex justify-center">
                     <Image
-                      src={Icon5}
+                      src={Icon14}
                       alt="Icon 1"
                       className="w-[20px] h-[20px]"
                     />
                     </div>
-                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">Anti-virus Scanner</p>
+                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">
+                      Anti-phishing</p>
                   </div>
                   <div className="">
                   <div className="flex justify-center">
                     <Image
-                      src={Icon6}
-                      alt="Icon 1"
-                      className="w-[30px] h-[20px]"
-                    />
-                    </div>
-                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">Farewell</p>
-                  </div>
-                  <div className="">
-                  <div className="flex justify-center">
-                    <Image
-                      src={Icon7}
+                      src={Icon17}
                       alt="Icon 1"
                       className="w-[20px] h-[20px]"
                     />
                     </div>
-                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">Pc Optimizer</p>
+                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">Firewell</p>
                   </div>
                   <div className="">
                   <div className="flex justify-center">
                     <Image
-                      src={Icon7}
+                      src={Icon3}
                       alt="Icon 1"
                       className="w-[20px] h-[20px]"
                     />
                     </div>
-                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">Pc Optimizer</p>
+                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">
+                      Anti Spam</p>
+                  </div>
+                  <div className="">
+                  <div className="flex justify-center">
+                    <Image
+                      src={Icon16}
+                      alt="Icon 1"
+                      className="w-[20px] h-[20px]"
+                    />
+                    </div>
+                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">
+                      Complex Protection</p>
                   </div>
                  
                 </div>

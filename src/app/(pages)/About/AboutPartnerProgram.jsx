@@ -29,7 +29,7 @@ const AboutPartnerProgram = () => {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl lg:px-10 mx-auto text-center">
-        <h2 className="text-xl lg:text-4xl font-bold mb-5">PARTNER PROGRAMS</h2>
+        <h2 className="text-xl lg:text-4xl font-bold mb-5">OUR PRINCIPALS</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
           {programs.map((program, index) => (
             <div key={index} className="text-center">
