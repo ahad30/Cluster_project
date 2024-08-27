@@ -55,6 +55,7 @@ export default function RootLayout({ children }) {
   <option value="Hongkong">Hongkong</option>
   <option value="India">India</option>
   <option value="Malaysia">Malaysia</option>
+  <option value="Malaysia">Nepal</option>
   <option value="Singapore">Singapore</option>
   <option value="Turkey">Turkey</option>
   <option value="United Arab Emirates">United Arab Emirates</option>
