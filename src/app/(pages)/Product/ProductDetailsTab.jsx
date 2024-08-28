@@ -4,7 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
 const ProductDetailsTab = ({product}) => {
-  console.log(product)
+  // console.log(product)
   return (
     <div className="space-y-4 px-5 lg:px-10 w-full lg:max-w-7xl mx-auto">
       <h2 className="lg:text-3xl text-lg font-semibold mb-14 text-center uppercase">about product</h2>

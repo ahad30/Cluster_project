@@ -11,6 +11,19 @@ import Icon4 from "../../../../../public/Products/Elements/Icon-4.png";
 import Icon5 from "../../../../../public/Products/Elements/Icon-5.png";
 import Icon6 from "../../../../../public/Products/Elements/Icon-6.png";
 import Icon7 from "../../../../../public/Products/Elements/Icon-7.png";
+import P2Icon1 from "../../../../../public/Products/Elements/Product-2/P2Icon1.png";
+import P2Icon2 from "../../../../../public/Products/Elements/Product-2/P2Icon2.png";
+import P2Icon3 from "../../../../../public/Products/Elements/Product-2/P2Icon3.png";
+import P2Icon4 from "../../../../../public/Products/Elements/Product-2/P2Icon4.png";
+import P2Icon5 from "../../../../../public/Products/Elements/Product-2/P2Icon5.png";
+import P2Icon6 from "../../../../../public/Products/Elements/Product-2/P2Icon6.png";
+import P2Icon7 from "../../../../../public/Products/Elements/Product-2/P2Icon7.png";
+import P2Icon8 from "../../../../../public/Products/Elements/Product-2/P2Icon8.png";
+import P2Icon9 from "../../../../../public/Products/Elements/Product-2/P2Icon9.png";
+import P3Icon1 from "../../../../../public/Products/Elements/Product-2/P3Icon1.png";
+import P3Icon2 from "../../../../../public/Products/Elements/Product-2/P3Icon2.png";
+
+
 import ProductDetailsTab from "../ProductDetailsTab";
 import { FaCartShopping } from "react-icons/fa6";
 import IconList from "../IconList";
@@ -24,6 +37,51 @@ const ProductDetails = ({ params }) => {
       title: "Cluster Antivirus",
       description: "Advanced Security for small and medium companies.",
       price: "490",
+      icons: [
+        {
+          icon: Icon1,
+          title: "Firewall",
+          descriptionIcon: Icon1,
+          descriptionTitle: "Firewall",
+          descriptionText: "Sets the rules of incoming and outgoing connections for programs installed on your PC",
+        },
+        {
+          icon: Icon2,
+          title: "Anti-phishing",
+          descriptionIcon: Icon2,
+          descriptionTitle: "Anti-phishing",
+          descriptionText: "Blocks websites designed to steal personal user data",
+        },
+        {
+          icon: Icon3,
+          title: "Anti-spam",
+          descriptionIcon: Icon3,
+          descriptionTitle: "Anti-spam",
+          descriptionText: "Blocks penetration of spam messages on the user's PC",
+        },
+        {
+          icon: Icon4,
+          title: "Parental control",
+          descriptionIcon: Icon4,
+          descriptionTitle: "Parental control",
+          descriptionText: "Provides parents an effective tool for monitoring of child's activity on the PC",
+        },
+        {
+          icon: Icon5,
+          title: "Optimizer PC",
+          descriptionIcon: Icon5,
+          descriptionTitle: "Optimizer PC",
+          descriptionText: "Allows to identify junk system files and to free more disk space",
+        },
+        {
+          icon: Icon6,
+          title: "Process Manager",
+          descriptionIcon: Icon6,
+          descriptionTitle: "Process Manager",
+          descriptionText: "Allows you to control and manage running applications and processes.",
+        },
+      
+      ],
       description1: {
         title: "Reliable protection against viruses",
         childDescription: `The antivirus protects your PC from viruses, spyware, Trojans, and other malicious programs.
@@ -123,11 +181,79 @@ description12: {
         programVersion: "3.0.2368.0"
       }
     },
+
     {
       id: 2,
       image: product2Image,
       title: "Cluster! Internet Security",
       description: "Solution which is ideal for active internet users",
+      icons: [
+        {
+          icon: P2Icon1,
+          title: "Anti-virus",
+          descriptionIcon: P2Icon1,
+          descriptionTitle: "Anti-virus",
+          descriptionText: "Includes full features of the antivirus.",
+        },
+        {
+          icon: P2Icon2,
+          title: "Anti-phishing",
+          descriptionIcon: P2Icon2,
+          descriptionTitle: "Anti-phishing",
+          descriptionText: "Blocks websites designed to steal personal user data.",
+        },
+        {
+          icon: P2Icon3,
+          title: "Anti-spam",
+          descriptionIcon: P2Icon3,
+          descriptionTitle: "Anti-spam",
+          descriptionText: "Blocks penetration of spam messages on the user's PC.",
+        },
+        {
+          icon: P2Icon4,
+          title: "Firewall",
+          descriptionIcon: P2Icon4,
+          descriptionTitle: "Firewall",
+          descriptionText: "Sets the rules of incoming and outgoing connections for programs installed on your PC.",
+        },
+        {
+          icon: P2Icon5,
+          title: "PC Optimizer",
+          descriptionIcon: P2Icon5,
+          descriptionTitle: "PC Optimizer",
+          descriptionText: "Allows identifying junk system files and freeing more disk space.",
+        },
+        {
+          icon: P2Icon6,
+          title: "Virtual Keyboard",
+          descriptionIcon: P2Icon6,
+          descriptionTitle: "Virtual Keyboard",
+          descriptionText: "Saves the password from being stolen by hackers.",
+        },
+        {
+          icon: P2Icon7,
+          title: "User-friendly interface",
+          descriptionIcon: P2Icon7,
+          descriptionTitle: "User-friendly interface",
+          descriptionText: "Has a simple and friendly user interface.",
+        },
+        {
+          icon: P2Icon8,
+          title: "Real-time support",
+          descriptionIcon: P2Icon8,
+          descriptionTitle: "Real-time support",
+          descriptionText: "Provides round-the-clock telephone support for users.",
+        },
+        {
+          icon: P2Icon9,
+          title: "High performance",
+          descriptionIcon: P2Icon9,
+          descriptionTitle: "High performance",
+          descriptionText: "Consumes low system resources.",
+        },
+      ],
+      
+      
       price: "1099",
         description1: {
           title: "Reliable protection against viruses",
@@ -208,12 +334,79 @@ description12: {
         programVersion: "3.0.2368.0"
       }
     },
+    
     {
       id: 3,
       image: product3Image,
       title: "Cluster! Total Security",
       description: "Product which will provide you the highest level of protection",
       price: "1450",
+      icons: [
+        {
+          icon: P2Icon4,
+          title: "Firewall",
+          descriptionIcon: P2Icon4,
+          descriptionTitle: "Firewall",
+          descriptionText: "Sets the rules of incoming and outgoing connections for programs installed on your PC.",
+        },
+        {
+          icon: P2Icon2,
+          title: "Anti-phishing",
+          descriptionIcon: P2Icon2,
+          descriptionTitle: "Anti-phishing",
+          descriptionText: "Blocks websites designed to steal personal user data.",
+        },
+        {
+          icon: P2Icon3,
+          title: "Anti-spam",
+          descriptionIcon: P2Icon3,
+          descriptionTitle: "Anti-spam",
+          descriptionText: "Blocks penetration of spam messages on the user's PC.",
+        },
+        {
+          icon: P3Icon1,
+          title: "Parental control",
+          descriptionIcon: P3Icon1,
+          descriptionTitle: "Parental control",
+          descriptionText: "Provides parents an effective tool for monitoring of child's activity on the PC.",
+        },
+        {
+          icon: P2Icon5,
+          title: "Optimizer PC",
+          descriptionIcon: P2Icon5,
+          descriptionTitle: "Optimizer PC",
+          descriptionText: "Allows to identify junk system files and to free more disk space.",
+        },
+        {
+          icon: P2Icon6,
+          title: "Process Manager",
+          descriptionIcon: P2Icon6,
+          descriptionTitle: "Process Manager",
+          descriptionText: "Allows you to control and manage running applications and processes.",
+        },
+        {
+          icon: P2Icon8,
+          title: "Startup Manager",
+          descriptionIcon: P2Icon8,
+          descriptionTitle: "Startup Manager",
+          descriptionText: "Utility of workload optimization has been designed to increase the speed of your PC.",
+        },
+        {
+          icon: P3Icon2,
+          title: "Privacy protection",
+          descriptionIcon: P3Icon2,
+          descriptionTitle: "Privacy protection",
+          descriptionText: "Program that allows to remove traces of the user's work on PC.",
+        },
+        {
+          icon: P2Icon8,
+          title: "Operative support 24/7",
+          descriptionIcon: P2Icon8,
+          descriptionTitle: "Operative support 24/7",
+          descriptionText: "Round-the-clock telephone support for users.",
+        },
+      ],
+      
       description1: {
         title: "Reliable protection against viruses",
         childDescription: "Antivirus protects your PC from viruses, spyware, Trojans and other malicious programs.\n\nThe basis of data protection against all types of malicious software is built on the use of the actual virus database, containing over 15 million malware's signatures and advanced module of proactive protection.\n\nThis module is the core of the entire security system, which is based on the basis of Cluster Internet Security product. A unique feature of this module is modern virus signature database that is updated every day. It should be noted that such data do not overload neither server nor local PC, as the database is optimized and modernized. Thus, work with it does not affect the computer's performance and does not lead to hanging or slowing down of PC."
@@ -312,16 +505,6 @@ description12: {
   ];
   
 
-  const images = [
-    { id: 1, src: Icon1, alt: "Icon 1", title: "Process Manager" },
-    { id: 2, src: Icon2, alt: "Icon 2", title: "Parental Control" },
-    { id: 3, src: Icon3, alt: "Icon 3", title: "Privacy Protection" },
-    { id: 4, src: Icon4, alt: "Icon 4", title: "Startup Manager" },
-    { id: 5, src: Icon5, alt: "Icon 5", title: "Anti-virus Scanner" },
-    { id: 6, src: Icon6, alt: "Icon 6", title: "Farewell" },
-    { id: 7, src: Icon7, alt: "Icon 7", title: "Pc Optimizer" },
-  ];
-
 
 
   const product = products.find((product) => product?.id == params.id);
@@ -371,7 +554,7 @@ description12: {
             </div>
 
             <div className="mt-3 lg:mt-0">
-              <IconList/>
+              <IconList product={product?.icons}/>
             </div>
 
             <div>
