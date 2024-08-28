@@ -38,20 +38,21 @@ const SupportForm = () => {
     for (const [key, value] of Object.entries(formData)) {
       formBody.append(key, value);
     }
-
+  
     try {
       const response = await fetch("/api/email", {
-        method: "post",
+        method: "POST",
         body: formBody,
       });
-
+  
       if (!response.ok) {
-        throw new Error(`Response status: ${response.status}`);
+        const errorData = await response.text(); // Retrieve the error response body
+        throw new Error(`Response status: ${response.status} - ${errorData}`);
       }
-
+  
       const responseData = await response.json();
-      toast.success("Message successfully sent"); // Success toast notification
-
+      toast.success("Message successfully sent");
+  
       // Reset form fields
       setFormData({
         firstName: "",
@@ -59,13 +60,14 @@ const SupportForm = () => {
         telephone: "",
         message: "",
         file: null,
+        template: "two", // Reset to the default template
       });
     } catch (err) {
-      console.error(err);
-      toast.error("Error, please try resubmitting the form"); 
+      console.error("Error:", err);
+      toast.error("Error, please try resubmitting the form");
     }
   };
-
+  
   return (
     <div className="max-w-[90%] lg:max-w-7xl lg:px-10 mx-auto mb-16">
         <Toaster position="top-center" reverseOrder={false} />
