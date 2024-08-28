@@ -106,9 +106,9 @@ The key to effective technical support lies in the willingness to understand and
 },
 description4: {
   title: "Daily Antivirus Database Updates for Full PC Protection",
-  childDescription: `The Cluster Antivirus Lab releases daily updates to its antivirus database, ensuring protection against thousands of new threats. 
+  childDescription: `Antivirus Lab of Cluster releases daily antivirus database updates, which contain the protection from thousands of new threats.
 
-To safeguard your important data and sensitive information, the development team constantly analyzes emerging threats and devises new detection methods. Currently, the Cluster Antivirus database includes over 15 million virus signatures, providing comprehensive protection for your PC.`
+To make user sure that the attacker would not steal important data or other valuable information from PC, the team of developers constantly analyzes the threats and offers new solutions for the detection of the maximum number of viruses. Currently, anti-virus database of Zillya! Antivirus has more than 15 million records..`
 },
 
 description5: {
