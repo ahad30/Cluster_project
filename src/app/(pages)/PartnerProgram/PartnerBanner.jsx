@@ -22,7 +22,7 @@ const PartnerBanner = () => {
     ></div>
   </section>
   <div className='relative max-w-7xl mx-auto'>
-  <div className='flex justify-center -mt-[150px] mb-[160px]'>
+  <div className='flex justify-center -mt-[150px] mb-[162px]'>
         <Link href="/Product" passHref>
           <button 
            className='bg-white text-green-500 px-3 py-2 cursor-pointer'>
