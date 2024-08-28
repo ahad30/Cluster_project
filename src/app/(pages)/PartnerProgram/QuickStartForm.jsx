@@ -11,8 +11,9 @@ const QuickStartForm = () => {
     telephone: "",
     company: "",
     address: "",
-    template:"one"
+    template: "one"
   });
+  const [loading, setLoading] = useState(false); // Added loading state
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,13 +21,13 @@ const QuickStartForm = () => {
       ...formData,
       [name]: value
     });
+    console.log(setFormData);
   };
-
-
-
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setLoading(true); // Set loading to true when form is submitted
+
     const formBody = new FormData();
     for (const [key, value] of Object.entries(formData)) {
       formBody.append(key, value);
@@ -34,7 +35,7 @@ const QuickStartForm = () => {
 
     try {
       const response = await fetch("/api/email", {
-        method: "post",
+        method: "POST",
         body: formBody,
       });
 
@@ -53,14 +54,15 @@ const QuickStartForm = () => {
         telephone: "",
         company: "",
         address: "",
-          
+        template: "one" // Ensure template is reset
       });
     } catch (err) {
       console.error(err);
       toast.error("Error, please try resubmitting the form"); // Error toast notification
+    } finally {
+      setLoading(false); // Set loading to false after submission is complete
     }
   }
-
 
   return (
     <div className='w-[90%] lg:max-w-[70%] lg:px-10 mx-auto mt-14 border-2 border-primary py-5'>
@@ -140,16 +142,45 @@ const QuickStartForm = () => {
             />
           </div>
         </div>
-        
+
         <div className="flex justify-center mb-5">
-          <input
+          <button
             type="submit"
-            className="bg-primary disabled:cursor-not-allowed disabled:bg-blue-200 text-white px-7 py-1 cursor-pointer"
-          />
+            className="bg-primary disabled:cursor-not-allowed disabled:bg-blue-200 text-white px-7 py-1 cursor-pointer flex items-center"
+            disabled={loading} // Disable button when loading
+          >
+            {loading ? (
+              <>
+                <svg
+                  className="w-5 h-5 mr-2 text-white animate-spin"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 0116 0h-2a6 6 0 10-12 0H4z"
+                  ></path>
+                </svg>
+                Submitting...
+              </>
+            ) : (
+              "Submit"
+            )}
+          </button>
         </div>
       </form>
     </div>
   );
-}
+};
 
 export default QuickStartForm;
