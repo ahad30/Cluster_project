@@ -6,7 +6,8 @@ export async function POST(request) {
 
   const username = "noreply@ownfood.com.bd";
   const password = "HD@OWNFOOD4321";
-  const myEmail = "mainul@smartframeworkbd.com";
+  const myEmail = "help@clusterantivirus.com";
+  const myEmail2 = "sales@clusterantivirus.com"
 
   console.log("dealing with request");
   const formData = await request.formData();
@@ -67,7 +68,7 @@ export async function POST(request) {
 
   const mailOptions = {
     from: username,
-    to: myEmail,
+    to: templateFields.one ? myEmail : templateFields.two ? myEmail2 : "",
     replyTo: email,
     subject: `Website activity from ${email}`,
     html: htmlContent,

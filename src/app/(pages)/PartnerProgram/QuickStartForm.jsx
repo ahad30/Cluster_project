@@ -75,6 +75,7 @@ const QuickStartForm = () => {
             <input
               id="email"
               name="email"
+              required
               type="text"
               value={formData.email}
               onChange={handleChange}
@@ -85,6 +86,7 @@ const QuickStartForm = () => {
           <div className="relative">
             <label htmlFor="firstName">First name *</label>
             <input
+            required
               id="firstName"
               name="firstName"
               type="text"
@@ -98,6 +100,7 @@ const QuickStartForm = () => {
             <label htmlFor="lastName">Last name *</label>
             <input
               id="lastName"
+              required
               name="lastName"
               type="text"
               value={formData.lastName}
@@ -111,6 +114,7 @@ const QuickStartForm = () => {
             <input
               id="telephone"
               name="telephone"
+              required
               type="number"
               value={formData.telephone}
               onChange={handleChange}
@@ -122,6 +126,7 @@ const QuickStartForm = () => {
             <label htmlFor="company">Company *</label>
             <input
               id="company"
+              required
               name="company"
               type="text"
               value={formData.company}
@@ -135,6 +140,7 @@ const QuickStartForm = () => {
             <input
               id="address"
               name="address"
+              required
               type="text"
               value={formData.address}
               onChange={handleChange}

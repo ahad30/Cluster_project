@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Icon1 from "../../../../public/Support/facebook.svg";
 import Icon2 from "../../../../public/Support/linkedin.svg";
 import Icon3 from "../../../../public/Support/youtube.svg";
@@ -13,11 +13,11 @@ const SupportForm = () => {
     email: "",
     telephone: "",
     message: "",
-    file: null,
+    file: "null",
     template: "two"
   });
   const [loading, setLoading] = useState(false); // Added loading state
-
+  const fileInputRef = useRef(null);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -55,7 +55,8 @@ const SupportForm = () => {
 
       const responseData = await response.json();
       toast.success("Message successfully sent");
-
+      
+      setLoading(false); // Set loading to false after submission is complete
       // Reset form fields
       setFormData({
         firstName: "",
@@ -66,11 +67,14 @@ const SupportForm = () => {
         file: null,
         template: "two", // Reset to the default template
       });
-    } catch (err) {
+      if (fileInputRef.current) {
+        fileInputRef.current.value = "";
+      }
+
+    } 
+    catch (err) {
       console.error("Error:", err);
       toast.error("Error, please try resubmitting the form");
-    } finally {
-      setLoading(false); // Set loading to false after submission is complete
     }
   };
 
@@ -112,6 +116,7 @@ const SupportForm = () => {
                   id="firstName"
                   name="firstName"
                   type="text"
+                  required
                   value={formData.firstName}
                   onChange={handleChange}
                   className="peer h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-b-primary"
@@ -124,6 +129,7 @@ const SupportForm = () => {
                   id="lastName"
                   name="lastName"
                   type="text"
+                  required
                   value={formData.lastName}
                   onChange={handleChange}
                   className="peer h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-b-primary"
@@ -134,6 +140,7 @@ const SupportForm = () => {
             <input
               id="email"
               name="email"
+              required
               type="text"
               value={formData.email}
               onChange={handleChange}
@@ -146,6 +153,7 @@ const SupportForm = () => {
                   id="telephone"
                   name="telephone"
                   type="number"
+                  required
                   value={formData.telephone}
                   onChange={handleChange}
                   className="peer h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-b-primary"
@@ -155,6 +163,7 @@ const SupportForm = () => {
               <div className="relative">
                 <textarea
                   id="message"
+                  required
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
@@ -167,11 +176,12 @@ const SupportForm = () => {
                 <label htmlFor="file">
                   Add file and press &apos;Upload&apos;
                 </label>
-                <div className="lg:border lg:border-gray-600 lg:border-r-0 flex items-center mt-3">
+                <div className=" flex items-center mt-3">
                   <input
                     id="file"
                     name="file"
                     type="file"
+                    ref={fileInputRef}
                     onChange={handleFileChange}
                     className="ms-1"
                   />
