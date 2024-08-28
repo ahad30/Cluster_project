@@ -1,14 +1,13 @@
 "use client"
 import React from 'react'
-import Slider from '../HomePage/Slider'
-import HomeProduct from '../HomePage/HomeProduct/HomeProduct'
-import BecomePartner from '../HomePage/BecomePartner'
+import HomePage from '../HomePage/pages'
+import DashboardTitle from '@/components/DashboardTitle'
+
 const Home = () => {
   return (
     <div>
-    <Slider/>
-    <HomeProduct/>
-    <BecomePartner/>
+      <DashboardTitle windowTitle={'Home'}/>
+      <HomePage/>
     </div>
   )
 }

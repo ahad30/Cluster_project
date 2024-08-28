@@ -66,7 +66,7 @@ const Header = () => {
         <div className="flex items-center justify-between text-blue-gray-900">
           <div className="flex items-center">
             <Typography as="div" className="mr-11 cursor-pointer py-1.5 font-medium">
-              <Link href="/" legacyBehavior>
+              <Link href="/Home" legacyBehavior>
               <Image src={Logo} alt="Cluster" className="w-[120px] h-[30px]"/>
               </Link>
             </Typography>

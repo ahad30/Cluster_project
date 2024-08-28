@@ -7,6 +7,7 @@ import product1Image from "../../../../public/Products/Elements/Product-1.png"
 import product2Image from "../../../../public/Products/Elements/Product-2.png"
 import product3Image from "../../../../public/Products/Elements/Product-3.png"
 import BecomePartner from "../HomePage/BecomePartner";
+import DashboardTitle from "@/components/DashboardTitle";
 
 const products = [
   {
@@ -143,6 +144,7 @@ const page = () => {
 
   return (
     <div className="lg:max-w-7xl lg:px-10 mx-auto p-6">
+         <DashboardTitle windowTitle={'Products'}/>
        <h1 className="font-bold">Select the antivirus protection that's right for you!</h1> 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-2">
         <ProductTab selectedTab={selectedTab} setSelectedTab={setSelectedTab} />

@@ -4,6 +4,7 @@ import PartnerBanner from './PartnerBanner'
 import Stepper from './Stepper'
 import PartnerTabs from './PartnerTabs/PartnerTabs'
 import QuickStartForm from './QuickStartForm'
+import DashboardTitle from '@/components/DashboardTitle'
 
 const PartnerProgram = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -13,6 +14,7 @@ const PartnerProgram = () => {
   };
   return (
     <div>
+         <DashboardTitle windowTitle={'Partner Program'}/>
       <PartnerBanner/>
       <Stepper/>
       <PartnerTabs/>
