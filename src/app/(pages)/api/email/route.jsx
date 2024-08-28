@@ -46,6 +46,7 @@ export async function POST(request) {
     htmlContent = `
       <p>First Name: ${firstName} </p>
       <p>Last Name: ${lastName} </p>
+      <p>Email: ${email} </p>
       <p>Phone Number: ${telephone} </p>
       <p>Message: ${message} </p>
     `;
@@ -90,9 +91,23 @@ export async function POST(request) {
   }
 
   try {
-    const res =  await transporter.sendMail(mailOptions);
+    const res = await transporter.sendMail(mailOptions);
     console.log(res);
-    
+
+    // Send thank you email to the sender
+    const thankYouMailOptions = {
+      from: username,
+      to: email,
+      subject: "Thank You for Your Submission",
+      html: `
+        <p>Dear ${firstName},</p>
+        <p>Thank you for reaching out to us. We have received your message and will get back to you shortly.</p>
+        <p>Best regards,<br>The Team</p>
+      `,
+    };
+
+    await transporter.sendMail(thankYouMailOptions);
+
     return NextResponse.json({ message: "Success: email was sent" });
   } catch (error) {
     console.log(error);
