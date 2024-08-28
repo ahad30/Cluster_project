@@ -20,6 +20,7 @@ const QuickStartForm = () => {
       ...formData,
       [name]: value
     });
+    console.log(setFormData);
   };
 
 
