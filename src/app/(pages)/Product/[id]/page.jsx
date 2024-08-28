@@ -4,13 +4,10 @@ import product1Image from "../../../../../public/Products/Elements/Product-1.png
 import product2Image from "../../../../../public/Products/Elements/Security-1.png";
 import product3Image from "../../../../../public/Products/Elements/Product-3.png";
 import Image from "next/image";
-import Icon1 from "../../../../../public/Products/Elements/Icon-1.png";
-import Icon2 from "../../../../../public/Products/Elements/Icon-2.png";
-import Icon3 from "../../../../../public/Products/Elements/Icon-3.png";
-import Icon4 from "../../../../../public/Products/Elements/Icon-4.png";
-import Icon5 from "../../../../../public/Products/Elements/Icon-5.png";
-import Icon6 from "../../../../../public/Products/Elements/Icon-6.png";
-import Icon7 from "../../../../../public/Products/Elements/Icon-7.png";
+import P1Icon1 from "../../../../../public/Products/Elements/Product-2/P1Icon1.png";
+import P1Icon2 from "../../../../../public/Products/Elements/Product-2/P1Icon2.png";
+import P1Icon3 from "../../../../../public/Products/Elements/Product-2/P1Icon3.png";
+
 import P2Icon1 from "../../../../../public/Products/Elements/Product-2/P2Icon1.png";
 import P2Icon2 from "../../../../../public/Products/Elements/Product-2/P2Icon2.png";
 import P2Icon3 from "../../../../../public/Products/Elements/Product-2/P2Icon3.png";
@@ -39,48 +36,47 @@ const ProductDetails = ({ params }) => {
       price: "490",
       icons: [
         {
-          icon: Icon1,
-          title: "Firewall",
-          descriptionIcon: Icon1,
-          descriptionTitle: "Firewall",
-          descriptionText: "Sets the rules of incoming and outgoing connections for programs installed on your PC",
+          icon: P2Icon1,
+          title: "Anti-virus",
+          descriptionIcon: P2Icon1,
+          descriptionTitle: "Anti-virus",
+          descriptionText: "Includes full features of the antivirus.",
         },
         {
-          icon: Icon2,
-          title: "Anti-phishing",
-          descriptionIcon: Icon2,
-          descriptionTitle: "Anti-phishing",
-          descriptionText: "Blocks websites designed to steal personal user data",
+          icon: P1Icon1,
+          title: "Mail-filter",
+          descriptionIcon: P1Icon1,
+          descriptionTitle: "Mail-filter",
+          descriptionText: "Scans email for threats.",
         },
         {
-          icon: Icon3,
-          title: "Anti-spam",
-          descriptionIcon: Icon3,
-          descriptionTitle: "Anti-spam",
-          descriptionText: "Blocks penetration of spam messages on the user's PC",
+          icon: P1Icon2,
+          title: "USB-protection",
+          descriptionIcon: P1Icon2,
+          descriptionTitle: "USB-protection",
+          descriptionText: "Makes penetration of virus threats via removable drives impossible.",
         },
         {
-          icon: Icon4,
-          title: "Parental control",
-          descriptionIcon: Icon4,
-          descriptionTitle: "Parental control",
-          descriptionText: "Provides parents an effective tool for monitoring of child's activity on the PC",
+          icon: P2Icon7,
+          title: "User-friendly interface",
+          descriptionIcon: P2Icon7,
+          descriptionTitle: "User-friendly interface",
+          descriptionText: "Has a simple and friendly user interface.",
         },
         {
-          icon: Icon5,
-          title: "Optimizer PC",
-          descriptionIcon: Icon5,
-          descriptionTitle: "Optimizer PC",
-          descriptionText: "Allows to identify junk system files and to free more disk space",
+          icon: P2Icon8,
+          title: "Operative support",
+          descriptionIcon: P2Icon8,
+          descriptionTitle: "Operative support",
+          descriptionText: "Provides round-the-clock telephone support for users.",
         },
         {
-          icon: Icon6,
-          title: "Process Manager",
-          descriptionIcon: Icon6,
-          descriptionTitle: "Process Manager",
-          descriptionText: "Allows you to control and manage running applications and processes.",
-        },
-      
+          icon: P1Icon3,
+          title: "Better price",
+          descriptionIcon: P1Icon3,
+          descriptionTitle: "Better price",
+          descriptionText: "Buy only 25 USD per year.",
+        }
       ],
       description1: {
         title: "Reliable protection against viruses",
