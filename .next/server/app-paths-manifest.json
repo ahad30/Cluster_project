@@ -1,14 +1,6 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js",
-  "/(pages)/About/page": "app/(pages)/About/page.js",
-  "/(pages)/Home/page": "app/(pages)/Home/page.js",
-  "/(pages)/PartnerProgram/page": "app/(pages)/PartnerProgram/page.js",
-  "/(pages)/Product/[id]/page": "app/(pages)/Product/[id]/page.js",
-  "/(pages)/Product/clusterBusiness/page": "app/(pages)/Product/clusterBusiness/page.js",
   "/(pages)/Product/page": "app/(pages)/Product/page.js",
-  "/(pages)/Support/page": "app/(pages)/Support/page.js",
-  "/(pages)/api/email/route": "app/(pages)/api/email/route.js",
-  "/(pages)/page": "app/(pages)/page.js"
+  "/(pages)/Home/page": "app/(pages)/Home/page.js"
 }
