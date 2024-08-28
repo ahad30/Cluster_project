@@ -51,7 +51,7 @@ const Stepper = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-10 mt-10">
-      <div className="lg:flex lg:flex-row items-center lg:gap-x-5 space-y-3 lg:space-y-0">
+      <div className="lg:flex lg:flex-row items-center lg:gap-x-5 space-y-7 lg:space-y-0">
         {programs.map((program, index) => (
             <>
           <div 

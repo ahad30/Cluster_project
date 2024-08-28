@@ -4,9 +4,7 @@ import Link from 'next/link';
 
 const PartnerBanner = () => {
 
-   const handleClick = () => {
-    console.log("clicked")
-   }
+
   return (
     <>
     <section className="bg-primary text-white py-20 relative h-[350px]">
@@ -24,9 +22,9 @@ const PartnerBanner = () => {
     ></div>
   </section>
   <div className='relative max-w-7xl mx-auto'>
-  <div className=' ml-[80px]  md:ml-[580px] -mt-[145px] absolute'>
+  <div className='flex justify-center -mt-[150px] mb-[160px]'>
         <Link href="/Product" passHref>
-          <button onClick={handleClick}
+          <button 
            className='bg-white text-green-500 px-3 py-2 cursor-pointer'>
             Sell Cluster Products
           </button>
