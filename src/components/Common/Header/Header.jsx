@@ -32,7 +32,7 @@ const Header = () => {
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       {[
-        { href: "/", label: "Home" },
+        { href: "/Home", label: "Home" },
         { href: "/About", label: "About Us" },
         { href: "/Product", label: "Products" },
         { href: "/PartnerProgram", label: "Partner Program" },
