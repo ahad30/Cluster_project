@@ -28,58 +28,6 @@ const IconList = ({product}) => {
   // console.log(product)
   const [hoveredIcon, setHoveredIcon] = useState(null);
 
-  // const product = [
-  //   {
-  //     icon: Icon1,
-  //     title: "Firewall",
-  //     descriptionIcon: Icon1,
-  //     descriptionTitle: "Firewall",
-  //     descriptionText: "Sets the rules of incoming and outgoing connections for programs installed on your PC",
-  //   },
-  //   {
-  //     icon: Icon2,
-  //     title: "Anti-phishing",
-  //     descriptionIcon: Icon2,
-  //     descriptionTitle: "Anti-phishing",
-  //     descriptionText: "Blocks websites designed to steal personal user data",
-  //   },
-  //   {
-  //     icon: Icon3,
-  //     title: "Anti-spam",
-  //     descriptionIcon: Icon3,
-  //     descriptionTitle: "Anti-spam",
-  //     descriptionText: "Blocks penetration of spam messages on the user's PC",
-  //   },
-  //   {
-  //     icon: Icon4,
-  //     title: "Parental control",
-  //     descriptionIcon: Icon4,
-  //     descriptionTitle: "Parental control",
-  //     descriptionText: "Provides parents an effective tool for monitoring of child's activity on the PC",
-  //   },
-  //   {
-  //     icon: Icon5,
-  //     title: "Optimizer PC",
-  //     descriptionIcon: Icon5,
-  //     descriptionTitle: "Optimizer PC",
-  //     descriptionText: "Allows to identify junk system files and to free more disk space",
-  //   },
-  //   {
-  //     icon: Icon6,
-  //     title: "Process Manager",
-  //     descriptionIcon: Icon6,
-  //     descriptionTitle: "Process Manager",
-  //     descriptionText: "Allows you to control and manage running applications and processes.",
-  //   },
-  //   {
-  //     icon: Icon7,
-  //     title: "Startup Manager",
-  //     descriptionIcon: Icon7,
-  //     descriptionTitle: "Startup Manager",
-  //     descriptionText: "Utility of workload optimization has been designed to increase the speed of your PC.",
-  //   },
-  // ];
-
   const getDescription = () => {
     const icon = product.find((icon) => icon.title === hoveredIcon);
     if (!icon) return null;

@@ -66,9 +66,10 @@ export async function POST(request) {
     },
   });
 
+  const recipientEmail = template === "one" ? myEmail2 : template === "two" ? myEmail : "";
   const mailOptions = {
     from: username,
-    to: templateFields.one ? myEmail : templateFields.two ? myEmail2 : "",
+    to: recipientEmail,
     replyTo: email,
     subject: `Website activity from ${email}`,
     html: htmlContent,
