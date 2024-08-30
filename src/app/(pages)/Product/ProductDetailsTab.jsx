@@ -13,7 +13,7 @@ const ProductDetailsTab = ({ product }) => {
       <Tabs>
         <div className="lg:flex gap-5">
           <div className="lg:border-r-2 lg:border-r-blue-gray-100 lg:h-[550px] lg:me-5">
-            <TabList className="flex flex-col gap-y-2 lg:me-4 text-center lg:text-start">
+            <TabList className="flex flex-col gap-y-2 lg:me-4 text-center lg:text-start list-none">
               <Tab
                 className="py-2 px-4 border-2 border-gray-300  cursor-pointer outline-none lg:w-[250px]"
                 selectedClassName="bg-green-500 text-white "
@@ -36,7 +36,7 @@ const ProductDetailsTab = ({ product }) => {
           </div>
           <div className="mt-5 lg:mt-0">
           <TabPanel>
-  <div className="space-y-4 lg:w-[700px]">
+  <div className="space-y-4 lg:w-[800px]">
     {product?.description
       ?.filter((item, index) => {
         if (product.id === 1) {
@@ -50,10 +50,10 @@ const ProductDetailsTab = ({ product }) => {
       .map((item, index) => (
         <details
           key={index}
-          className="group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
+          className="group border-s-4 border-green-500 bg-gray-50 px-3 py-3 [&_summary::-webkit-details-marker]:hidden"
         >
-          <summary className="flex cursor-pointer items-center justify-between gap-1.5">
-            <h2 className="text-lg font-medium text-gray-900">
+          <summary className="flex cursor-pointer items-center justify-between">
+            <h2 className="text-xs lg:text-lg font-medium text-gray-900">
               {item.title}
             </h2>
 
@@ -74,7 +74,7 @@ const ProductDetailsTab = ({ product }) => {
           </summary>
 
           <p
-            className="text-justify"
+            className="text-justify text-xs mt-3 lg:mt-0 lg:text-sm"
             dangerouslySetInnerHTML={{
               __html: item?.childDescription,
             }}
@@ -85,7 +85,7 @@ const ProductDetailsTab = ({ product }) => {
 </TabPanel>
 
 <TabPanel>
-  <div className="space-y-4 lg:w-[700px]">
+  <div className="space-y-4 lg:w-[800px]">
     {product?.description
       ?.filter((item, index) => {
         if (product.id === 1) {
@@ -99,10 +99,10 @@ const ProductDetailsTab = ({ product }) => {
       .map((item, index) => (
         <details
           key={index}
-          className="group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
+          className="group border-s-4 border-green-500 bg-gray-50 px-3 py-3 [&_summary::-webkit-details-marker]:hidden"
         >
-          <summary className="flex cursor-pointer items-center justify-between gap-1.5">
-            <h2 className="text-lg font-medium text-gray-900">
+          <summary className="flex cursor-pointer items-center justify-between">
+            <h2 className="text-xs lg:text-lg font-medium text-gray-900">
               {item.title}
             </h2>
 
@@ -123,7 +123,7 @@ const ProductDetailsTab = ({ product }) => {
           </summary>
 
           <p
-            className="text-justify"
+            className="text-justify text-xs mt-3 lg:mt-0 lg:text-sm"
             dangerouslySetInnerHTML={{
               __html: item?.childDescription,
             }}

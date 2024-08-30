@@ -5,11 +5,11 @@ import "react-tabs/style/react-tabs.css";
 const BusinessTab = () => {
   return (
     <div className="space-y-4 px-5 lg:px-10 w-full lg:max-w-7xl mx-auto">
-    <h2 className="lg:text-3xl text-lg font-semibold mb-14 text-center uppercase">about product</h2>
+    <h2 className="lg:text-3xl text-xs  font-semibold mb-14 text-center uppercase">about product</h2>
     <Tabs>
       <div className="lg:flex gap-5">
         <div className="lg:border-r-2 lg:border-r-blue-gray-100 lg:h-[550px] lg:me-5">
-          <TabList className="flex flex-col gap-y-2 lg:me-4 text-center lg:text-start">
+          <TabList className="flex flex-col gap-y-2 lg:me-4 text-center lg:text-start list-none">
             <Tab
               className="py-2 px-4 border-2 border-gray-300  cursor-pointer outline-none lg:w-[250px]"
               selectedClassName="bg-green-500 text-white "
@@ -30,15 +30,16 @@ const BusinessTab = () => {
             </Tab>
           </TabList>
         </div>
+
         <div className="mt-5 lg:mt-0">
           <TabPanel>
-         <div className="space-y-4 lg:w-[700px]">
+         <div className="space-y-4 lg:w-[800px]">
          <details
-              className="group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
+              className="group border-s-4 border-green-500 bg-gray-50 px-3 py-3 [&_summary::-webkit-details-marker]:hidden"
               open
             >
               <summary className="flex cursor-pointer items-center justify-between gap-1.5">
-                <h2 className="text-lg font-medium text-gray-900">
+                <h2 className="text-xs lg:text-lg font-medium text-gray-900">
                 Reliable protection of computer in the network
                 </h2>
 
@@ -58,12 +59,13 @@ const BusinessTab = () => {
                 </span>
               </summary>
 
-              <p className="mt-4 leading-relaxed text-gray-700">
-              Cluster Antivirus for Business is a modern solution created to form reliable cyber protection of corporate clients. A distinctive feature of this product is the format of total protection of organization against all types of cyber threats with possibility of centralized management of antivirus software.
+              <p className="text-justify text-xs mt-3 lg:mt-0 lg:text-sm text-gray-700">
+              Cluster Antivirus for Business is a modern solution created to form reliable cyber protection of corporate clients. A distinctive feature of this product is the format of total protection of organization against all types of cyber threats with possibility of centralized management of antivirus software.<br/><br />
+
 
  
 
-Work computers of the network (client side) of organizations will be protected by product of “Internet Security” class with daily updates of virus signatures.
+Work computers of the network (client side) of organizations will be protected by product of “Internet Security” class with daily updates of virus signatures.<br/><br />
 
  
 
@@ -72,12 +74,12 @@ Features of Cluster Antivirus for Business allow to set complete protection of P
             </details>
             
             <details
-              className="group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
+              className="group border-s-4 border-green-500 bg-gray-50 px-3 py-3 [&_summary::-webkit-details-marker]:hidden"
 
             >
               <summary className="flex w-full cursor-pointer items-center justify-between 
               gap-1.5">
-                <h2 className="text-lg font-medium text-gray-900">
+                <h2 className="text-xs lg:text-lg font-medium text-gray-900">
                 Single Center for updates
                 </h2>
 
@@ -97,33 +99,29 @@ Features of Cluster Antivirus for Business allow to set complete protection of P
                 </span>
               </summary>
 
-              <p className="mt-4 leading-relaxed text-gray-700">
-              Cluster! Antivirus for Business is a comprehensive product for cyber defense. Antivirus’ structure is designed to facilitate its management and thin customization.
-
- 
-
-Update of antivirus databases on computers of organization is centralized and does not require every separate PC to be connected to the Internet. All updates of PC inside the corporate network will be received from the server side of anti-virus, which must have access to all PCs.
-
- 
-
-This algorithm helps solve several important system tasks that arise when using other corporate antiviruses:
-
- 
-
-Reduced work time with 1 PC in the scale of total time of service;
-Increased security of distribution of updates by means of reliable and centralized computer of administrator;
-Minimizing the interference of employees in the work of antivirus software;
-Minimizing the time expenses on setting and updating of antivirus.
-              </p>
+              <div className="text-justify text-xs mt-3 lg:mt-0 lg:text-sm text-gray-700">
+                Cluster Antivirus for Business is a comprehensive product for cyber defense. Antivirus’ structure is designed to facilitate its management and thin customization.<br/><br/>
+  
+  Update of antivirus databases on computers of an organization is centralized and does not require every separate PC to be connected to the Internet. All updates for PCs inside the corporate network will be received from the server side of the antivirus, which must have access to all PCs.<br/><br/>
+  
+  This algorithm helps solve several important system tasks that arise when using other corporate antiviruses:<br/><br/>
+  
+  <ul>
+    <li>Reduced work time with 1 PC in the scale of total time of service</li>
+    <li>Increased security of distribution of updates by means of a reliable and centralized computer of the administrator</li>
+    <li>Minimizing the interference of employees in the work of antivirus software</li>
+    <li>Minimizing the time expenses on setting and updating of antivirus</li>
+  </ul>
+              </div>
             </details>
 
             <details
-              className="group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
+              className="group border-s-4 border-green-500 bg-gray-50 px-3 py-3 [&_summary::-webkit-details-marker]:hidden"
             
             >
               <summary className="flex w-full cursor-pointer items-center justify-between 
               gap-1.5">
-                <h2 className="text-lg font-medium text-gray-900">
+                <h2 className="text-xs lg:text-lg font-medium text-gray-900">
                 Quick informing of the administrator about the online dangers
                 </h2>
 
@@ -143,17 +141,17 @@ Minimizing the time expenses on setting and updating of antivirus.
                 </span>
               </summary>
 
-              <p className="mt-4 leading-relaxed text-gray-700">
-              Centralized management of corporate version of Cluster Antivirus for Business allows to keep-in-touch the system of cyber security of the company 24/7/365.
+              <p className="text-justify text-xs mt-3 lg:mt-0 lg:text-sm text-gray-700">
+              Centralized management of corporate version of Cluster Antivirus for Business allows to keep-in-touch the system of cyber security of the company 24/7/365.<br/><br/>
 
  
 
 Management of the entire system of antivirus protection via a single main computer allows most effectively and efficiently to respond to emerging threats or possible hacker attacks.
-
+<br/><br/>
  
 
 IT administrator has the ability to monitor the status of system protection online. All events associated with the detection of virus threats to PCs of the network will be recorded by antivirus and reflected in the administration panel as messages.
-
+<br/><br/>
  
 
 Thus, an expert on cyber security in the company will be able to promptly respond to emerging threats and to minimize the consequences by means of own professional actions.
@@ -161,12 +159,12 @@ Thus, an expert on cyber security in the company will be able to promptly respon
             </details>
 
             <details
-              className="group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
+              className="group border-s-4 border-green-500 bg-gray-50 px-3 py-3 [&_summary::-webkit-details-marker]:hidden"
            
             >
               <summary className="flex w-full cursor-pointer items-center justify-between 
               gap-1.5">
-                <h2 className="text-lg font-medium text-gray-900">
+                <h2 className="text-xs lg:text-lg font-medium text-gray-900">
                 Enhanced possibilities of protection’s administration
                 </h2>
 
@@ -186,25 +184,25 @@ Thus, an expert on cyber security in the company will be able to promptly respon
                 </span>
               </summary>
 
-              <p className="mt-4 leading-relaxed text-gray-700">
-              The system administrator has access to features that will make managing a system of virus protection easy and convenient:
-
- 
-
-Automated (remote) and local (manual) installation of antivirus protection on computers.
-Managing client side via the Internet (using the IP address of the server).
-Control of the defense of network’s computers: launching scans, viewing current events and history, queuing of tasks, performing actions over the found threats, setting the software and system firewall rules, individual settings of client-side antivirus from the administration panel.
-Creating groups that will allow to perform group management of computers in the network.
-Securing settings by password.
-Reception of reports.
-              </p>
+              <div className="text-justify text-xs mt-3 lg:mt-0 lg:text-sm text-gray-700">
+              The system administrator has access to features that will make managing a system of virus protection easy and convenient:<br/><br/>
+  
+  <ul>
+    <li>Automated (remote) and local (manual) installation of antivirus protection on computers.</li>
+    <li>Managing client side via the Internet (using the IP address of the server).</li>
+    <li>Control of the defense of network’s computers: launching scans, viewing current events and history, queuing of tasks, performing actions over the found threats, setting the software and system firewall rules, individual settings of client-side antivirus from the administration panel.</li>
+    <li>Creating groups that will allow performing group management of computers in the network.</li>
+    <li>Securing settings by password.</li>
+    <li>Reception of reports.</li>
+  </ul>
+              </div>
             </details>
             <details
-              className="group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
+              className="group border-s-4 border-green-500 bg-gray-50 px-3 py-3 [&_summary::-webkit-details-marker]:hidden"
               
             >
               <summary className="flex cursor-pointer items-center justify-between gap-1.5">
-                <h2 className="text-lg font-medium text-gray-900">
+                <h2 className="text-xs lg:text-lg font-medium text-gray-900">
                 Autonomy of client side
                 </h2>
 
@@ -224,31 +222,29 @@ Reception of reports.
                 </span>
               </summary>
 
-              <p className="mt-4 leading-relaxed text-gray-700">
-              With all unquestionable pros of centralized control system of cyber security built on the basis of Cluster Antivirus for Business, the program also has the ability to control local antivirus software on work PC. Wherever necessary, the expert of IT security of the company may input changes in the antivirus program of the client side directly on the required PC.
+              <div className="text-justify text-xs mt-3 lg:mt-0 lg:text-sm text-gray-700">
+              With all unquestionable pros of a centralized control system of cybersecurity built on the basis of Zillya! Antivirus for Business, the program also has the ability to control local antivirus software on work PCs. Wherever necessary, the IT security expert of the company may input changes in the antivirus program on the client side directly on the required PC.<br/><br/>
 
- 
+This is possible with the administrator password. The user of the client side of the antivirus has the opportunity to perform actions at his own discretion:<br/><br/>
 
-This is possible with the administrator password. The user of client side of antivirus has the opportunity to perform actions at his own discretion:
+<ul>
+  <li>Run the scan, perform actions on threats;</li>
+  <li>Update the virus databases and program modules;</li>
+  <li>Change settings of file monitor "Guardian", firewall, WEB-filter, and USB-defense.</li>
+</ul><br/>
 
- 
+Such manipulations allow for additional checks of the system of cyber protection at a local PC. In some cases, this extremely handy feature allows for fine-tuning a single personal computer to follow unique needs and objectives.
 
-Run the scan, perform actions on threats;
-Update the virus databases and program modules;
-Change settings of file monitor "Guardian", of firewall, of WEB-filter and USB-defense.
- 
-
-Such manipulations allow to make additional checks of system of cyber protection at local PC. In some cases, this extremely handy feature allows to perform fine-tune at a single personal computer to follow unique needs and objectives.
-              </p>
+              </div>
             </details>
             
             <details
-              className="group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
+              className="group border-s-4 border-green-500 bg-gray-50 px-3 py-3 [&_summary::-webkit-details-marker]:hidden"
 
             >
               <summary className="flex w-full cursor-pointer items-center justify-between 
               gap-1.5">
-                <h2 className="text-lg font-medium text-gray-900">
+                <h2 className="text-xs lg:text-lg font-medium text-gray-900">
                 The possibility of on-line and off-line product activation
                 </h2>
 
@@ -268,14 +264,14 @@ Such manipulations allow to make additional checks of system of cyber protection
                 </span>
               </summary>
 
-              <p className="mt-4 leading-relaxed text-gray-700">
-              Commercial license can be activated in two ways:
-
- 
-
-using the activation code made of 32 characters via the Internet. This code is issued to the user automatically and is used for the standard priority product activation. It can be used again after change of the local network, reinstallation of Cluster Antivirus for Business and so on.
-via license key that does not require an Internet connection at the time of activation. This license key is issued to the user upon request and is used as an emergency, a backup method. Using this way, it is recommended to connect to the Internet as soon as possible, because it is necessary for the correct functioning of the product (virus database updates, software modules updates etc.)!
-              </p>
+              <div className="text-justify text-xs mt-3 lg:mt-0 lg:text-sm text-gray-700">
+              Commercial license can be activated in two ways:<br/><br/>
+  
+  <ul>
+    <li>Using the activation code made of 32 characters via the Internet. This code is issued to the user automatically and is used for the standard priority product activation. It can be used again after changes in the local network, reinstallation of Zillya! Antivirus for Business, and so on.</li>
+    <li>Via a license key that does not require an Internet connection at the time of activation. This license key is issued to the user upon request and is used as an emergency, backup method. Using this way, it is recommended to connect to the Internet as soon as possible, as it is necessary for the correct functioning of the product (virus database updates, software modules updates, etc.)!</li>
+  </ul>
+              </div>
             </details>
 
          </div>
@@ -286,12 +282,12 @@ via license key that does not require an Internet connection at the time of acti
 
 
             <details
-              className="group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
+              className="group border-s-4 border-green-500 bg-gray-50 px-3 py-3 [&_summary::-webkit-details-marker]:hidden"
             
             >
               <summary className="flex w-full cursor-pointer items-center justify-between 
               gap-1.5">
-                <h2 className="text-lg font-medium text-gray-900">
+                <h2 className="text-xs lg:text-lg font-medium text-gray-900">
                 Main components
                 </h2>
 
@@ -311,7 +307,7 @@ via license key that does not require an Internet connection at the time of acti
                 </span>
               </summary>
 
-              <p className="mt-4 leading-relaxed text-gray-700">
+              <p className="text-justify text-xs mt-3 lg:mt-0 lg:text-sm text-gray-700">
             <b>  Admin panel</b> – central management of all client sides and settings of Antivirus server.
 
  
@@ -329,12 +325,12 @@ Allows to adjust the setting and monitoring of the system of anti-virus protecti
             </details>
 
             <details
-              className="group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
+              className="group border-s-4 border-green-500 bg-gray-50 px-3 py-3 [&_summary::-webkit-details-marker]:hidden"
            
             >
               <summary className="flex w-full cursor-pointer items-center justify-between 
               gap-1.5">
-                <h2 className="text-lg font-medium text-gray-900">
+                <h2 className="text-xs lg:text-lg font-medium text-gray-900">
                 Protection modules
                 </h2>
 
@@ -354,24 +350,24 @@ Allows to adjust the setting and monitoring of the system of anti-virus protecti
                 </span>
               </summary>
 
-              <p className="mt-4 leading-relaxed text-gray-700">
-              <p><strong>Antivirus</strong> – can detect and neutralize malicious software on user’s PC. Items falling under the examination: the files on hard disk, USB-drives, operative memory, e-mails.</p>
+              <p className="text-justify text-xs mt-3 lg:mt-0 lg:text-sm text-gray-700">
+  <strong>Antivirus</strong> – can detect and neutralize malicious software on the user’s PC. Items falling under the examination: the files on hard disk, USB drives, operative memory, e-mails.<br/><br/>
 
-<p><strong>This module is a basic of entire system of security</strong> that is based on a Cluster Antivirus for Business. A unique feature of this module is the availability of modern, updated every day, virus signature database. It should be noted that these data do not overload any server or local PC, since the base is optimized and modernized. Thus, work with it does not affect the speed of the central computer and, especially, local workstation and does not lead to hanging downs or slowing of PC.</p>
+  <strong>This module is the basis of the entire system of security</strong> that is based on Cluster Antivirus for Business. A unique feature of this module is the availability of a modern, updated daily virus signature database. It should be noted that these data do not overload any server or local PC, since the base is optimized and modernized. Thus, work with it does not affect the speed of the central computer and, especially, local workstation, and does not lead to hanging down or slowing of the PC.<br/><br/>
 
-<p><strong>The firewall</strong> – controls access of installed on computer programs to the network to setup advanced options. Two modes are available: automatic and interactive (with the possibility of independent processing of each application).</p>
+  <strong>The firewall</strong> – controls the access of installed programs to the network and sets up advanced options. Two modes are available: automatic and interactive (with the possibility of independent processing of each application).<br/><br/>
 
-<p><strong>The presence of firewall in a modern version of corporate antivirus</strong> is a critical necessity. This module can significantly reduce the possibility of infection by malware while surfing the Internet. In addition, the firewall blocks the action of malware that might get on workstation in case of unauthorized attempts to upload information from the Internet to receive other harmful components, fraudulent or new spyware.</p>
+  <strong>The presence of a firewall in a modern version of corporate antivirus</strong> is a critical necessity. This module can significantly reduce the possibility of infection by malware while surfing the Internet. In addition, the firewall blocks the action of malware that might get on the workstation in case of unauthorized attempts to upload information from the Internet to receive other harmful components, fraudulent, or new spyware.<br/><br/>
 
-<p><strong>Web Filter</strong> – controls access of PC to the set online resources: a centralized list of undesirable sites.</p>
+  <strong>Web Filter</strong> – controls access of the PC to the set online resources: a centralized list of undesirable sites.<br/><br/>
 
-<p><strong>The module allows to create own “black lists”</strong> of undesirable Internet resources containing questionable or frankly objectionable material. Web Filter can also be used as an important part of anti-phishing security system built on databases of known spyware sites or suspicious resources that may be involved in fraudulent activity.</p>
+  <strong>The module allows creating your own “black lists”</strong> of undesirable Internet resources containing questionable or frankly objectionable material. Web Filter can also be used as an important part of an anti-phishing security system built on databases of known spyware sites or suspicious resources that may be involved in fraudulent activity.<br/><br/>
 
-<p><strong>USB-protection</strong> – checks flash drives for viruses, analyzes the likelihood of infection of carrier and offers scan on demand.</p>
+  <strong>USB-protection</strong> – checks flash drives for viruses, analyzes the likelihood of infection of the carrier, and offers a scan on demand.<br/><br/>
 
-<p><strong>Checking USB-drives still remains an important aspect</strong> of a total cyber security because they are possible carriers of malware. USB-protection module integrated into Cluster Antivirus for Business scans USB-devices connected to the computer for the presence of malware and prevents them from entering into the secured PC.</p>
+  <strong>Checking USB drives still remains an important aspect</strong> of total cyber security because they are possible carriers of malware. The USB-protection module integrated into Cluster Antivirus for Business scans USB devices connected to the computer for the presence of malware and prevents them from entering the secured PC.
+</p>
 
-              </p>
             </details>
 
 
@@ -380,7 +376,7 @@ Allows to adjust the setting and monitoring of the system of anti-virus protecti
           </TabPanel>
 
           <TabPanel>
-          <h2 class="text-lg font-semibold text-gray-800 mb-4">
+          <h2 class="text-xs lg:text-lg font-semibold text-gray-800 mb-4">
   Minimum system requirements of Cluster Antivirus:
 </h2>
 <ul class="list-disc list-inside space-y-2 text-gray-700">

@@ -46,3 +46,14 @@
   display: none;
 } */
 
+/* Add this to your global CSS or component CSS */
+ul {
+  list-style-type: disc; /* Use 'disc', 'circle', 'square', etc. */
+  padding-left: 1.5rem;  /* Adjust left padding to indent the list */
+  margin-top: 0.5rem;    /* Adjust top margin */
+}
+
+li {
+  margin-bottom: 0.5rem; /* Adjust spacing between list items */
+}
+

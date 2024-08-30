@@ -35,7 +35,7 @@ const Footer = (props) => {
                   Our Partner Program
                 </p>
 
-                <ul className="mt-6 space-y-2 text-sm">
+                <ul className="mt-6 space-y-2 text-sm list-none pl-0">
                   <li>
                     <Link href="/PartnerProgram">
                       <div className="text-white transition hover:opacity-75">
@@ -65,7 +65,7 @@ const Footer = (props) => {
               <div>
                 <p className="font-medium text-green-500">Products</p>
 
-                <ul className="mt-6 space-y-2 text-sm">
+                <ul className="mt-6 space-y-2 text-sm list-none pl-0">
                   <li>
                     <Link href="/Product" passHref>
                       <div className="text-white transition hover:opacity-75 cursor-pointer">
@@ -105,7 +105,7 @@ const Footer = (props) => {
                   Contact Information
                 </p>
 
-                <ul className="mt-6 space-y-2 text-sm">
+                <ul className="mt-6 space-y-2 text-sm list-none pl-0">
                   <li className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 items-center text-white justify-center lg:justify-start">
                     <FaPhoneAlt className="text-green-500 mr-2" />
                     <span className=""> +8809614502010</span>
