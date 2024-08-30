@@ -83,66 +83,66 @@ const ProductDetails = ({ params }) => {
       description: [
         {
           title: "Reliable protection against viruses",
-          childDescription: `The antivirus protects your PC from viruses, spyware, Trojans, and other malicious programs.
+          childDescription: `The antivirus protects your PC from viruses, spyware, Trojans, and other malicious programs.<br/><br/>
       
-      The core of data protection against all types of malware is built on an up-to-date virus database containing over 15 million malware signatures, along with an advanced proactive protection.
+      The core of data protection against all types of malware is built on an up-to-date virus database containing over 15 million malware signatures, along with an advanced proactive protection.<br/><br/>
       
       This module forms the backbone of the entire security system, based on the Cluster! Internet Security product. A unique feature of this module is its modern virus signature database, which is updated daily. Notably, this data does not overload either the server or the local PC, as the database is optimized and modernized. As a result, it does not affect the computer's performance or cause it to hang or slow down.`,
         },
 
         {
           title: "Low System Resource Consumption",
-          childDescription: `The antivirus utilities will not overload your PC, as they consume no more than 512 MB of RAM.
+          childDescription: `The antivirus utilities will not overload your PC, as they consume no more than 512 MB of RAM.<br/><br/>
 
 This level of resource consumption is acceptable not only for modern personal computers but also for those manufactured 3-5 years ago. While Cluster Anti-Virus is running, it does not block or slow down even the most basic computers.`,
         },
         {
           title: "Complete and Free Technical Support",
           childDescription: `
-        The main rule of Cluser is "Anti-virus protection is, above all, high-quality service". The basis of a successful tech support is in-depth knowledge of the products, the desire to "listen" to user, to present information on the level at which it is clear to them. The secret of success is in the desire, the ability will also come.
+        The main rule of Cluser is "Anti-virus protection is, above all, high-quality service". The basis of a successful tech support is in-depth knowledge of the products, the desire to "listen" to user, to present information on the level at which it is clear to them. The secret of success is in the desire, the ability will also come.<br/><br/>
 
-The desire to understand the user and to help him or her is one of the tenets of the successful technical support.
+The desire to understand the user and to help him or her is one of the tenets of the successful technical support.<br/><br/>
 
 Recommendations of highly qualified specialist, described by "cool" slang, may be "empty words" for the client. While the help provided in simple terms, are a recipe for the solution of user's problems and the key to professionalism in the eyes of the user.`,
         },
         {
           title: "Daily Antivirus Database Updates for Full PC Protection",
-          childDescription: `Antivirus Lab of Cluster releases daily antivirus database updates, which contain the protection from thousands of new threats.
+          childDescription: `Antivirus Lab of Cluster releases daily antivirus database updates, which contain the protection from thousands of new threats.<br/><br/>
 
-To make user sure that the attacker would not steal important data or other valuable information from PC, the team of developers constantly analyzes the threats and offers new solutions for the detection of the maximum number of viruses. Currently, anti-virus database of Cluster Antivirus has more than 15 million records..`,
+To make user sure that the attacker would not steal important data or other valuable information from PC, the team of developers constantly analyzes the threats and offers new solutions for the detection of the maximum number of viruses. Currently, anti-virus database of Cluster Antivirus has more than 15 million records.`,
         },
         {
           title: "Behavioral Analyzer (HIPS)",
-          childDescription: `The new line of Cluster antivirus products features innovative proactive technologies, including the cutting-edge Behavioral Analyzer (HIPS).
+          childDescription: `The new line of Cluster antivirus products features innovative proactive technologies, including the cutting-edge Behavioral Analyzer (HIPS).<br/><br/>
 
 This advanced technology is one of the most sophisticated solutions in the global antivirus industry. It works by scanning and analyzing programs to detect potential malicious behavior. If HIPS notices that a program may perform actions harmful to your PC, it blocks the program even before it can launch, ensuring your system remains secure.`,
         },
         {
           title: "Function of Self-Defense",
-          childDescription: `The new line of antiviruses by Cluster has a function of self-defense.
+          childDescription: `The new line of antiviruses by Cluster has a function of self-defense.<br/><br/>
 
 It eliminates the possibility of disabling the protection of your PC as a result of the forced stop using the "Task Manager". This feature is implemented as a response to modern Trojans that are able to get administrative rights on the infected PC and block the work of installed programs, including non-modern antiviruses.`,
         },
         {
           title:
             "Using heuristic analysis technology - detection of new and unknown threats",
-          childDescription: `Blocking of dangerous sites Heuristic Analyzer scans files with similar characteristics.
+          childDescription: `Blocking of dangerous sites Heuristic Analyzer scans files with similar characteristics.<br/><br/>
 
-When a certain number of similar data found in the file, it decides that the program is similar to malicious one.
+When a certain number of similar data found in the file, it decides that the program is similar to malicious one.<br/><br/>
 
-Thus, Cluster AntiVirus can detect malware that has not yet been added to the antivirus database.
+Thus, Cluster AntiVirus can detect malware that has not yet been added to the antivirus database.<br/><br/>
 
 Cluster Antivirus has a built-in heuristic analyzer and helps to protect the system from even those threats that have not yet appeared, but may appear in the future.`,
         },
         {
           title: "Guard (Patrol)",
-          childDescription: `Guard (Patrol) is a real-time file monitoring system designed to detect viruses and other malicious programs as they attempt to infiltrate your computer.
+          childDescription: `Guard (Patrol) is a real-time file monitoring system designed to detect viruses and other malicious programs as they attempt to infiltrate your computer.<br/><br/>
 
 By continuously scanning files, Guard (Patrol) ensures that any potential threats are identified and neutralized before they can cause harm, providing an additional layer of security to your system.`,
         },
         {
           title: "USB Protection",
-          childDescription: `Security module of USB-drives controls the connection of any drive to the USB-ports. Preliminary analysis with following informing of user reliably protects the computer from automatically downloaded objects on disks. So now Cluster will protect you from the automatic start from the flash drive of a virus or worm, even if it is a completely new, unknown virus.
+          childDescription: `Security module of USB-drives controls the connection of any drive to the USB-ports. Preliminary analysis with following informing of user reliably protects the computer from automatically downloaded objects on disks. So now Cluster will protect you from the automatic start from the flash drive of a virus or worm, even if it is a completely new, unknown virus.<br/><br/>
 
 When connecting a new USB-drive, Cluster detects it, performs a brief analysis and informs the user about the evaluated level of security of the disc. In the case of detection of the viruses or any suspicious objects on the flash drive, antivirus immediately prompts the user to remove them.`,
         },
@@ -167,7 +167,7 @@ When connecting a new USB-drive, Cluster detects it, performs a brief analysis a
 
         {
           title: "Scan Scheduler",
-          childDescription: `You do not need to remind yourself every day that you need to check your computer for malware.
+          childDescription: `You do not need to remind yourself every day that you need to check your computer for malware.<br/><br/>
 
 CLuster Antivirus contains a function of Scheduler - the scannig of the PC, which can be configured in the most convenient way for you. The user can configure automatic scan one-time, daily, hourly, weekly or monthly.`,
         },
