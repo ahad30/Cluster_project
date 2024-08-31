@@ -125,7 +125,7 @@ const HomeProduct = () => {
           </p>
         )}
         <button
-          className="text-white px-7 py-2 font-semibold mt-4 bg-green-500 hover:bg-green-600 transition-colors duration-300 text-sm uppercase"
+          className="text-white px-7 py-2 font-semibold  bg-green-500 hover:bg-green-600 transition-colors duration-300 text-sm uppercase"
         >
           {product.detailsText} &gt;
         </button>
