@@ -32,8 +32,10 @@ const ProductDetails = ({ params }) => {
       id: 1,
       image: product1Image,
       title: "Cluster Antivirus",
+      bannerTitle1: 'Stay protected when you are buying online, surfing Internet or chatting with your friends.',
+      bannerTitle2: "  Proactive technologies of defense will make the product perfect for active Internet users.",
       description: "Advanced Security for small and medium companies.",
-      price: "490",
+      price: "790",
       icons: [
         {
           icon: P2Icon1,
@@ -77,7 +79,7 @@ const ProductDetails = ({ params }) => {
           title: "Better price",
           descriptionIcon: P1Icon3,
           descriptionTitle: "Better price",
-          descriptionText: "Buy only 25 USD per year.",
+          descriptionText: "Buy only 790 BDT per year.",
         },
       ],
       description: [
@@ -179,7 +181,9 @@ CLuster Antivirus contains a function of Scheduler - the scannig of the PC, whic
     {
       id: 2,
       image: product2Image,
-      title: "Cluster! Internet Security",
+      title: "Cluster Internet Security",
+      bannerTitle1: 'Stay protected when you are buying online, surfing Internet or chatting with your friends.',
+      bannerTitle2: "  Proactive technologies of defense will make the product perfect for active Internet users.",
       description: "Solution which is ideal for active internet users",
       icons: [
         {
@@ -256,31 +260,52 @@ CLuster Antivirus contains a function of Scheduler - the scannig of the PC, whic
         {
           title: "Reliable protection against viruses",
           childDescription:
-           `Antivirus protects your PC from viruses, spyware, Trojans and other malicious programs.
-
-The basis of data protection against all types of malicious software is built on the use of the actual virus database, containing over 15 million malware's signatures and advanced module of proactive protection.
-
-This module is the core of the entire security system, which is based on the basis of Cluster Internet Security product. A unique feature of this module is modern virus signature database that is updated every day. It should be noted that such data do not overload neither server nor local PC, as the database is optimized and modernized. Thus, work with it does not affect the computer's performance and does not lead to hanging or slowing down of PC.`,
+            "Antivirus protects your PC from viruses, spyware, Trojans and other malicious programs.<br/><br/>The basis of data protection against all types of malicious software is built on the use of the actual virus database, containing over 15 million malware's signatures and advanced module of proactive protection.<br/><br/>This module is the core of the entire security system, which is based on the basis of Cluster Internet Security product. A unique feature of this module is modern virus signature database that is updated every day. It should be noted that such data do not overload neither server nor local PC, as the database is optimized and modernized. Thus, work with it does not affect the computer's performance and does not lead to hanging or slowing down of PC.",
         },
-        {
+     {
           title: "The complexity of Internet protection",
           childDescription:
-            'It is performed by means of a powerful firewall and WEB-filter, capable of up-to-date data check that come on the user\'s PC and to block sites with detected threats.The presence of a firewall in the modern version of antivirus is a critical necessity. This module allows to significantly reduce the possibility of infection by malware via the Internet surfing. In addition, the firewall blocks the actions of malware that might get on the PC as unauthorized attempt to upload information from the Internet, reception of additional malicious components, new fraudulent or spyware capabilities.The module allows to create your own "black lists" of undesirable Internet resources containing dubious or frankly objectionable materials. Web filter can also be used as an important part of anti-phishing security system based on databases of known spyware sites or suspicious sites that could potentially be involved in fraudulent activity.',
+            'It is performed by means of a powerful firewall and WEB-filter, capable of up-to-date data check that come on the user\'s PC and to block sites with detected threats.<br/><br/>The presence of a firewall in the modern version of antivirus is a critical necessity. This module allows to significantly reduce the possibility of infection by malware via the Internet surfing. In addition, the firewall blocks the actions of malware that might get on the PC as unauthorized attempt to upload information from the Internet, reception of additional malicious components, new fraudulent or spyware capabilities.<br/><br/>The module allows to create your own "black lists" of undesirable Internet resources containing dubious or frankly objectionable materials. Web filter can also be used as an important part of anti-phishing security system based on databases of known spyware sites or suspicious sites that could potentially be involved in fraudulent activity.',
         },
-        {
+     {
           title: "Low level of PC download",
           childDescription:
-            "Utilities will not overload your PC, because anti-virus consumes no more than 512 MB of PC's RAM.It should be noted that such level of consumption is acceptable not only for modern personal computers, but also for those, which were manufactured 3-5 years ago. During Cluster Internet Security work, it does not block nor slow down the most unpretentious computers.",
+            "Utilities will not overload your PC, because anti-virus consumes no more than 512 MB of PC's RAM.<br/><br/>It should be noted that such level of consumption is acceptable not only for modern personal computers, but also for those, which were manufactured 3-5 years ago. During Cluster Internet Security work, it does not block nor slow down the most unpretentious computers.",
         },
-        {
+     {
           title: "Complete and free technical support",
           childDescription:
-            'The main rule of Cluster is "Anti-virus protection is, above all, high-quality service".The basis of a successful tech support is in-depth knowledge of the products, the desire to "listen" to user, to present information on the level at which it is clear to them. The secret of success is in the desire, the ability will also come.The desire to understand the user and to help him or her is one of the tenets of the successful technical support. Recommendations of highly qualified specialist, described by "cool" slang, may be "empty words" for the client. While the help provided in simple terms, are a recipe for the solution of user\'s problems and the key to professionalism in the eyes of the user.',
+            'The main rule of Cluster is "Anti-virus protection is, above all, high-quality service".<br/><br/>The basis of a successful tech support is in-depth knowledge of the products, the desire to "listen" to user, to present information on the level at which it is clear to them. The secret of success is in the desire, the ability will also come.<br/><br/>The desire to understand the user and to help him or her is one of the tenets of the successful technical support. Recommendations of highly qualified specialist, described by "cool" slang, may be "empty words" for the client. While the help provided in simple terms, are a recipe for the solution of user\'s problems and the key to professionalism in the eyes of the user.',
         },
-        {
+     {
           title: "Additional modules of the product",
           childDescription:
-            'Optimizer is a tool that speeds up your PC. The software module allows to find unnecessary files and programs that overload operating system, and to remove them. The principle of its work is based on check of certain computer memory locations where temporary files are stored. To such categories optimizer attributes browsers\' cache, search history, which they store, OS updates, "service" files and so on.After scanning, the tool displays a list of all files, which are offered to be removed, and - most importantly, - their size alone, and the total amount of memory that will be released. The decision about removal takes user directly.File Shredder is a special program that allows to safely remove the most unwanted sensitive files without the possibility of their recovery.The way of operation of programs-shredders is that the file that is planned to be removed, is subjected to multi wipe-off. In fact, it is filled with meaningless information garbage (random numbers, characters, symbols etc.), which completely distorts its contents, without the restoration possibility. After this, it is removed from the hard drive. Even if such file would ever be found by hackers and they would try to restore it, they would not receive any benefit from such actions.',
+           `
+    <strong>Optimizer:</strong> Optimizer is a tool that speeds up your PC. The software module allows finding unnecessary files and programs that overload the operating system and removing them. The principle of its work is based on checking certain computer memory locations where temporary files are stored. Such categories include browser caches search history, OS updates "service" files, and so on.<br><br>
+    
+    After scanning, the tool displays a list of all files offered for removal and, most importantly, their size and the total amount of memory that will be released. The decision about removal is made directly by the user.<br><br>
+    
+    <strong>Parental Control:</strong> Parental Control is a module that allows parents to control the websites visited by young PC users that they find undesirable.<br><br>
+    
+    It is important to understand that the essence of "Parental Control" is to create a safe informational space for the child. Modern parental control programs are complex filters that prevent minors from visiting certain sites, the content of which, according to their parents, is undesirable for viewing.<br><br>
+    
+    <strong>Process Manager:</strong> The Process Manager acts as a built-in controller of applications and processes, allowing you to control and manage running applications and processes.<br><br>
+    
+    Process Manager provides the user with information on currently running applications and services and data on resource consumption. The utility allows forcibly terminating undesirable processes if they hang or excessively use memory, which could adversely affect PC performance.<br><br>
+    
+    <strong>Startup Manager:</strong> The Startup Manager utility optimizes workload by allowing you to analyze the applications that are loaded at startup and optimize boot time by disabling applications and some system functions that are not used.<br><br>
+    
+    The utility is designed to increase the speed of your PC.<br><br>
+    
+    "Startup Manager" allows you to search for programs and services of the operating system that are not used by the user but are still automatically loaded and consume computer resources and to disable their automatic loading.<br><br>
+    
+    <strong>Privacy Protection:</strong> Privacy Protection is a program that allows the removal of traces of the user's work on the PC. The module searches for configuration and temporary files created during the operation of standard software packages and performs their clean-up.<br><br>
+    
+    <strong>File Shredder:</strong> File Shredder is a special program that allows the safe removal of unwanted sensitive files without the possibility of their recovery.<br><br>
+    
+    The way these programs operate is that the file planned for removal is subjected to multiple wipe-offs. It is filled with meaningless information (random numbers, characters, symbols, etc.), which completely distorts its contents without the possibility of restoration. After this, it is removed from the hard drive. Even if such a file were ever found by hackers and they tried to restore it, they would not benefit from such actions.
+
+  `,
         },
         {
           title: "A complete set of antivirus functionality",
@@ -347,7 +372,10 @@ This module is the core of the entire security system, which is based on the bas
     {
       id: 3,
       image: product3Image,
-      title: "Cluster! Total Security",
+      title: "Cluster Total Security",
+      bannerTitle1: 'The product with the highest level of protection!',
+      bannerTitle2: ` Additionally, it has instrument of computer'  s control and module "Parental control".`,
+      bannerTitle3: 'This product is ideal for whose, who cares about information security of all family.',
       description:
         "Product which will provide you the highest level of protection",
       price: "1450",
@@ -595,27 +623,25 @@ Privacy Protection: Privacy protection program is a program that allows removing
               <h1 className="font-zcool text-white text-center lg:text-start text-[20px] lg:text-[35px]">
                 {product?.title}
               </h1>
-              <h1 className=" text-white text-sm text-center lg:text-start lg:text-[20px]  font-semibold mb-5 mt-3 lg:mt-5">
-                Maximum protection against cyber threats!
+              <h1 className=" text-white mb-5 text-center lg:text-start text-sm lg:text-base mt-3">
+              {product?.bannerTitle1}
               </h1>
               <p className="text-white mb-5 text-center lg:text-start text-sm lg:text-base">
-                Proactive technology of protection will defend your PC from
-                malicious software and scams.
+              {product?.bannerTitle2}
               </p>
               <p className="text-white  text-center lg:text-start text-sm lg:text-base">
-                {" "}
-                If you are looking for reliable and simple antivirus, this
-                product will be ideal for you.
+              {product?.bannerTitle3}
+
               </p>
               <p className="text-white mt-5  text-center lg:text-start text-sm lg:text-base">
-                15 days trial period available{" "}
+                30 days trial period available
               </p>
 
               <div className="flex justify-center lg:justify-start">
                 <button className="border text-primary bg-white px-5 py-1 mt-4 hover:bg-green-500   rounded-md font-semibold hover:text-white transition-all duration-300">
                   <div className="flex items-center gap-x-2">
                     <FaCartShopping className="" />
-                    <p className="">ONLY {product.price} USD</p>
+                    <p className="">ONLY {product.price} BDT</p>
                   </div>
                 </button>
               </div>
@@ -634,7 +660,7 @@ Privacy Protection: Privacy protection program is a program that allows removing
               <Image
                 src={product?.image}
                 alt=""
-                className={`w-[500px] lg:w-[600px] object-cover lg:h-[400px]`}
+                className={`w-[500px] lg:w-[600px]  lg:h-[400px]`}
               />
             </div>
           </div>

@@ -174,7 +174,7 @@ const SupportForm = () => {
 
               <div className="relative">
                 <label htmlFor="file">
-                  Add file and press &apos;Upload&apos;
+                  Add file
                 </label>
                 <div className=" flex items-center mt-3">
                   <input

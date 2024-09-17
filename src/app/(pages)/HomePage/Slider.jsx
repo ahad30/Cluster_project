@@ -62,7 +62,7 @@ const Slider = () => {
 
               <div>
                 <h1 className="font-zcool text-white text-center lg:text-start text-[20px] lg:text-[50px] mb-5">
-                  Cluster Internet Security.
+                  Cluster Internet Security
                 </h1>
                 <div className="flex justify-center lg:justify-start items-center gap-7 mb-8">
                   <div className="">
@@ -129,7 +129,7 @@ const Slider = () => {
                       className="w-[30px] h-[20px]"
                     />
                     </div>
-                    <p className="mt-2 text-white text-[10px] lg:text-sm">Firewell</p>
+                    <p className="mt-2 text-white text-[10px] lg:text-sm">Firewall</p>
                   </div>
                   <div className="">
                   <div className="flex justify-center">
@@ -157,7 +157,7 @@ const Slider = () => {
          
               <div>
                 <h1 className="font-zcool text-white text-center lg:text-start text-[20px] lg:text-[40px]">
-                  Cluster Total Security.
+                  Cluster Total Security
                 </h1>
                 <h1 className=" text-white text-sm text-center lg:text-start lg:text-[20px]  font-semibold mb-5 mt-3 lg:mt-0">
                   Maximum protection against cyber threats!
@@ -230,7 +230,7 @@ const Slider = () => {
                       className="w-[20px] h-[20px]"
                     />
                     </div>
-                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">Firewell</p>
+                    <p className="mt-2 text-white text-[7px] lg:text-[12px]">Firewall</p>
                   </div>
                   <div className="">
                   <div className="flex justify-center">

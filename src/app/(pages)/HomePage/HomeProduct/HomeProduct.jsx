@@ -4,6 +4,8 @@ import product2Image from "../../../../../public/Homepage/Elements/Product-2.png
 import Image from "next/image";
 import Icon1 from "../../../../../public/Homepage/Elements/Icon-windows.png";
 import Icon2 from "../../../../../public/Homepage/Elements/Icon-Android.png";
+import Link from "next/link";
+
 
 const HomeProduct = () => {
   const products = [
@@ -20,6 +22,7 @@ const HomeProduct = () => {
         "Advanced threat detection",
         "User-friendly interface",
       ],
+      Link:"/Product/clusterBusiness"
     },
     {
       icon: Icon1,
@@ -35,6 +38,7 @@ const HomeProduct = () => {
         "Multi-device support",
         "Customizable security settings",
       ],
+       Link:`/Product/3`
     },
     {
       icon: Icon2,
@@ -90,12 +94,17 @@ const HomeProduct = () => {
           </p>
         )}
         
-        <button
-        className={` ${index === 0 ? 'mt-5' : ""} ${index === 2 ? 'mt-5' : ""}
-          text-white px-7 py-2 font-semibold  bg-green-500 hover:bg-green-600 transition-colors duration-300 text-sm  uppercase`}
-        >
-          {product.detailsText} &gt;
-        </button>
+   
+        <Link href={`${product?.Link ? product?.Link : "coming soon"}`}>
+  <button
+    className={` ${index === 0 || index === 2 ? 'mt-5' : ''} 
+      text-white px-7 py-2 font-semibold disabled:cursor-not-allowed  bg-green-500 hover:bg-green-600 transition-colors duration-300 text-sm uppercase`}
+    disabled={!product?.Link} 
+  >
+    {product.detailsText} &gt;
+  </button>
+</Link>
+
         
         <div className="absolute inset-0 bg-white opacity-0 hover:opacity-100 p-6 text-sm text-gray-800 transition-opacity duration-300">
         <div className="flex items-center justify-center lg:justify-start gap-4">
@@ -124,11 +133,17 @@ const HomeProduct = () => {
             {product.price}
           </p>
         )}
+        <Link href={`${product?.Link ? product?.Link : "coming soon"}`}>
         <button
-          className="text-white px-7 py-2 font-semibold mt-4 bg-green-500 hover:bg-green-600 transition-colors duration-300 text-sm uppercase"
+          className="text-white px-7 py-2 font-semibold disabled:cursor-not-allowed  bg-green-500 hover:bg-green-600 transition-colors duration-300 text-sm uppercase"
+        disabled={!product?.Link} 
+
         >
           {product.detailsText} &gt;
         </button>
+        </Link>
+       
+
         </div>
       </div>
       

@@ -67,7 +67,7 @@ const Footer = (props) => {
 
                 <ul className="mt-6 space-y-2 text-sm list-none pl-0">
                   <li>
-                    <Link href="/Product" passHref>
+                    <Link href="/Product/1" passHref>
                       <div className="text-white transition hover:opacity-75 cursor-pointer">
                         Cluster Antivirus
                       </div>
@@ -75,7 +75,7 @@ const Footer = (props) => {
                   </li>
 
                   <li>
-                    <Link href="/Product" passHref>
+                    <Link href="/Product/2" passHref>
                       <div className="text-white transition hover:opacity-75 cursor-pointer">
                         Cluster Internet Security
                       </div>
@@ -83,7 +83,7 @@ const Footer = (props) => {
                   </li>
 
                   <li>
-                    <Link href="/Product" passHref>
+                    <Link href="/Product/3" passHref>
                       <div className="text-white transition hover:opacity-75 cursor-pointer">
                         Cluster Total Security
                       </div>
