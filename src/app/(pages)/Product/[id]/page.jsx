@@ -260,7 +260,11 @@ CLuster Antivirus contains a function of Scheduler - the scannig of the PC, whic
         {
           title: "Reliable protection against viruses",
           childDescription:
-            "Antivirus protects your PC from viruses, spyware, Trojans and other malicious programs.<br/><br/>The basis of data protection against all types of malicious software is built on the use of the actual virus database, containing over 15 million malware's signatures and advanced module of proactive protection.<br/><br/>This module is the core of the entire security system, which is based on the basis of Cluster Internet Security product. A unique feature of this module is modern virus signature database that is updated every day. It should be noted that such data do not overload neither server nor local PC, as the database is optimized and modernized. Thus, work with it does not affect the computer's performance and does not lead to hanging or slowing down of PC.",
+           `Antivirus protects your PC from viruses, spyware, Trojans and other malicious programs.<br/><br/>
+
+The basis of data protection against all types of malicious software is built on the use of the actual virus database, containing over 15 million malware's signatures and advanced module of proactive protection.<br/><br/>
+
+This module is the core of the entire security system, which is based on the basis of Cluster Internet Security product. A unique feature of this module is modern virus signature database that is updated every day. It should be noted that such data do not overload neither server nor local PC, as the database is optimized and modernized. Thus, work with it does not affect the computer's performance and does not lead to hanging or slowing down of PC.`,
         },
      {
           title: "The complexity of Internet protection",
