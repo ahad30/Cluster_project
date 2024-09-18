@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import Logo from "../../../../public/logo-2.png";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import Link from "next/link";
+import { PartnerContext } from "@/components/PartnerProvider";
 
-const Footer = (props) => {
+const Footer = () => {
+  const { setActiveTab } = useContext(PartnerContext);
+
+  const partners = [
+    {
+      title: "Reseller",
+      tabIndex: 1, // Tab index for "Cluster! Reseller"
+    },
+    {
+      title: "Distributorship",
+      tabIndex: 0, // Tab index for "Cluster! Distributor"
+    },
+    {
+      title: "Affiliate",
+      tabIndex: 2, // Tab index for "Cluster! Affiliate"
+    },
+  ];
+
   return (
     <div>
       <footer className="bg-[#0b1219] mt-8">
@@ -31,35 +49,24 @@ const Footer = (props) => {
 
             <div className="flex flex-col lg:flex-row gap-7 lg:gap-16 lg:col-span-2">
               <div>
-                <p className="font-medium text-green-500">
+                <p className="font-medium text-green-500 mb-6">
                   Our Partner Program
                 </p>
 
-                <ul className="mt-6 space-y-2 text-sm list-none pl-0">
-                  <li>
-                    <Link href="/PartnerProgram">
-                      <div className="text-white transition hover:opacity-75">
-                        Distributor
-                      </div>
-                    </Link>
-                  </li>
+                {partners.map((partner, index) => (
 
-                  <li>
-                    <Link href="/PartnerProgram">
-                      <div className="text-white transition hover:opacity-75">
-                        Reseller
-                      </div>
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link href="/PartnerProgram">
-                      <div className="text-white transition hover:opacity-75">
-                        Affiliate
-                      </div>
-                    </Link>
-                  </li>
+               <>
+                <Link href={`/PartnerProgram`}>
+                <ul key={index}
+                className="text-sm list-none pl-0"
+                  onClick={() => setActiveTab(partner.tabIndex)}  
+                >
+                
+                <li className="text-white">{partner.title}</li>
                 </ul>
+                </Link>
+               </>
+))}
               </div>
 
               <div>

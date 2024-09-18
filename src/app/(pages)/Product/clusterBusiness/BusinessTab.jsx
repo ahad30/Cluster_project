@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
@@ -223,7 +224,7 @@ Thus, an expert on cyber security in the company will be able to promptly respon
               </summary>
 
               <div className="text-justify text-xs mt-3 lg:mt-0 lg:text-sm text-gray-700">
-              With all unquestionable pros of a centralized control system of cybersecurity built on the basis of Zillya! Antivirus for Business, the program also has the ability to control local antivirus software on work PCs. Wherever necessary, the IT security expert of the company may input changes in the antivirus program on the client side directly on the required PC.<br/><br/>
+              With all unquestionable pros of a centralized control system of cybersecurity built on the basis of Cluster Antivirus for Business, the program also has the ability to control local antivirus software on work PCs. Wherever necessary, the IT security expert of the company may input changes in the antivirus program on the client side directly on the required PC.<br/><br/>
 
 This is possible with the administrator password. The user of the client side of the antivirus has the opportunity to perform actions at his own discretion:<br/><br/>
 
@@ -268,7 +269,7 @@ Such manipulations allow for additional checks of the system of cyber protection
               Commercial license can be activated in two ways:<br/><br/>
   
   <ul>
-    <li>Using the activation code made of 32 characters via the Internet. This code is issued to the user automatically and is used for the standard priority product activation. It can be used again after changes in the local network, reinstallation of Zillya! Antivirus for Business, and so on.</li>
+    <li>Using the activation code made of 32 characters via the Internet. This code is issued to the user automatically and is used for the standard priority product activation. It can be used again after changes in the local network, reinstallation of Cluster Antivirus for Business, and so on.</li>
     <li>Via a license key that does not require an Internet connection at the time of activation. This license key is issued to the user upon request and is used as an emergency, backup method. Using this way, it is recommended to connect to the Internet as soon as possible, as it is necessary for the correct functioning of the product (virus database updates, software modules updates, etc.)!</li>
   </ul>
               </div>

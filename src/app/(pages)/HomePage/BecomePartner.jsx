@@ -44,8 +44,7 @@ const BecomePartner = () => {
             <div
               key={index}
               className="border rounded-lg shadow-md p-6 text-center transition-all duration-300 transform hover:-translate-y-3 hover:shadow-lg hover:border-primary cursor-pointer"
-              onClick={() => setActiveTab(partner.tabIndex)} // Set the active tab when clicked
-            >
+              onClick={() => setActiveTab(partner.tabIndex)}            >
               <div className="flex flex-col lg:flex-row items-center gap-5">
                 <Image
                   src={partner.image}

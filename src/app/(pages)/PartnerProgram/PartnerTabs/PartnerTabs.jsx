@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import { PartnerContext } from '@/components/PartnerProvider';
 import React, { useContext } from 'react';
