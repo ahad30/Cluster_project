@@ -21,11 +21,11 @@ const PartnerTabs = () => {
           </div>
           <div className='mt-5 lg:mt-0'>
           <TabPanel>
-              <h2 className="font-semibold text-lg mb-4">Partner Status: Cluster! Distributor</h2>
+              <h2 className="font-semibold text-lg mb-4">Partner Status: Cluster Distributor</h2>
               <p>Partner program "Distributor" is an ideal proposition for big IT, software, and hardware distributors who want to become our exclusive Partners in certain countries or regions.</p>
               <p>This program gives a partner the status of exclusive representative in a country/region confirmed by the Agreement; all further sales in this country/region will go through this partner.</p>
               <p>Our distributors receive access to a license key generator from the 3rd month of collaboration. This means that the partner can generate keys directly without any additional requests.</p>
-              <p>In case of partner necessity, we will create a website in Cluster! style for online sales.</p>
+              <p>In case of partner necessity, we will create a website in Cluster style for online sales.</p>
               <p className="mt-4">As our official distributor, you will receive:</p>
               <ul className="list-disc list-inside ml-4">
                 <li>Unique design of BOX, CD labels - we can produce any unique design based on your specification;</li>
@@ -35,10 +35,10 @@ const PartnerTabs = () => {
                 <li>Technical information needed to provide user support - we will make several trainings for you for better understanding of our products, which will help you provide the best user support.</li>
               </ul>
               <p className="mt-4">We will sign the agreement to establish all the details of our collaboration.</p>
-              <p className="mt-4">Market price on Cluster! Internet Security is established by the Distributor. This means that our distributors are absolutely free in market price settings.</p>
+              <p className="mt-4">Market price on Cluster Internet Security is established by the Distributor. This means that our distributors are absolutely free in market price settings.</p>
             </TabPanel>
             <TabPanel>
-              <h2 className="font-semibold text-lg mb-4">Partner Status: Cluster! Reseller</h2>
+              <h2 className="font-semibold text-lg mb-4">Partner Status: Cluster Reseller</h2>
               <p>Partner program "Reseller" is an ideal proposition for existing software resellers and distributors who want to extend their product line.</p>
               <p>The program does not require a lot of investments; you just make your first purchase and then sell software on the market.</p>
               <p>After the first purchase, you do not have any obligations to pay monthly fees; just order the amount of licenses that you need with a fixed price for 1 license.</p>
@@ -52,7 +52,7 @@ const PartnerTabs = () => {
                 <li>Technical information needed to provide user support - we will make several trainings for you for better understanding of our products, which will help you provide the best user support.</li>
               </ul>
               <p className="mt-4">We will sign the agreement to establish all the details of our collaboration.</p>
-              <p className="mt-4">Market price on Cluster! Internet Security is established by the Reseller. However, we recommend it to be not less than the price for license key generation plus 50% of this price.</p>
+              <p className="mt-4">Market price on Cluster Internet Security is established by the Reseller. However, we recommend it to be not less than the price for license key generation plus 50% of this price.</p>
             </TabPanel>
             <TabPanel>
               <h2 className="font-semibold text-sm lg:text-lg mb-4">Partner Status:  Cluster affiliate</h2>
@@ -68,7 +68,7 @@ const PartnerTabs = () => {
                 <li>Technical information needed to provide user support - we will make several trainings for you for better understanding of our products, which will help you provide the best user support.</li>
               </ul>
               <p className="mt-4">This program does not require any obligations or agreement assignment as a result. If something goes wrong, you can easily go out of business.</p>
-              <p className="mt-4">Market price for Cluster! Internet Security Software is fixed by Affiliate! But we recommend it to be not less than the price for license key generation +50% of this price.</p>
+              <p className="mt-4">Market price for Cluster Internet Security Software is fixed by Affiliate! But we recommend it to be not less than the price for license key generation +50% of this price.</p>
             </TabPanel>
           </div>
         </div>
