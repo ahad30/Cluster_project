@@ -10,7 +10,7 @@ const page = () => {
         {
           id:1,
           image: product1Image,
-          title: "Cluster! Antivirus for Business",
+          title: "Cluster Antivirus for Business",
           description: "Total protection of organizations against all types of cyber threats with possibility of centralized management of antivirus software.",
           price: " Ask for price"
         },
