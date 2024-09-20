@@ -77,6 +77,7 @@ const Dashboard = ({ children }) => {
       <Sider
         breakpoint="xs"
         collapsedWidth="0"
+        className="lg:p-2 p-0" 
         onBreakpoint={(broken) => {
           // console.log(broken);
         }}
@@ -84,14 +85,13 @@ const Dashboard = ({ children }) => {
           // console.log(collapsed, type);
         }}
       >
-       <div className="flex justify-start p-3 mt-5 mb-5">
+       <div className="flex justify-start p-3 mt-3 mb-5">
        <Image src={Logo} alt="Cluster" className="w-[120px] h-[30px]"/>
        </div>
         <Menu
           theme="dark"
           mode="inline"
-          selectedKeys={[currentMenuKey]}
-     
+          selectedKeys={[currentMenuKey]}   
           items={items}
         />
       </Sider>

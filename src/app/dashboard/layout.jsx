@@ -9,7 +9,7 @@ const DashboardLayout = ({children}) => {
   return (
     <>
           <div className="overflow-y-hidden overflow-x-hidden">
-            <div className="block md:flex md:flex-row justify-start h-screen relative">
+            <div className="flex flex-row justify-start h-screen relative">
             <div>
                <Dashboard/>
             </div>

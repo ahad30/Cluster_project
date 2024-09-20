@@ -9,9 +9,18 @@ import Image1 from "../../public/logo.png"
 import Image2 from "../../public/Objects.png"
 import { Spin } from "antd";
 import { useRouter } from "next/navigation";
+import UseLoader from "@/components/UseLoader";
 
 export default function RootLayout({ children }) {
+  const [isLoading, setIsLoading] = useState(true);
 
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setIsLoading(false);
+  }, 500);
+
+  return () => clearTimeout(timer);
+}, []);
 
 
   return (
@@ -19,7 +28,17 @@ export default function RootLayout({ children }) {
       <body>
 
             <>
+            {  
+              isLoading ? ( 
+                <div>
+                  <UseLoader/>
+                </div>
+          ): 
+          (
+              
               <div className="">{children}</div>
+          )
+        }
             </>
       </body>
     </html>

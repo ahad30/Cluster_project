@@ -1,13 +1,12 @@
-import { Spin } from 'antd';
 import React from 'react';
+import UseLoader from '@/components/UseLoader';
 
 const Loading = () => {
     return (
-        <div className='lg:max-w-5xl mx-auto'>
-           <div className='flex flex-col items-center'>
-           <Spin/>
+        <div className=''>
+           <UseLoader/>
            </div>
-        </div>
+ 
     );
 }
 
