@@ -17,8 +17,6 @@ const page = () => {
 
       ];
 
-
-
   return (
     <>
     {products.map(({ id, image, title, price }) => (

@@ -1,15 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
-import Header from "@/components/Common/Header/Header";
-import Footer from "@/components/Common/Footer/Footer";
-import { PartnerProvider } from "@/components/PartnerProvider";
 import "./globals.css";
-import Image from "next/image";
-import Image1 from "../../public/logo.png"
-import Image2 from "../../public/Objects.png"
-import { Spin } from "antd";
-import { useRouter } from "next/navigation";
 import UseLoader from "@/components/UseLoader";
+import { Provider } from "react-redux";
+import store from "@/redux/store/store";
+import { Toaster } from "sonner";
 
 export default function RootLayout({ children }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,8 +30,10 @@ useEffect(() => {
                 </div>
           ): 
           (
-              
+              <Provider store={store}>
+            <Toaster expand={true} richColors />
               <div className="">{children}</div>
+              </Provider>
           )
         }
             </>

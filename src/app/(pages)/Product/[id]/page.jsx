@@ -19,12 +19,18 @@ import P2Icon8 from "../../../../../public/Products/Elements/Product-2/P2Icon8.p
 import P2Icon9 from "../../../../../public/Products/Elements/Product-2/P2Icon9.png";
 import P3Icon1 from "../../../../../public/Products/Elements/Product-2/P3Icon1.png";
 import P3Icon2 from "../../../../../public/Products/Elements/Product-2/P3Icon2.png";
-
 import ProductDetailsTab from "../ProductDetailsTab";
 import { FaCartShopping } from "react-icons/fa6";
 import IconList from "../IconList";
+import { useAppDispatch, useAppSelector } from "@/redux/Hook/Hook";
+import AddModal from "@/components/Modal/AddModal";
+import AddTrialForm from "../AddTrialForm";
+import ButtonWithModal from "@/components/Button/ButtonWithModal";
+
 
 const ProductDetails = ({ params }) => {
+  const dispatch = useAppDispatch();
+  const { isAddModalOpen } = useAppSelector((state) => state.modal);
   
   const products = [
     //  Prouct 1
@@ -650,10 +656,16 @@ Privacy Protection: Privacy protection program is a program that allows removing
                 </button>
               </div>
               <div className="flex justify-center lg:justify-start">
-                <button className="border  px-12 text-white py-1 mt-4 hover:bg-green-500   rounded-md font-semibold  transition-all duration-300">
+                {/* <button className="border  px-12 text-white py-1 mt-4 hover:bg-green-500   rounded-md font-semibold  transition-all duration-300">
                   <p className="uppercase">Try Trial</p>
-                </button>
+                </button> */}
+                 <ButtonWithModal title="Try Trial"></ButtonWithModal>
               </div>
+
+              <AddModal isAddModalOpen={isAddModalOpen} title="Submit your information">
+               <AddTrialForm /> {/* Updated to AddBrand component */}
+             </AddModal>             
+
             </div>
 
             <div className="mt-3 lg:mt-0">
