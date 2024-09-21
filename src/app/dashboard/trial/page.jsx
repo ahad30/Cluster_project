@@ -56,7 +56,7 @@ const Trial = () => {
   return (
     <>
  
-
+         
       {/* Render the table with trial data */}
       <DashboardTable columns={columns} data={formattedTrialData} loading={isLoading} />
     </>
