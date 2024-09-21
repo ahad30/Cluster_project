@@ -17,9 +17,9 @@ const ButtonWithModal = ({
   ) : (
     <button
       onClick={() => dispatch(setIsAddModalOpen())}
-      className="bg-[#24354C] flex justify-center  items-center gap-2  text-center text-white w-full px-2 lg:px-0 py-2 lg:py-0 lg:w-[200px] lg:h-[45px] rounded-md"
+     className="border  px-12 text-white py-1 mt-4 hover:bg-green-500   rounded-md font-semibold  transition-all duration-300"
     >
-      <FaPlus /> {title}
+      {title}
     </button>
   );
 };

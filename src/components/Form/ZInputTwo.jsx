@@ -4,7 +4,7 @@ import { Form, Input } from "antd";
 import { useEffect } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 
-const ZInputTwo = ({ name, type, label, defaultKey, value , placeholder , required , reset }) => {
+const ZInputTwo = ({ name, type, label, defaultKey, value , placeholder , required , reset, readOnly }) => {
 
   const { control, setValue, resetField } = useFormContext();
   const { isEditModalOpen } = useAppSelector((state) => state.modal);
@@ -38,6 +38,7 @@ const ZInputTwo = ({ name, type, label, defaultKey, value , placeholder , requir
           help={error?.message}
         >
           <Input
+            readOnly ={readOnly? readOnly : false}
             className={defaultKey ? `${defaultKey}` : ``}
             {...field}
             type={type}

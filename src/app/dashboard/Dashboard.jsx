@@ -1,6 +1,6 @@
 import Link from "next/link"; // Import Link from Next.js
 import { Layout, Menu, theme } from "antd";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { FiBox } from "react-icons/fi";
 import { MdOutlineShoppingCartCheckout, MdOutlinePayments, MdOutlineDashboardCustomize } from "react-icons/md";
 import Image from "next/image";
@@ -9,14 +9,13 @@ import Logo from "../../../public/logo-2.png"
 const { Header, Content, Footer, Sider } = Layout;
 
 const Dashboard = ({ children }) => {
-  const router = useRouter();
-
+  const pathName = usePathname();
   // Map the current pathname to the corresponding menu key
   const getCurrentMenuKey = (pathname) => {
     switch (pathname) {
       case "/dashboard/adminHome":
         return "1";
-      case "/dashboard/product":
+      case "/dashboard/trial":
         return "2";
       case "/dashboard/order":
         return "3";
@@ -27,7 +26,7 @@ const Dashboard = ({ children }) => {
     }
   };
 
-  const currentMenuKey = getCurrentMenuKey(router.pathname);
+  const currentMenuKey = getCurrentMenuKey(pathName);
 
   const items = [
     {
@@ -35,7 +34,7 @@ const Dashboard = ({ children }) => {
       icon: <MdOutlineDashboardCustomize size={20} />,
       label: (
         <Link href="/dashboard/adminHome" legacyBehavior>
-   Admin Home
+        Admin Home
         </Link>
       ),
     },
@@ -43,8 +42,8 @@ const Dashboard = ({ children }) => {
       key: "2",
       icon: <FiBox size={20} />,
       label: (
-        <Link href="/dashboard/product" legacyBehavior>
-          Product
+        <Link href="/dashboard/trial" legacyBehavior>
+          Trials
         </Link>
       ),
     },

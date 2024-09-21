@@ -27,6 +27,7 @@ const ZFormTwo = ({
   error,
   data,
   formType,
+  specialCase,
   buttonName,
 }) => {
 
@@ -68,6 +69,8 @@ const ZFormTwo = ({
         methods.clearErrors();
       }
     }
+    
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAddModalOpen, isEditModalOpen, methods]);
 

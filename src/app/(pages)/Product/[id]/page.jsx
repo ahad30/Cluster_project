@@ -31,13 +31,15 @@ import ButtonWithModal from "@/components/Button/ButtonWithModal";
 const ProductDetails = ({ params }) => {
   const dispatch = useAppDispatch();
   const { isAddModalOpen } = useAppSelector((state) => state.modal);
+  const [selectedTrial, setSelectedTrial] = useState({});
+
   
   const products = [
     //  Prouct 1
     {
       id: 1,
       image: product1Image,
-      title: "Cluster Antivirus",
+      productName: "Cluster Antivirus",
       bannerTitle1: 'Stay protected when you are buying online, surfing Internet or chatting with your friends.',
       bannerTitle2: "  Proactive technologies of defense will make the product perfect for active Internet users.",
       description: "Advanced Security for small and medium companies.",
@@ -187,7 +189,7 @@ CLuster Antivirus contains a function of Scheduler - the scannig of the PC, whic
     {
       id: 2,
       image: product2Image,
-      title: "Cluster Internet Security",
+      productName: "Cluster Internet Security",
       bannerTitle1: 'Stay protected when you are buying online, surfing Internet or chatting with your friends.',
       bannerTitle2: "  Proactive technologies of defense will make the product perfect for active Internet users.",
       description: "Solution which is ideal for active internet users",
@@ -382,7 +384,7 @@ This module is the core of the entire security system, which is based on the bas
     {
       id: 3,
       image: product3Image,
-      title: "Cluster Total Security",
+      productName: "Cluster Total Security",
       bannerTitle1: 'The product with the highest level of protection!',
       bannerTitle2: ` Additionally, it has instrument of computer'  s control and module "Parental control".`,
       bannerTitle3: 'This product is ideal for whose, who cares about information security of all family.',
@@ -618,9 +620,14 @@ Privacy Protection: Privacy protection program is a program that allows removing
   
   ];
 
+
+
   const product = products.find((product) => product?.id == params.id);
   
+  const handleTrial = (product) => {
+    setSelectedTrial(product);
 
+  };
   return (
     <>
       <section
@@ -631,7 +638,7 @@ Privacy Protection: Privacy protection program is a program that allows removing
           <div className="lg:px-[50px] grid grid-cols-1 lg:grid-cols-3 gap-3 items-center">
             <div className="">
               <h1 className="font-zcool text-white text-center lg:text-start text-[20px] lg:text-[35px]">
-                {product?.title}
+                {product?.productName}
               </h1>
               <h1 className=" text-white mb-5 text-center lg:text-start text-sm lg:text-base mt-3">
               {product?.bannerTitle1}
@@ -655,15 +662,13 @@ Privacy Protection: Privacy protection program is a program that allows removing
                   </div>
                 </button>
               </div>
-              <div className="flex justify-center lg:justify-start">
-                {/* <button className="border  px-12 text-white py-1 mt-4 hover:bg-green-500   rounded-md font-semibold  transition-all duration-300">
-                  <p className="uppercase">Try Trial</p>
-                </button> */}
-                 <ButtonWithModal title="Try Trial"></ButtonWithModal>
+              <div onClick={() => handleTrial(product)}
+               className="flex justify-center lg:justify-start">
+                 <ButtonWithModal  title="Try Trial"></ButtonWithModal>
               </div>
 
               <AddModal isAddModalOpen={isAddModalOpen} title="Submit your information">
-               <AddTrialForm /> {/* Updated to AddBrand component */}
+               <AddTrialForm selectedTrial={selectedTrial}/>
              </AddModal>             
 
             </div>

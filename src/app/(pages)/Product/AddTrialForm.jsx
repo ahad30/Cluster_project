@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import ZFormTwo from "@/components/Form/ZFormTwo";
 import ZInputTwo from "@/components/Form/ZInputTwo";
 import { useAppDispatch } from "@/redux/Hook/Hook";
@@ -6,12 +7,16 @@ import { setIsAddModalOpen } from "@/redux/Modal/ModalSlice";
 import { useAddTrialMutation } from "@/redux/Feature/Admin/trial/trialApi";
 import ZEmail from "@/components/Form/ZEmail";
 
-const AddTrialForm = () => {
+const AddTrialForm = ({selectedTrial}) => {
+  console.log(selectedTrial);
+  useEffect(() => {
+    console.log("Selected Trial Updated:", selectedTrial);
+  }, [selectedTrial]);
   const dispatch = useAppDispatch();
   const [createTrial, { isLoading: TIsLoading, isError: TIsError, error: TError, isSuccess: TIsSuccess, data }] = useAddTrialMutation();
 
   const handleSubmit = (data) => {
-    // Ensure productName is set to "use client"
+    console.log(data)
     createTrial(data);
   };
 
@@ -28,18 +33,31 @@ const AddTrialForm = () => {
         error={TError}
         submit={handleSubmit}
         closeModal={handleCloseAndOpen}
-        formType="create"
+        formType="edit"
         data={data}
         buttonName="submit"
       >
         <div className="grid grid-cols-1 gap-3 mt-10">
-        
+
+
+  <ZInputTwo
+    name="productName"
+    label="Product Name"
+    type={"text"}
+    value={selectedTrial?.productName || "Unknown product"}
+    readOnly={1}
+  />
+
+
+
         {/* Email */}
         <ZEmail 
         label={"Email"} 
         name={"email"} 
         />
+        {/* title */}
 
+      
           {/* Name */}
           <ZInputTwo
             name="name"
@@ -48,6 +66,7 @@ const AddTrialForm = () => {
             defaultKey={""}
             placeholder="Enter your name"
             required
+            reset={1}
           />
 
           {/* Address */}
@@ -58,6 +77,8 @@ const AddTrialForm = () => {
             defaultKey={""}
             placeholder="Enter your address"
             required
+            reset={1}
+
           />
 
           {/* Mobile */}
@@ -68,6 +89,8 @@ const AddTrialForm = () => {
             defaultKey={""}
             placeholder="Enter your mobile number"
             required
+            reset={1}
+
           />
         </div>
       </ZFormTwo>

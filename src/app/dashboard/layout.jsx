@@ -17,7 +17,7 @@ const DashboardLayout = ({children}) => {
           <div className="relative w-[100%]">
           <div className=" text-gray-900 h-screen overflow-y-scroll">
            <Navbar/>
-           <div className='p-5  mx-auto'> {children}</div>
+           <div className='py-5 w-[88%] lg:max-w-[90%] mx-auto'> {children}</div>
           </div>
         </div>
             </div>
