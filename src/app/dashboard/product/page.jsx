@@ -8,13 +8,12 @@ import { AiOutlineDelete } from "react-icons/ai";
 import AddModal from "@/components/Modal/AddModal";
 import EditModal from "@/components/Modal/EditModal";
 import { useAppDispatch, useAppSelector } from "@/redux/Hook/Hook";
-import AddProduct from "./AddProduct/page"; // Updated to AddProduct component
- // Updated API imports
 import ButtonWithModal from "@/components/Button/ButtonWithModal";
 import { setIsDeleteModalOpen, setIsEditModalOpen } from "@/redux/Modal/ModalSlice";
-import EditProduct from "./EditProduct/page"; // Updated to EditProduct component
 import DeleteModal from "@/components/Modal/DeleteModal";
 import { useDeleteProductMutation, useGetProductQuery } from "@/redux/Feature/Admin/product/productApi";
+import AddProduct from "./AddProduct/AddProduct";
+import EditProduct from "./EditProduct/EditProduct";
 
 const Product = () => {
   const dispatch = useAppDispatch();
