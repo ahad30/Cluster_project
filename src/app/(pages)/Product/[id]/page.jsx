@@ -26,15 +26,14 @@ import { useAppDispatch, useAppSelector } from "@/redux/Hook/Hook";
 import AddModal from "@/components/Modal/AddModal";
 import AddTrialForm from "../AddTrialForm";
 import ButtonWithModal from "@/components/Button/ButtonWithModal";
-import { setIsAddModalOpen } from "@/redux/Modal/ModalSlice";
-import Checkout from "../checkout/page";
+import { useRouter } from "next/navigation";
 
 
 const ProductDetails = ({ params }) => {
-  const dispatch = useAppDispatch();
+
   const { isAddModalOpen } = useAppSelector((state) => state.modal);
   const [selectedTrial, setSelectedTrial] = useState({});
-
+  const router = useRouter()
   
   const products = [
     //  Prouct 1
@@ -625,17 +624,20 @@ Privacy Protection: Privacy protection program is a program that allows removing
 
 
   const product = products.find((product) => product?.id == params.id);
-  
+
   const handleTrial = (product) => {
     setSelectedTrial(product);
 
   };
 
+
+  const handleCheckout = () => {
+
+    localStorage.setItem('selectedProduct', JSON.stringify(product));
+    router.push('/Product/checkout');
+  };
+
  
-  const handleClick = (product) =>{
-    dispatch(setIsAddModalOpen())
-    setSelectedTrial(product)
-  }
   return (
     <>
       <section
@@ -664,8 +666,9 @@ Privacy Protection: Privacy protection program is a program that allows removing
 
               <div className="flex justify-center lg:justify-start">
 
-                <button className="border text-primary bg-white px-5 py-1 mt-4 hover:bg-green-500   rounded-md font-semibold hover:text-white transition-all duration-300">
-                  <div onClick={() => handleClick(product)}
+                <button  onClick={handleCheckout}
+                 className="border text-primary bg-white px-5 py-1 mt-4 hover:bg-green-500   rounded-md font-semibold hover:text-white transition-all duration-300">
+                  <div 
                   className="flex items-center gap-x-2">
                     <FaCartShopping className="" />
                     <p className="">ONLY {product.price} BDT</p>
@@ -680,11 +683,7 @@ Privacy Protection: Privacy protection program is a program that allows removing
               <AddModal isAddModalOpen={isAddModalOpen} title="Submit your information">
                <AddTrialForm selectedTrial={selectedTrial}/>
              </AddModal>    
-              <AddModal 
-              width={600}
-              isAddModalOpen={isAddModalOpen} title="Submit your information">
-               <Checkout selectedTrial={selectedTrial}/>
-             </AddModal>    
+             
 
 
 
