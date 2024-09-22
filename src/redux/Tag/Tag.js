@@ -8,6 +8,10 @@ export const tags = [
   {
     name: 'Product', 
     tag: 'products', 
+  },
+  {
+    name: 'Order', 
+    tag: 'orders', 
   }
 
 ];

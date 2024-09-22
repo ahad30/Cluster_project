@@ -26,6 +26,8 @@ import { useAppDispatch, useAppSelector } from "@/redux/Hook/Hook";
 import AddModal from "@/components/Modal/AddModal";
 import AddTrialForm from "../AddTrialForm";
 import ButtonWithModal from "@/components/Button/ButtonWithModal";
+import { setIsAddModalOpen } from "@/redux/Modal/ModalSlice";
+import Checkout from "../checkout/page";
 
 
 const ProductDetails = ({ params }) => {
@@ -628,6 +630,12 @@ Privacy Protection: Privacy protection program is a program that allows removing
     setSelectedTrial(product);
 
   };
+
+ 
+  const handleClick = (product) =>{
+    dispatch(setIsAddModalOpen())
+    setSelectedTrial(product)
+  }
   return (
     <>
       <section
@@ -655,8 +663,10 @@ Privacy Protection: Privacy protection program is a program that allows removing
               </p>
 
               <div className="flex justify-center lg:justify-start">
+
                 <button className="border text-primary bg-white px-5 py-1 mt-4 hover:bg-green-500   rounded-md font-semibold hover:text-white transition-all duration-300">
-                  <div className="flex items-center gap-x-2">
+                  <div onClick={() => handleClick(product)}
+                  className="flex items-center gap-x-2">
                     <FaCartShopping className="" />
                     <p className="">ONLY {product.price} BDT</p>
                   </div>
@@ -669,7 +679,14 @@ Privacy Protection: Privacy protection program is a program that allows removing
 
               <AddModal isAddModalOpen={isAddModalOpen} title="Submit your information">
                <AddTrialForm selectedTrial={selectedTrial}/>
-             </AddModal>             
+             </AddModal>    
+              <AddModal 
+              width={600}
+              isAddModalOpen={isAddModalOpen} title="Submit your information">
+               <Checkout selectedTrial={selectedTrial}/>
+             </AddModal>    
+
+
 
             </div>
 

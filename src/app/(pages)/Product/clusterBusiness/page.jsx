@@ -10,7 +10,7 @@ const page = () => {
         {
           id:1,
           image: product1Image,
-          title: "Cluster Antivirus for Business",
+          productName: "Cluster Antivirus for Business",
           description: "Total protection of organizations against all types of cyber threats with possibility of centralized management of antivirus software.",
           price: " Ask for price"
         },
@@ -19,7 +19,7 @@ const page = () => {
 
   return (
     <>
-    {products.map(({ id, image, title, price }) => (
+    {products.map(({ id, image, productName, price }) => (
       <section
         key={id}
         className="bg-primary mb-10 bg-no-repeat bg-cover h-[750px] lg:h-[500px] bg-center"
@@ -28,7 +28,7 @@ const page = () => {
           <div className="lg:px-[50px] grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
             <div className='col-span-2'>
               <h1 className="font-zcool text-white text-center lg:text-start text-[20px] lg:text-[35px] lg:mb-10">
-                {title}
+                {productName}
               </h1>
               <p className="text-white mb-5 text-center lg:text-start text-sm lg:text-base">
               Total protection of organizations against all types of cyber threats with possibility of centralized management of antivirus software.
@@ -56,7 +56,7 @@ const page = () => {
             <div className='col-span-2'>
               <Image
                 src={image}
-                alt={title}
+                alt={productName}
                 className="w-[90%] mx-auto"
               />
             </div>

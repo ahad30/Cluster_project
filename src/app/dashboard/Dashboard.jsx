@@ -68,15 +68,16 @@ const Dashboard = ({ children }) => {
         </Link>
       ),
     },
-    {
-      key: "5",
-      icon: <MdOutlinePayments size={20} />,
-      label: (
-        <Link href="/dashboard/transaction" legacyBehavior>
-          Transaction
-        </Link>
-      ),
-    },
+
+    // {
+    //   key: "5",
+    //   icon: <MdOutlinePayments size={20} />,
+    //   label: (
+    //     <Link href="/dashboard/transaction" legacyBehavior>
+    //       Transaction
+    //     </Link>
+    //   ),
+    // },
   ];
 
   const {
