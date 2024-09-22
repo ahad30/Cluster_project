@@ -16,9 +16,9 @@ import EditProduct from "./EditProduct/page"; // Updated to EditProduct componen
 import DeleteModal from "@/components/Modal/DeleteModal";
 import { useDeleteProductMutation, useGetProductQuery } from "@/redux/Feature/Admin/product/productApi";
 
-const ProductTable = () => {
+const Product = () => {
   const dispatch = useAppDispatch();
-  const { data, error, isLoading: productIsLoading } = useGetProductQuery(); // Updated to product query
+  const { data, error, isLoading: productIsLoading } = useGetProductQuery();
   const { isAddModalOpen, isEditModalOpen, isDeleteModalOpen } = useAppSelector((state) => state.modal);
   const [selectedProduct, setSelectedProduct] = useState({});
   const [deleteProduct, { isLoading: dPIsLoading, isError, isSuccess, data: dPData, error: dPError }] = useDeleteProductMutation();
@@ -94,19 +94,19 @@ const ProductTable = () => {
     <>
 
       <div className="flex flex-col lg:flex-row items-center gap-x-2 justify-end my-5">
-        <ButtonWithModal title="Add Product"></ButtonWithModal> {/* Updated to "Add Product" */}
+        <ButtonWithModal title="Add Product"></ButtonWithModal>
       </div>
 
       <DashboardTable columns={columns} data={productData} loading={productIsLoading} /> {/* Updated to use product data */}
       
       {/* AddModal Component */}
       <AddModal isAddModalOpen={isAddModalOpen} title="Add New Product">
-        <AddProduct /> {/* Updated to AddProduct component */}
+        <AddProduct />
       </AddModal>
 
       {/* EditModal Component */}
       <EditModal isEditModalOpen={isEditModalOpen} title="Edit Product">
-        <EditProduct selectedProduct={selectedProduct} /> {/* Updated to EditProduct component */}
+        <EditProduct selectedProduct={selectedProduct} /> 
       </EditModal>
 
       {/* DeleteModal Component */}
@@ -125,4 +125,4 @@ const ProductTable = () => {
   );
 };
 
-export default ProductTable;
+export default Product;
