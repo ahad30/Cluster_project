@@ -17,7 +17,10 @@ const ButtonWithModal = ({
   ) : (
     <button
       onClick={() => dispatch(setIsAddModalOpen())}
-     className="border  px-12 text-white py-1 mt-4 hover:bg-green-500   rounded-md font-semibold  transition-all duration-300"
+     className={`border 
+     
+     ${title === 'Add Product' && "bg-[#001529]"}
+     px-12 text-white py-1 mt-4 hover:bg-green-500   rounded-md font-semibold  transition-all duration-300`}
     >
       {title}
     </button>

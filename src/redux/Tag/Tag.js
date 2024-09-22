@@ -4,6 +4,10 @@ export const tags = [
   {
     name: 'Trial', 
     tag: 'trials', 
+  },
+  {
+    name: 'Product', 
+    tag: 'products', 
   }
 
 ];

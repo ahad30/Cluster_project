@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect } from "react";
 import ZFormTwo from "@/components/Form/ZFormTwo";
 import ZInputTwo from "@/components/Form/ZInputTwo";
@@ -7,22 +7,31 @@ import { setIsAddModalOpen } from "@/redux/Modal/ModalSlice";
 import { useAddTrialMutation } from "@/redux/Feature/Admin/trial/trialApi";
 import ZEmail from "@/components/Form/ZEmail";
 
-const AddTrialForm = ({selectedTrial}) => {
-  console.log(selectedTrial);
-  useEffect(() => {
-    console.log("Selected Trial Updated:", selectedTrial);
-  }, [selectedTrial]);
-  const dispatch = useAppDispatch();
-  const [createTrial, { isLoading: TIsLoading, isError: TIsError, error: TError, isSuccess: TIsSuccess, data }] = useAddTrialMutation();
+const AddTrialForm = ({ selectedTrial }) => {
 
+  const dispatch = useAppDispatch();
+  const [
+    createTrial,
+    {
+      isLoading: TIsLoading,
+      isError: TIsError,
+      error: TError,
+      isSuccess: TIsSuccess,
+      data,
+    },
+  ] = useAddTrialMutation();
+
+  
   const handleSubmit = (data) => {
-    console.log(data)
-    createTrial(data);
+    console.log(data);
+    createTrial({ ...data, productName: selectedTrial?.productName });
   };
 
   const handleCloseAndOpen = () => {
     dispatch(setIsAddModalOpen());
   };
+
+
 
   return (
     <div className="">
@@ -33,31 +42,16 @@ const AddTrialForm = ({selectedTrial}) => {
         error={TError}
         submit={handleSubmit}
         closeModal={handleCloseAndOpen}
-        formType="edit"
+        formType="create"
         data={data}
         buttonName="submit"
       >
         <div className="grid grid-cols-1 gap-3 mt-10">
 
+          {/* Email */}
+          <ZEmail label={"Email"} name={"email"} />
+          {/* title */}
 
-  <ZInputTwo
-    name="productName"
-    label="Product Name"
-    type={"text"}
-    value={selectedTrial?.productName || "Unknown product"}
-    readOnly={1}
-  />
-
-
-
-        {/* Email */}
-        <ZEmail 
-        label={"Email"} 
-        name={"email"} 
-        />
-        {/* title */}
-
-      
           {/* Name */}
           <ZInputTwo
             name="name"
@@ -78,7 +72,6 @@ const AddTrialForm = ({selectedTrial}) => {
             placeholder="Enter your address"
             required
             reset={1}
-
           />
 
           {/* Mobile */}
@@ -90,7 +83,6 @@ const AddTrialForm = ({selectedTrial}) => {
             placeholder="Enter your mobile number"
             required
             reset={1}
-
           />
         </div>
       </ZFormTwo>

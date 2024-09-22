@@ -5,6 +5,7 @@ import { FiBox } from "react-icons/fi";
 import { MdOutlineShoppingCartCheckout, MdOutlinePayments, MdOutlineDashboardCustomize } from "react-icons/md";
 import Image from "next/image";
 import Logo from "../../../public/logo-2.png"
+import { AiFillProduct } from "react-icons/ai";
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -17,10 +18,12 @@ const Dashboard = ({ children }) => {
         return "1";
       case "/dashboard/trial":
         return "2";
-      case "/dashboard/order":
+      case "/dashboard/product":
         return "3";
-      case "/dashboard/transaction":
+      case "/dashboard/order":
         return "4";
+      case "/dashboard/transaction":
+        return "5";
       default:
         return "1";
     }
@@ -49,6 +52,15 @@ const Dashboard = ({ children }) => {
     },
     {
       key: "3",
+      icon: <AiFillProduct size={20} />,
+      label: (
+        <Link href="/dashboard/product" legacyBehavior>
+          Products
+        </Link>
+      ),
+    },
+    {
+      key: "4",
       icon: <MdOutlineShoppingCartCheckout size={20} />,
       label: (
         <Link href="/dashboard/order" legacyBehavior>
@@ -57,7 +69,7 @@ const Dashboard = ({ children }) => {
       ),
     },
     {
-      key: "4",
+      key: "5",
       icon: <MdOutlinePayments size={20} />,
       label: (
         <Link href="/dashboard/transaction" legacyBehavior>
