@@ -57,8 +57,8 @@ const AddProduct = () => {
             name="status"
             label="Status"
             options={[
-              { label: "Sold", value: true },
-              { label: "Unsold", value: false },
+              { label: "Sold", value: "sold" },
+              { label: "Unsold", value: "unsold" },
             ]}
             placeholder="Select status"
    

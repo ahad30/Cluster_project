@@ -23,7 +23,6 @@ const AddTrialForm = ({ selectedTrial }) => {
 
   
   const handleSubmit = (data) => {
-    console.log(data);
     createTrial({ ...data, productName: selectedTrial?.productName });
   };
 

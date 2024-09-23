@@ -28,11 +28,10 @@ const Product = () => {
     id: product.ID,
     productKey: product?.key, // Updated to use productID
     name: product?.name, // Updated to productName
-    status: product?.status ? 'Sold' : 'Unsold',
+    status: product?.status 
   }));
 
-  console.log(productData)
-
+// console.log(productData)
   const handleEditProduct = (productData) => {
     setSelectedProduct(productData);
     dispatch(setIsEditModalOpen());
@@ -66,7 +65,7 @@ const Product = () => {
       dataIndex: "status",
       key: "status",
       render: (status) => (
-        <Tag color={status === 'Sold' ? 'green' : 'red'}>{status}</Tag> // Display status with color
+        <Tag color={status === 'sold' ? 'green' : 'red'}>{status}</Tag> // Display status with color
       ),
     },
     {

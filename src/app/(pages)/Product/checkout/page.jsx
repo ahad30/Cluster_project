@@ -1,18 +1,15 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import React, { useEffect, useState } from "react";
 import ZFormTwo from "@/components/Form/ZFormTwo";
 import ZInputTwo from "@/components/Form/ZInputTwo";
-import { useAppDispatch } from "@/redux/Hook/Hook";
-import { setIsAddModalOpen } from "@/redux/Modal/ModalSlice";
 import ZEmail from "@/components/Form/ZEmail";
 import { useAddOrderMutation } from "@/redux/Feature/Admin/order/orderApi";
-import { useRouter } from "next/navigation";
+
 
 const page = () => {
   const [product, setProduct] = useState([]);
-  const dispatch = useAppDispatch();
-
   useEffect(() => {
     // Retrieve product data from sessionStorage
     const storedProduct = localStorage.getItem('selectedProduct');
@@ -30,23 +27,38 @@ const page = () => {
       isError: OIsError,   
       error: OError,        
       isSuccess: OIsSuccess, 
-      data,                  
+      data: OData,                  
     },
   ] = useAddOrderMutation(); 
 
-  
-  const handleSubmit = (data) => {
-    console.log(data);
-    addOrder({ ...data,  productName: product.productName, 
-      price: product.price   });
-  };
 
-  const handleCloseAndOpen = () => {
-    dispatch(setIsAddModalOpen());
+  const handleSubmit = async (data) => {
+    try {
+      // Add order with product data
+      const result = await addOrder({
+        ...data,
+        productName: product?.productName,
+        price: product?.price,
+      });
+       
+      console.log(result)
+      if (result?.data?.GatewayPageURL) {
+        window.location.replace(result?.data?.GatewayPageURL);
+      }
+    } catch (error) {
+      console.error("Error occurred:", error);
+    }
   };
+  
+
+
 
   return (
-  
+  <>
+    <p className="text-center  text-sm lg:text-xl font-bold">
+    You've made an excellent choice!
+
+              </p>
       <ZFormTwo
         isLoading={OIsLoading}
         isSuccess={OIsSuccess}
@@ -54,7 +66,7 @@ const page = () => {
         error={OError}
         submit={handleSubmit}
         formType="create"
-        data={data}
+        data={OData}
 
       >
         <div className="flex flex-col lg:flex-row gap-5 max-w-6xl mx-auto">
@@ -63,12 +75,8 @@ const page = () => {
          Submit your Information here
 
               </p>
-          {/* Email */}
-          <ZEmail label={"Email"} name={"email"} />
-          {/* title */}
 
-          {/* Name */}
-          <ZInputTwo
+              <ZInputTwo
             name="name"
             type="text"
             label="Name"
@@ -77,6 +85,15 @@ const page = () => {
             required
     
           />
+
+
+
+          {/* Email */}
+          <ZEmail label={"Email Address"} name={"email"} />
+          {/* title */}
+
+          {/* Name */}
+         
 
           {/* Address */}
           <ZInputTwo
@@ -93,7 +110,7 @@ const page = () => {
           <ZInputTwo
             name="phone"
             type="number"
-            label="Mobile"
+            label="Mobile Number"
             defaultKey={""}
             placeholder="Enter your mobile number"
             required
@@ -106,7 +123,7 @@ const page = () => {
         className= {`
           bg-green-500 disabled:bg-[#4f5a67] disabled:cursor-not-allowed text-center text-white rounded-md py-2 text-lg`}
       >
-        {OIsLoading ? "Processing..." : "Proceed to Buy"}
+        {OIsLoading ? "Processing..." : "Proceed to Pay"}
       </button>
         </div>
         <div className="flex flex-col p-6 space-y-4 divide-y sm:w-96 sm:p-10 dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
@@ -149,7 +166,7 @@ const page = () => {
        </div>
        </div>
       </ZFormTwo>
-
+</>
 
 
   );
