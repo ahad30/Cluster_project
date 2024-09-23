@@ -7,6 +7,9 @@ const trialApi = baseApi.injectEndpoints({
     addTrial: builder.mutation({
       query: (data) => ({
         url: "/free-trials/create",
+        // headers: {
+        //   "Content-Type": "application/json"
+        // },
         method: "POST",
         body: data,
       }),

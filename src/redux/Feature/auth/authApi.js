@@ -6,7 +6,7 @@ const authApi = baseApi.injectEndpoints({
 
     login: builder.mutation({
       query: (data) => ({
-        url: "/system-admin/login",
+        url: "/admins/login",
         headers: {
           'Content-Type': 'application/json',
         },
@@ -15,33 +15,9 @@ const authApi = baseApi.injectEndpoints({
       }),
     }),
 
-    userLogin: builder.mutation({
-      query: (data) => ({
-        url: "/users/login",
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        method: "POST",
-        body: data,
-      }),
-    }),
-
-    register: builder.mutation({
-      query: (data) => ({
-        url: "/users/create",
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        method: "POST",
-        body: data,
-      }),
-      // invalidatesTags:getTagsByModuleName('users')
-    }),
   }),
 });
 
 export const { 
   useLoginMutation, 
-  useUserLoginMutation,
-  useRegisterMutation
 } = authApi;

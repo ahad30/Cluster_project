@@ -6,11 +6,16 @@ import { MdOutlineShoppingCartCheckout, MdOutlinePayments, MdOutlineDashboardCus
 import Image from "next/image";
 import Logo from "../../../public/logo-2.png"
 import { AiFillProduct } from "react-icons/ai";
+import Cookies from "js-cookie";
+import { useState } from "react";
+import { toast } from "sonner";
 
 const { Header, Content, Footer, Sider } = Layout;
 
 const Dashboard = ({ children }) => {
   const pathName = usePathname();
+  const router = useRouter();
+  const [loading, setLoading] = useState(false); 
   // Map the current pathname to the corresponding menu key
   const getCurrentMenuKey = (pathname) => {
     switch (pathname) {
@@ -27,6 +32,17 @@ const Dashboard = ({ children }) => {
       default:
         return "1";
     }
+  };
+
+  const handleLogout = () => {
+    setLoading(true); 
+    localStorage.removeItem('authToken');
+    Cookies.remove('authToken', { path: '/' });
+    setTimeout(() => {
+      setLoading(false);
+      toast.success('Logged out successfully'); 
+      router.push('/login');
+    }, 1000);
   };
 
   const currentMenuKey = getCurrentMenuKey(pathName);
@@ -55,7 +71,7 @@ const Dashboard = ({ children }) => {
       icon: <AiFillProduct size={20} />,
       label: (
         <Link href="/dashboard/product" legacyBehavior>
-          Products
+          Product Keys
         </Link>
       ),
     },
@@ -69,15 +85,17 @@ const Dashboard = ({ children }) => {
       ),
     },
 
-    // {
-    //   key: "5",
-    //   icon: <MdOutlinePayments size={20} />,
-    //   label: (
-    //     <Link href="/dashboard/transaction" legacyBehavior>
-    //       Transaction
-    //     </Link>
-    //   ),
-    // },
+    {
+      key: "5",
+      icon: <MdOutlinePayments size={20} />,
+      label: (
+     
+        <div onClick={handleLogout}>
+          logout
+         </div>
+       
+      ),
+    },
   ];
 
   const {

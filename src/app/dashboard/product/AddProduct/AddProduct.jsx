@@ -45,7 +45,7 @@ const AddProduct = () => {
 
           {/* Product Key */}
           <ZInputTwo
-            name="key"
+            name="productKey"
             type="text"
             label="Product Key"
             defaultKey={""}

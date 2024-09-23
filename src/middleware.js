@@ -8,12 +8,12 @@ export const middleware = (request) => {
   const authToken = request.cookies.get('authToken')?.value;
   
   if (!authToken) {
-    return NextResponse.redirect(new URL('/', request.url));
+    return NextResponse.redirect(new URL('/login', request.url));
   }
   
   return NextResponse.next();
 };
 
 export const config = {
-  matcher: ['/Dashboard/AdminHome' , '/UserDashboard/UserHome'],
+  matcher: ['/dashboard/adminHome'],
 };

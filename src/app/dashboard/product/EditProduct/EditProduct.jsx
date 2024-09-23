@@ -19,19 +19,6 @@ const EditProduct = ({ selectedProduct }) => {
       data,
     };
     updateProduct(updatedData);
-
-    // fetch(`https://cluster-backend.hostdivine.com/api/v1/product-key/update/${selectedProduct.id}`, {
-    //   method: 'PATCH',
-    //   headers: {
-    //     'content-type': 'application/json'
-    //   },
-    //   body: JSON.stringify(data)
-    // })
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     console.log(data);
-
-    //   });
   };
 
   const handleCloseAndOpen = () => {

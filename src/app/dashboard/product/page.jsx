@@ -26,7 +26,7 @@ const Product = () => {
   const productData = data?.data?.map((product, index) => ({
     key: index,
     id: product.ID,
-    productKey: product?.key, // Updated to use productID
+    productKey: product?.productKey, // Updated to use productID
     name: product?.name, // Updated to productName
     status: product?.status 
   }));
