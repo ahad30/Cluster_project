@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-const page = () => {
+const Key = () => {
   return (
     <div>
       <section className="bg-gray-900 text-white -mb-8">
@@ -10,13 +10,13 @@ const page = () => {
       <h1
         className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl"
       >
-        Thank you
+       Sorry No
 
-        <span className="sm:block"> for your purchase </span>
+        <span className="sm:block"> Product Key Found </span>
       </h1>
 
       <p className="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
-        Please check your email for product key
+        Please contact admin for product key
       </p>
 
       <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -34,4 +34,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Key
