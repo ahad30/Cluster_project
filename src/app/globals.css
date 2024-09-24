@@ -83,3 +83,30 @@ li {
     transform: translateX(calc(-100% - 4px));
   }
 }
+
+
+
+.wrapper{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.custom-form{
+  width: 500px;
+}
+
+.btn{
+  margin: 10px 0;
+}
+
+.viewer{
+  width: 100%;
+  background-color: #e4e4e4;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

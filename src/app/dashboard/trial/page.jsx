@@ -55,7 +55,10 @@ const Trial = () => {
 
   return (
     <>
- 
+      
+      <div className="flex flex-col font-bold lg:flex-row items-center gap-x-2 justify-start my-5">
+       Total Trial : {formattedTrialData?.length}
+             </div>
          
       {/* Render the table with trial data */}
       <DashboardTable columns={columns} data={formattedTrialData} loading={isLoading} />

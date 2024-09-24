@@ -15,6 +15,7 @@ import { useDeleteProductMutation, useGetProductQuery } from "@/redux/Feature/Ad
 import AddProduct from "./AddProduct/AddProduct";
 import EditProduct from "./EditProduct/EditProduct";
 import ProductsReportAsCSV from "./ProductsReportAsCSV";
+import ProductExcelFile from "./ProductExcelFile";
 
 const Product = () => {
   const dispatch = useAppDispatch();
@@ -31,6 +32,11 @@ const Product = () => {
     name: product?.name, // Updated to productName
     status: product?.status 
   }));
+
+
+const soldKey = data?.data?.filter(soldKey => soldKey?.status === 'sold')
+const unsoldKey = data?.data?.filter(unsoldKey => unsoldKey?.status === 'unsold')
+
 
 // console.log(productData)
   const handleEditProduct = (productData) => {
@@ -91,10 +97,24 @@ const Product = () => {
 
   return (
     <>
-
-      <div className="flex flex-col lg:flex-row items-center gap-x-2 justify-end my-5">
+      <div>
+     
+      <ProductExcelFile/>
+      </div>
+      <div className="flex flex-col lg:flex-row items-center  justify-between my-5">
+      <div className="font-bold mt-4">
+       Total Product Key : {productData?.length}
+      </div> 
+      <div className="font-bold mt-4">
+       Total Sold : {soldKey?.length}
+      </div> 
+      <div className="font-bold mt-4">
+       Total Unsold : {unsoldKey?.length}
+      </div> 
+        <div className="flex flex-col lg:flex-row items-center gap-2">
         <ProductsReportAsCSV data={data}/>
         <ButtonWithModal title="Add Product"></ButtonWithModal>
+        </div>
       </div>
 
       <DashboardTable columns={columns} data={productData} loading={productIsLoading} /> {/* Updated to use product data */}
