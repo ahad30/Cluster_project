@@ -23,7 +23,7 @@ const SaveAndCloseButton = ({
         disabled={isLoading}
         type="submit"
         className= {` ${title == 'Login' ? 'lg:w-[88px] h-[35px]' : 'w-full lg:w-[200px] h-[45px]'}
-          bg-[#24354C] disabled:bg-[#4f5a67] disabled:cursor-not-allowed text-center text-white  rounded-md`}
+          bg-primary disabled:bg-[#4f5a67] disabled:cursor-not-allowed text-center text-white  rounded-md`}
       >
         {isLoading ? "Processing..." : title}
       </button>
