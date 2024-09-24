@@ -1,100 +1,139 @@
-"use client"
-import { useState } from "react";
-import * as XLSX from 'xlsx';
+"use client";
+import { useEffect, useRef, useState } from "react";
+import * as XLSX from "xlsx"; // For handling XLSX files
+import Papa from "papaparse"; // For handling CSV files
+import { useAddProductMutation } from "@/redux/Feature/Admin/product/productApi";
+import { toast } from "sonner";
 
 function ProductExcelFile() {
-
-  // onchange states
-  const [excelFile, setExcelFile] = useState(null);
+  const [createProduct, { isLoading, isError, isSuccess }] = useAddProductMutation();
+  const [file, setFile] = useState(null);
   const [typeError, setTypeError] = useState(null);
+  const [parsedData, setParsedData] = useState(null);
+  const fileInputRef = useRef(null);
 
-  // submit state
-  const [excelData, setExcelData] = useState(null);
-
-  // onchange event
-  const handleFile=(e)=>{
-    let fileTypes = ['application/vnd.ms-excel','application/vnd.openxmlformats-officedocument.spreadsheetml.sheet','text/csv'];
+  // Handle file selection
+  const handleFile = (e) => {
+    let fileTypes = [
+      "application/vnd.ms-excel", 
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "text/csv"
+    ];
     let selectedFile = e.target.files[0];
-    if(selectedFile){
-      if(selectedFile&&fileTypes.includes(selectedFile.type)){
+
+    if (selectedFile) {
+      if (fileTypes.includes(selectedFile.type)) {
         setTypeError(null);
-        let reader = new FileReader();
-        reader.readAsArrayBuffer(selectedFile);
-        reader.onload=(e)=>{
-          setExcelFile(e.target.result);
+        setFile(selectedFile);
+      } else {
+        setTypeError("Please select a valid CSV or Excel file");
+        setFile(null);
+      }
+    } else {
+      console.log("Please select your file");
+    }
+  };
+
+  // Parse file based on type (CSV or XLSX)
+  const parseFile = async (file) => {
+    if (file.type === "text/csv") {
+      // Parse CSV file
+      Papa.parse(file, {
+        header: true,
+        skipEmptyLines: true,
+        complete: (result) => {
+          setParsedData(result.data);
+        },
+      });
+    } else {
+      // Parse XLSX file
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const data = new Uint8Array(e.target.result);
+        const workbook = XLSX.read(data, { type: "array" });
+        const sheetName = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[sheetName];
+        const jsonData = XLSX.utils.sheet_to_json(worksheet);
+        setParsedData(jsonData);
+      };
+      reader.readAsArrayBuffer(file);
+    }
+  };
+
+  // Submit form to parse and upload data
+  const handleFileSubmit = async (e) => {
+    e.preventDefault();
+    if (file !== null) {
+      await parseFile(file);
+
+      // Send each parsed product to the API
+      if (parsedData) {
+        for (const product of parsedData) {
+          await createProduct(product);
         }
       }
-      else{
-        setTypeError('Please select only excel file types');
-        setExcelFile(null);
+    }
+  };
+
+  useEffect(() => {
+    if (isLoading || isSuccess || isError) {
+      if (isLoading) {
+        toast.loading("Uploading...", { id: 1 });
+      }
+      if (isSuccess) {
+        toast.success("Product keys created successfully", { id: 1 });
+        if (fileInputRef.current) {
+          fileInputRef.current.value = "";
+        }
+      }
+      if (isError) {
+        toast.error("Error uploading products", { id: 1 });
       }
     }
-    else{
-      console.log('Please select your file');
-    }
-  }
-  
-  // submit event
-  const handleFileSubmit=(e)=>{
-    e.preventDefault();
-    if(excelFile!==null){
-      const workbook = XLSX.read(excelFile,{type: 'buffer'});
-      const worksheetName = workbook.SheetNames[0];
-      const worksheet = workbook.Sheets[worksheetName];
-      const data = XLSX.utils.sheet_to_json(worksheet);
-      setExcelData(data.slice(0,10));
-    }
-  }
+  }, [isSuccess, isLoading, isError]);
 
   return (
-    <div className="wrapper">
-
-   <h2 className="lg:text-xl font-semibold mb-14 text-start">Product Key Upload</h2>
+    <div className="justify-start lg:w-[50%] w-full">
+      <h2 className="lg:text-xl font-semibold mb-5 mt-5 text-start">Product Key Upload by Excel(.csv, .xlsx) file</h2>
       {/* form */}
-      <form className="form-group custom-form" onSubmit={handleFileSubmit}>
+      <form className="" onSubmit={handleFileSubmit}>
         <div className="border-primary border p-2">
-        <input type="file" className="form-control" required onChange={handleFile} />
+          <input
+            ref={fileInputRef}
+            type="file"
+            className="form-control"
+            required
+            onChange={handleFile}
+          />
         </div>
         <div className="flex justify-end">
-        <button type="submit" className="border bg-primary mb-3
-     px-12 text-white py-1 mt-4 hover:bg-green-500   rounded-md font-semibold  transition-all duration-300 ">UPLOAD</button>
-        </div>        
-        {typeError&&(
-          <div className="alert alert-danger" role="alert">{typeError}</div>
+          <button
+            type="submit"
+            className="border bg-primary mb-3 px-12 text-white py-1 mt-4 hover:bg-green-500 rounded-md font-semibold transition-all duration-300"
+          >
+            {isLoading ? "Uploading..." : "UPLOAD"}
+          </button>
+        </div>
+        {typeError && (
+          <div className="text-red-500 font-bold text-center" role="alert">
+            {typeError}
+          </div>
         )}
       </form>
 
-      {/* view data */}
-      {/* <div className="viewer">
-        {excelData?(
-          <div className="table-responsive">
-            <table className="table">
-
-              <thead>
-                <tr>
-                  {Object.keys(excelData[0]).map((key)=>(
-                    <th key={key}>{key}</th>
-                  ))}
-                </tr>
-              </thead>
-
-              <tbody>
-                {excelData.map((individualExcelData, index)=>(
-                  <tr className="" key={index}>
-                    {Object.keys(individualExcelData).map((key)=>(
-                      <td key={key}>{individualExcelData[key]}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-
-            </table>
-          </div>
-        ):(
-          <div>No File is uploaded yet!</div>
-        )}
-      </div> */}
-
+      {/* View uploaded data */}
+      {/* {parsedData && (
+        <div>
+          <h3>Uploaded Products</h3>
+          <ul>
+            {parsedData.map((product, index) => (
+              <li key={index}>
+                {product.name} - {product.productKey} - {product.status}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )} */}
     </div>
   );
 }

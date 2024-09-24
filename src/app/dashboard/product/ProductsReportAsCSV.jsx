@@ -4,8 +4,9 @@ import { CSVLink } from "react-csv";
 
 const ProductsReportAsCSV = ({ data }) => {
   const csvData = data?.data?.map((item) => ({
-    "Product Name": item?.name,
-    "Product Key": item?.productKey,
+    "name": item?.name,
+    "productKey": item?.productKey,
+    "status": item?.status
   }));
 
   return (
