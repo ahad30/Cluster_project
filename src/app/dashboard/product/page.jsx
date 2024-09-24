@@ -14,6 +14,7 @@ import DeleteModal from "@/components/Modal/DeleteModal";
 import { useDeleteProductMutation, useGetProductQuery } from "@/redux/Feature/Admin/product/productApi";
 import AddProduct from "./AddProduct/AddProduct";
 import EditProduct from "./EditProduct/EditProduct";
+import ProductsReportAsCSV from "./ProductsReportAsCSV";
 
 const Product = () => {
   const dispatch = useAppDispatch();
@@ -92,6 +93,7 @@ const Product = () => {
     <>
 
       <div className="flex flex-col lg:flex-row items-center gap-x-2 justify-end my-5">
+        <ProductsReportAsCSV data={data}/>
         <ButtonWithModal title="Add Product"></ButtonWithModal>
       </div>
 
