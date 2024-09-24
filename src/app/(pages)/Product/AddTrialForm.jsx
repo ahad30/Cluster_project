@@ -43,16 +43,13 @@ const AddTrialForm = ({ selectedTrial }) => {
         closeModal={handleCloseAndOpen}
         formType="create"
         data={data}
-        buttonName="submit"
+        buttonName="Submit"
       >
         <div className="grid grid-cols-1 gap-3 mt-10">
 
-          {/* Email */}
-          <ZEmail label={"Email"} name={"email"} />
-          {/* title */}
 
-          {/* Name */}
-          <ZInputTwo
+     {/* Name */}
+     <ZInputTwo
             name="name"
             type="text"
             label="Name"
@@ -61,6 +58,13 @@ const AddTrialForm = ({ selectedTrial }) => {
             required
             reset={1}
           />
+
+
+          {/* Email */}
+          <ZEmail label={"Email Address"} name={"email"} />
+          {/* title */}
+
+     
 
           {/* Address */}
           <ZInputTwo
@@ -77,7 +81,7 @@ const AddTrialForm = ({ selectedTrial }) => {
           <ZInputTwo
             name="mobile"
             type="number"
-            label="Mobile"
+            label="Mobile Number"
             defaultKey={""}
             placeholder="Enter your mobile number"
             required
