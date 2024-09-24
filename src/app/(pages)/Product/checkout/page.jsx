@@ -121,7 +121,7 @@ const page = () => {
         disabled={OIsLoading}
         type="submit"
         className= {`
-          bg-green-500 disabled:bg-[#4f5a67] disabled:cursor-not-allowed text-center text-white rounded-md py-2 text-lg`}
+          bg-primary disabled:bg-[#4f5a67] disabled:cursor-not-allowed text-center text-white rounded-md py-2 text-lg`}
       >
         {OIsLoading ? "Processing..." : "Proceed to Pay"}
       </button>
