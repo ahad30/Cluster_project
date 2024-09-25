@@ -14,7 +14,7 @@ import { useDeleteOrderMutation, useGetOrderQuery } from "@/redux/Feature/Admin/
 
 const Order = () => {
   const dispatch = useAppDispatch();
-  const { data, error, isLoading: orderIsLoading } = useGetOrderQuery(); // Fetch order data
+  const { data, error, isLoading: orderIsLoading } = useGetOrderQuery();
   const { isDeleteModalOpen } = useAppSelector((state) => state.modal);
   const [selectedOrder, setSelectedOrder] = useState({});
   const [deleteOrder, { isLoading: dOIsLoading, isError, isSuccess, data: dOData, error: dOError }] = useDeleteOrderMutation();
@@ -34,7 +34,7 @@ const Order = () => {
     createdAt: moment(order?.createdAt).format("L"), // Format createdAt using moment.js
   }));
 
-
+console.log(orderData)
   const handleDeleteConfirmation = (orderData) => {
     setSelectedOrder(orderData);
     dispatch(setIsDeleteModalOpen());

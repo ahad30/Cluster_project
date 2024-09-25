@@ -1,10 +1,125 @@
+"use client"
 import React from 'react'
+import { useGetOrderQuery } from '@/redux/Feature/Admin/order/orderApi';
+import { useGetProductQuery } from '@/redux/Feature/Admin/product/productApi';
+import { useGetTrialsQuery } from '@/redux/Feature/Admin/trial/trialApi';
+import UseLoader from '@/components/UseLoader';
+import Skeleton from '@/components/Skeleton/Skeleton';
 
 const page = () => {
+
+  const { data: trialsData, isLoading } = useGetTrialsQuery();
+  const { data: productData } = useGetProductQuery();
+  const { data: orderData, error } = useGetOrderQuery();
+
+  const trialData = trialsData?.data?.map((trial, index) => ({
+    key: index
+  }));
+
+  const productKeyData = productData?.data?.map((product, index) => ({
+    key: index,
+
+  }));
+
+  const soldKey = productData?.data?.filter(soldKey => soldKey?.status === 'sold')
+  const clusterKey = productData?.data?.filter(clusterKey =>clusterKey?.name ==='Cluster Antivirus' && clusterKey?.status === 'sold')
+  const internetKey = productData?.data?.filter(internetKey => internetKey?.name ==='Cluster Internet Security' && internetKey?.status === 'sold')
+  const securityKey = productData?.data?.filter(securityKey => securityKey?.name ==='Cluster Total Security' && securityKey?.status === 'sold')
+  const businessKey = productData?.data?.filter(businessKey =>businessKey?.name ==='Cluster Antivirus Business' && businessKey?.status === 'sold')
+
+
+
+// const unsoldKey = productData?.data?.filter(unsoldKey => unsoldKey?.status === 'unsold')
+
+
+  const orderProductData = orderData?.data?.map((order, index) => ({
+    key: index,
+  }));
+
+
+
+  if (isLoading) {
+    return <div><Skeleton/></div>;
+  }
+
+  if (error) {
+    return <div>Error loading data</div>;
+  }
+
+ 
   return (
-    <div>
-      Admin home
+
+ <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+  <div className="mx-auto max-w-3xl text-center">
+    <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+      Total Summary
+    </h2>
+
+  </div>
+
+  <dl className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-4">
+  <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
+      <dt className="order-last text-lg font-medium text-gray-500">Total Order</dt>
+
+      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{orderProductData?.length}</dd>
     </div>
+
+    <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
+    transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
+      <dt className="order-last text-lg font-medium text-gray-500">Total Trials</dt>
+
+      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{trialData?.length}</dd>
+    </div>
+
+    <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
+    transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
+      <dt className="order-last text-lg font-medium text-gray-500">Total Product Keys</dt>
+
+      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{productKeyData?.length}</dd>
+    </div>
+
+    <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
+      <dt className="order-last text-lg font-medium text-gray-500">Total Key Sold</dt>
+
+      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{soldKey?.length}</dd>
+    </div>
+
+    <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
+    transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
+      <dt className="order-last text-lg font-medium text-gray-500">Cluster Antivirus Keys</dt>
+
+      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{clusterKey?.length}</dd>
+    </div>
+    <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
+    transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
+      <dt className="order-last text-lg font-medium text-gray-500">Cluster Internet Security Keys</dt>
+
+      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{internetKey?.length}</dd>
+    </div>
+    <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
+    transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
+      <dt className="order-last text-lg font-medium text-gray-500">Cluster Total Security Keys</dt>
+
+      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{securityKey?.length}</dd>
+    </div>
+    <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
+    transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
+      <dt className="order-last text-lg font-medium text-gray-500">Cluster Business Security Keys</dt>
+
+      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{businessKey?.length}</dd>
+    </div>
+
+    
+
+   
+
+    {/* <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
+      <dt className="order-last text-lg font-medium text-gray-500">Total Key Unsold</dt>
+
+      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{unsoldKey?.length}</dd>
+    </div> */}
+  </dl>
+</div>
   )
 }
 

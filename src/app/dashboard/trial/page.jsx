@@ -1,15 +1,14 @@
 "use client";
 import React from "react";
 import DashboardTable from "@/components/Table/DashboardTable";
-import { useGetTrialsQuery } from "@/redux/Feature/Admin/trial/trialApi"; // Import the query hook
-import { Spin, Tag } from "antd";
+import { useGetTrialsQuery } from "@/redux/Feature/Admin/trial/trialApi"; 
 
 const Trial = () => {
   // Fetch trial data from Redux API
   const { data: trialsData, error, isLoading } = useGetTrialsQuery();
 
   // Format trial data for the table
-  const formattedTrialData = trialsData?.data?.map((trial, index) => ({
+  const trialData = trialsData?.data?.map((trial, index) => ({
     key: index,
     name: trial.name,
     email: trial.email,
@@ -17,6 +16,7 @@ const Trial = () => {
     mobile: trial.mobile,
     productName: trial.productName,
   }));
+
 
   // Define columns for the trial table
   const columns = [
@@ -57,11 +57,11 @@ const Trial = () => {
     <>
       
       <div className="flex flex-col font-bold lg:flex-row items-center gap-x-2 justify-start my-5">
-       Total Trial : {formattedTrialData?.length}
+       Total Trial : {trialData?.length}
              </div>
          
       {/* Render the table with trial data */}
-      <DashboardTable columns={columns} data={formattedTrialData} loading={isLoading} />
+      <DashboardTable columns={columns} data={trialData} loading={isLoading} />
     </>
   );
 };
