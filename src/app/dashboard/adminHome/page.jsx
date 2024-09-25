@@ -123,38 +123,58 @@ const page = () => {
 
 
   <Link href={`/dashboard/product`}>
-    <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
+    <div className=" rounded-lg bg-blue-50 px-4 py-8 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border   hover:border-primary cursor-pointer">
       <p className="order-last text-lg font-medium text-gray-500">Cluster Antivirus Keys</p>
 
-      <p className="text-4xl font-extrabold text-primary md:text-5xl">{clusterKey?.length}</p>
+      <p className="text-xl font-extrabold text-primary  md:text-xl ">
+      Sold: {clusterKey?.length}
+        </p>
+      <p className="text-xl font-extrabold text-primary  md:text-xl ">
+      Unsold: {clusterKey2?.length}
+        </p>
     </div>
 </Link>
 
     <Link href={`/dashboard/product`}>
-    <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
+    <div className=" rounded-lg bg-blue-50 px-4 py-8 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
       <dt className="order-last text-lg font-medium text-gray-500"> Internet Security Keys</dt>
 
-      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{internetKey?.length}</dd>
+      <p className="text-xl font-extrabold text-primary  md:text-xl ">
+      Sold: {internetKey?.length}
+        </p>
+      <p className="text-xl font-extrabold text-primary  md:text-xl ">
+      Unsold: {internetKey2?.length}
+        </p>
     </div>
 </Link>
 
 <Link href={`/dashboard/product`}>
-    <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
+    <div className=" rounded-lg bg-blue-50 px-4 py-8 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
       <dt className="order-last text-lg font-medium text-gray-500"> Total Security Keys</dt>
 
-      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{securityKey?.length}</dd>
+      <p className="text-xl font-extrabold text-primary  md:text-xl ">
+      Sold: {securityKey?.length}
+        </p>
+      <p className="text-xl font-extrabold text-primary  md:text-xl ">
+      Unsold: {securityKey2?.length}
+        </p>
     </div>
 </Link>
 
 <Link href={`/dashboard/product`}>
-    <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
+    <div className=" rounded-lg bg-blue-50 px-4 py-8 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
       <dt className="order-last text-lg font-medium text-gray-500">Cluster Business  Keys</dt>
 
-      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{businessKey?.length}</dd>
+      <p className="text-xl font-extrabold text-primary  md:text-xl ">
+      Sold: {businessKey?.length}
+        </p>
+      <p className="text-xl font-extrabold text-primary  md:text-xl ">
+      Unsold: {businessKey2?.length}
+        </p>
     </div>
 </Link>
 
