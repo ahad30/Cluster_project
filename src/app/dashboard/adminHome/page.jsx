@@ -5,6 +5,7 @@ import { useGetProductQuery } from '@/redux/Feature/Admin/product/productApi';
 import { useGetTrialsQuery } from '@/redux/Feature/Admin/trial/trialApi';
 import UseLoader from '@/components/UseLoader';
 import Skeleton from '@/components/Skeleton/Skeleton';
+import Link from 'next/link';
 
 const page = () => {
 
@@ -58,11 +59,16 @@ const page = () => {
   </div>
 
   <dl className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-4">
+
+  <Link href={`/dashboard/order`}>
   <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
       <dt className="order-last text-lg font-medium text-gray-500">Total Order</dt>
 
       <dd className="text-4xl font-extrabold text-primary md:text-5xl">{orderProductData?.length}</dd>
     </div>
+  </Link>
+
+  <Link href={`/dashboard/trial`}>
 
     <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
@@ -70,6 +76,9 @@ const page = () => {
 
       <dd className="text-4xl font-extrabold text-primary md:text-5xl">{trialData?.length}</dd>
     </div>
+</Link>
+
+<Link href={`/dashboard/product`}>
 
     <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
@@ -77,39 +86,51 @@ const page = () => {
 
       <dd className="text-4xl font-extrabold text-primary md:text-5xl">{productKeyData?.length}</dd>
     </div>
+</Link>
 
+<Link href={`/dashboard/product`}>
     <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
       <dt className="order-last text-lg font-medium text-gray-500">Total Key Sold</dt>
 
       <dd className="text-4xl font-extrabold text-primary md:text-5xl">{soldKey?.length}</dd>
     </div>
+</Link>
 
+<Link href={`/dashboard/product`}>
     <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
       <dt className="order-last text-lg font-medium text-gray-500">Cluster Antivirus Keys</dt>
 
       <dd className="text-4xl font-extrabold text-primary md:text-5xl">{clusterKey?.length}</dd>
     </div>
+</Link>
+
+    <Link href={`/dashboard/product`}>
     <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
-      <dt className="order-last text-lg font-medium text-gray-500">Cluster Internet Security Keys</dt>
+      <dt className="order-last text-lg font-medium text-gray-500"> Internet Security Keys</dt>
 
       <dd className="text-4xl font-extrabold text-primary md:text-5xl">{internetKey?.length}</dd>
     </div>
+</Link>
+
+<Link href={`/dashboard/product`}>
     <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
-      <dt className="order-last text-lg font-medium text-gray-500">Cluster Total Security Keys</dt>
+      <dt className="order-last text-lg font-medium text-gray-500"> Total Security Keys</dt>
 
       <dd className="text-4xl font-extrabold text-primary md:text-5xl">{securityKey?.length}</dd>
     </div>
+</Link>
+
+<Link href={`/dashboard/product`}>
     <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
-      <dt className="order-last text-lg font-medium text-gray-500">Cluster Business Security Keys</dt>
+      <dt className="order-last text-lg font-medium text-gray-500">Cluster Business  Keys</dt>
 
       <dd className="text-4xl font-extrabold text-primary md:text-5xl">{businessKey?.length}</dd>
     </div>
-
-    
+</Link>
 
    
 
