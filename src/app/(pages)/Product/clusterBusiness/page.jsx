@@ -2,7 +2,6 @@ import Image from 'next/image';
 import React from 'react'
 import { FaCartShopping } from 'react-icons/fa6';
 import product1Image from "../../../../../public/Products/Elements/zfb.png"
-import ProductDetailsTab from '../ProductDetailsTab';
 import BusinessTab from './BusinessTab';
 
 const page = () => {
@@ -10,7 +9,7 @@ const page = () => {
         {
           id:1,
           image: product1Image,
-          productName: "Cluster Antivirus for Business",
+          productName: "Cluster Antivirus Business",
           description: "Total protection of organizations against all types of cyber threats with possibility of centralized management of antivirus software.",
           price: " Ask for price"
         },

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import * as XLSX from "xlsx"; // For handling XLSX files
-import Papa from "papaparse"; // For handling CSV files
+import * as XLSX from "xlsx"; 
+import Papa from "papaparse";
 import { useAddProductMutation } from "@/redux/Feature/Admin/product/productApi";
 import { toast } from "sonner";
 

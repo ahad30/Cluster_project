@@ -40,12 +40,18 @@ const EditProduct = ({ selectedProduct }) => {
       >
         <div className="grid grid-cols-1 gap-3 mt-10">
           {/* Product Name */}
-          <ZInputTwo
+          <ZSelect
             name="name"
-            type="text"
             label="Product Name"
-            value={selectedProduct?.name || ""} // Pre-fill with existing product data
-            placeholder="Enter product name"
+            options={[
+              { label: "Cluster Antivirus", value: "Cluster Antivirus" },
+              { label: "Cluster Internet Security", value: "Cluster Internet Security" },
+              { label: "Cluster Total Security", value: "Cluster Total Security" },
+              { label: "Cluster Antivirus Business", value: "Cluster Antivirus Business" }
+            ]}
+            value={selectedProduct?.name || ""} 
+            placeholder="Select product"
+   
           />
 
           {/* Product Key */}
@@ -55,6 +61,7 @@ const EditProduct = ({ selectedProduct }) => {
             label="Product Key"
             value={selectedProduct?.productKey || ""} // Pre-fill with existing product key
             placeholder="Enter product key"
+            
           />
 
           {/* Status */}

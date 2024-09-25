@@ -113,14 +113,14 @@ const unsoldKey = data?.data?.filter(unsoldKey => unsoldKey?.status === 'unsold'
       </div> 
         <div className="flex flex-col lg:flex-row items-center gap-2">
         <ProductsReportAsCSV data={data}/>
-        <ButtonWithModal title="Add Product"></ButtonWithModal>
+        <ButtonWithModal title="Add Product Key"></ButtonWithModal>
         </div>
       </div>
 
       <DashboardTable columns={columns} data={productData} loading={productIsLoading} /> {/* Updated to use product data */}
       
       {/* AddModal Component */}
-      <AddModal isAddModalOpen={isAddModalOpen} title="Add New Product">
+      <AddModal isAddModalOpen={isAddModalOpen} title="Add New Product Key">
         <AddProduct />
       </AddModal>
 
