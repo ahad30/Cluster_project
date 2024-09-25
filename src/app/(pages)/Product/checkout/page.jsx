@@ -55,10 +55,24 @@ const page = () => {
 
   return (
   <>
-    <p className="text-center  text-sm lg:text-xl font-bold">
-    You've made an excellent choice!
+    <section className="bg-gray-900  text-white py-16 relative -z-40">
+      <div className="container mx-auto text-center">
+    <h1
+        className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl"
+      >
+        You've made
 
-              </p>
+        <span className="sm:block"> an excellent choice </span>
+      </h1>
+    <h1
+        className="text-white bg-clip-text text-3xl font-extrabold text-transparent sm:text-3xl mt-5 animate-bounce"
+      >
+        Checkout here!
+      </h1>
+      </div>
+      
+    </section>
+   
       <ZFormTwo
         isLoading={OIsLoading}
         isSuccess={OIsSuccess}
@@ -69,8 +83,9 @@ const page = () => {
         data={OData}
 
       >
-        <div className="flex flex-col lg:flex-row gap-5 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 gap-3 mt-10 w-[90%] mx-auto lg:w-[60%]">
+      <div className="bg-gray-100 -mb-8 py-4">
+        <div className="flex flex-col lg:flex-row gap-5 max-w-6xl mx-auto ">
+        <div className="grid grid-cols-1 rounded-lg bg-white p-8 shadow-lg gap-3 mt-10 w-[90%] mx-auto lg:w-[60%] lg:h-[550px]">
         <p className="text-center lg:text-start text-sm lg:text-lg font-semibold">
          Submit your Information here
 
@@ -126,8 +141,9 @@ const page = () => {
         {OIsLoading ? "Processing..." : "Proceed to Pay"}
       </button>
         </div>
-        <div className="flex flex-col p-6 space-y-4 divide-y sm:w-96 sm:p-10 dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
-	<h2 className="text-lg font-semibold">Your Order items</h2>
+
+        <div className="flex  flex-col p-6 rounded-lg bg-white shadow-lg space-y-4 divide-y sm:w-96 w-[90%] mx-auto sm:p-10 lg:h-[550px] lg:mt-9">
+	  <h2 className="text-lg font-semibold">Your Order items</h2>
 
 	<div className="pt-4 space-y-2">
 		<div>
@@ -165,6 +181,7 @@ const page = () => {
        </div>
        </div>
        </div>
+      </div>
       </ZFormTwo>
 </>
 
