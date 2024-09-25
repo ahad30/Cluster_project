@@ -23,14 +23,30 @@ const page = () => {
   }));
 
   const soldKey = productData?.data?.filter(soldKey => soldKey?.status === 'sold')
+  const unsoldKey = productData?.data?.filter(unsoldKey => unsoldKey?.status === 'unsold')
+
   const clusterKey = productData?.data?.filter(clusterKey =>clusterKey?.name ==='Cluster Antivirus' && clusterKey?.status === 'sold')
+
+  const clusterKey2 = productData?.data?.filter(clusterKey2 =>clusterKey2?.name ==='Cluster Antivirus' && clusterKey2?.status === 'unsold')
+
+
   const internetKey = productData?.data?.filter(internetKey => internetKey?.name ==='Cluster Internet Security' && internetKey?.status === 'sold')
+  const internetKey2 = productData?.data?.filter(internetKey2 => internetKey2?.name ==='Cluster Internet Security' && internetKey2?.status === 'unsold')
+
+
+
   const securityKey = productData?.data?.filter(securityKey => securityKey?.name ==='Cluster Total Security' && securityKey?.status === 'sold')
+  const securityKey2 = productData?.data?.filter(securityKey2 => securityKey2?.name ==='Cluster Total Security' && securityKey2?.status === 'unsold')
+
+
+
+
   const businessKey = productData?.data?.filter(businessKey =>businessKey?.name ==='Cluster Antivirus Business' && businessKey?.status === 'sold')
+  const businessKey2 = productData?.data?.filter(businessKey2 =>businessKey2?.name ==='Cluster Antivirus Business' && businessKey2?.status === 'unsold')
 
 
 
-// const unsoldKey = productData?.data?.filter(unsoldKey => unsoldKey?.status === 'unsold')
+
 
 
   const orderProductData = orderData?.data?.map((order, index) => ({
@@ -52,17 +68,17 @@ const page = () => {
 
  <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
   <div className="mx-auto max-w-3xl text-center">
-    <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-      Total Summary
+    <h2 className="text-2xl font-bold text-gray-900 sm:text-4xl">
+      Welcome to Cluster Antivirus Dashboard
     </h2>
 
   </div>
 
-  <dl className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-4">
+  <div className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-4">
 
   <Link href={`/dashboard/order`}>
   <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
-      <dt className="order-last text-lg font-medium text-gray-500">Total Order</dt>
+      <dt className="order-last text-lg font-medium text-gray-500">Total Orders</dt>
 
       <dd className="text-4xl font-extrabold text-primary md:text-5xl">{orderProductData?.length}</dd>
     </div>
@@ -97,11 +113,21 @@ const page = () => {
 </Link>
 
 <Link href={`/dashboard/product`}>
-    <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
-    transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
-      <dt className="order-last text-lg font-medium text-gray-500">Cluster Antivirus Keys</dt>
+<div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
+      <dt className="order-last text-lg font-medium text-gray-500">Total Key Unsold</dt>
 
-      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{clusterKey?.length}</dd>
+      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{unsoldKey?.length}</dd>
+    </div>
+  </Link>
+
+
+
+  <Link href={`/dashboard/product`}>
+    <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
+    transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border   hover:border-primary cursor-pointer">
+      <p className="order-last text-lg font-medium text-gray-500">Cluster Antivirus Keys</p>
+
+      <p className="text-4xl font-extrabold text-primary md:text-5xl">{clusterKey?.length}</p>
     </div>
 </Link>
 
@@ -134,12 +160,8 @@ const page = () => {
 
    
 
-    {/* <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
-      <dt className="order-last text-lg font-medium text-gray-500">Total Key Unsold</dt>
 
-      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{unsoldKey?.length}</dd>
-    </div> */}
-  </dl>
+  </div>
 </div>
   )
 }
