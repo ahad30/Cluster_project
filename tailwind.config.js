@@ -12,7 +12,7 @@ module.exports = withMT({
         primary: "#44bd32",
       },
       fontFamily: {
-        zcool: ['"ZCOOL QingKe HuangYou"', 'cursive'],
+        zcool: ["ZCOOL QingKe HuangYou", 'cursive'],
       },
     },
   },

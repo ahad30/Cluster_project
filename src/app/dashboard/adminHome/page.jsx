@@ -3,7 +3,6 @@ import React from 'react'
 import { useGetOrderQuery } from '@/redux/Feature/Admin/order/orderApi';
 import { useGetProductQuery } from '@/redux/Feature/Admin/product/productApi';
 import { useGetTrialsQuery } from '@/redux/Feature/Admin/trial/trialApi';
-import UseLoader from '@/components/UseLoader';
 import Skeleton from '@/components/Skeleton/Skeleton';
 import Link from 'next/link';
 
