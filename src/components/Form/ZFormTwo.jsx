@@ -91,7 +91,7 @@ const ZFormTwo = ({
   useEffect(() => {
     if (isLoading || isSuccess || isError) {
       if (isLoading) {
-        toast.loading("loading...", { id: 1 });
+        toast.loading("loading...", { id: 1});
       }
       if (isSuccess) {
         toast.success(data?.message, { id: 1 });

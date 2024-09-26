@@ -2,6 +2,7 @@
 import React from "react";
 import DashboardTable from "@/components/Table/DashboardTable";
 import { useGetTrialsQuery } from "@/redux/Feature/Admin/trial/trialApi"; 
+import moment from "moment";
 
 const Trial = () => {
   // Fetch trial data from Redux API
@@ -15,11 +16,17 @@ const Trial = () => {
     address: trial.address,
     mobile: trial.mobile,
     productName: trial.productName,
+    createdAt: moment(trial?.createdAt).format("LLL"),
   }));
 
 
   // Define columns for the trial table
   const columns = [
+    {
+      title: " Date",
+      dataIndex: "createdAt",
+      key: "createdAt",
+    },
     {
       title: "Name",
       dataIndex: "name",

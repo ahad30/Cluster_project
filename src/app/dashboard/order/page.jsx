@@ -31,7 +31,7 @@ const Order = () => {
     price: order?.price,
     transactionID: order?.transactionID,
     paymentStatus: order?.paymentStatus,
-    createdAt: moment(order?.createdAt).format("L"), // Format createdAt using moment.js
+    createdAt: moment(order?.createdAt).format("LLL"), // Format createdAt using moment.js
   }));
 
 console.log(orderData)
@@ -46,6 +46,12 @@ console.log(orderData)
 
   // Columns for order data
   const columns = [
+
+    {
+      title: " Date",
+      dataIndex: "createdAt",
+      key: "createdAt",
+    },
     {
       title: "Name",
       dataIndex: "name",
@@ -90,11 +96,7 @@ console.log(orderData)
         <Tag color={status === 'successed' ? 'green' : 'red'}>{status}</Tag> // Display payment status with color
       ),
     },
-    {
-      title: " Date",
-      dataIndex: "createdAt",
-      key: "createdAt",
-    },
+    
     {
       title: "Action",
       key: "action",
