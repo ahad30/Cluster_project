@@ -17,7 +17,7 @@ const page = () => {
 
   const products = [
     {
-      id: 1,
+      id: 4,
       image: product1Image,
       productName: "Cluster Antivirus Business",
       description:
