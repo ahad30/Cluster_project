@@ -58,6 +58,7 @@ const Login = () => {
                   
                   <h1 className="text-2xl mt-2 text-center">Admin Login Here</h1>
                 </div>
+                
                 <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                   <div className="relative mb-8">
                     <ZEmail label={"Email"} name={"email"} />

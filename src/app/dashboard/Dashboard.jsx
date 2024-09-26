@@ -1,7 +1,7 @@
 import Link from "next/link"; // Import Link from Next.js
 import { Layout, Menu, theme } from "antd";
 import { usePathname, useRouter } from "next/navigation";
-import { FiBox } from "react-icons/fi";
+import { FiBox, FiSettings } from "react-icons/fi";
 import { MdOutlineShoppingCartCheckout, MdOutlinePayments, MdOutlineDashboardCustomize } from "react-icons/md";
 import Image from "next/image";
 import Logo from "../../../public/logo-2.png"
@@ -27,7 +27,7 @@ const Dashboard = ({ children }) => {
         return "3";
       case "/dashboard/order":
         return "4";
-      case "/dashboard/transaction":
+      case "/dashboard/setting":
         return "5";
       default:
         return "1";
@@ -84,9 +84,18 @@ const Dashboard = ({ children }) => {
         </Link>
       ),
     },
-
     {
       key: "5",
+      icon: <FiSettings size={20} />,
+      label: (
+        <Link href="/dashboard/setting" legacyBehavior>
+          Setting
+        </Link>
+      ),
+    },
+
+    {
+      key: "6",
       icon: <MdOutlinePayments size={20} />,
       label: (
      

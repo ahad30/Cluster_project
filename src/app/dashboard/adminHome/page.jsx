@@ -65,9 +65,9 @@ const page = () => {
  
   return (
 
- <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+ <div className="mx-auto max-w-screen-xl  py-4 sm:px-6 sm:py-12 lg:px-8">
   <div className="mx-auto max-w-3xl text-center">
-    <h2 className="text-2xl font-bold text-gray-900 sm:text-4xl">
+    <h2 className="text-xl font-bold text-gray-900 sm:text-2xl">
       Welcome to Cluster Antivirus Dashboard
     </h2>
 
@@ -76,8 +76,8 @@ const page = () => {
   <div className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-4">
 
   <Link href={`/dashboard/order`}>
-  <div className=" rounded-lg bg-blue-50 px-4 py-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
-      <dt className="order-last text-lg font-medium text-gray-500">Total Orders</dt>
+  <div className=" rounded-lg bg-blue-50  py-4 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
+      <dt className="order-last text-base font-medium text-gray-500">Total Orders</dt>
 
       <dd className="text-4xl font-extrabold text-primary md:text-3xl">{orderProductData?.length}</dd>
     </div>
@@ -85,9 +85,9 @@ const page = () => {
 
   <Link href={`/dashboard/trial`}>
 
-    <div className=" rounded-lg bg-blue-50 px-4 py-8 text-center
+    <div className=" rounded-lg bg-blue-50  py-4 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
-      <dt className="order-last text-lg font-medium text-gray-500">Total Trials</dt>
+      <dt className="order-last text-base font-medium text-gray-500">Total Trials</dt>
 
       <dd className="text-4xl font-extrabold text-primary md:text-3xl">{trialData?.length}</dd>
     </div>
@@ -95,25 +95,25 @@ const page = () => {
 
 <Link href={`/dashboard/product`}>
 
-    <div className=" rounded-lg bg-blue-50 px-4 py-8 text-center
+    <div className=" rounded-lg bg-blue-50  py-4 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
-      <dt className="order-last text-lg font-medium text-gray-500">Total Product Keys</dt>
+      <dt className="order-last text-base font-medium text-gray-500">Total Product Keys</dt>
 
       <dd className="text-4xl font-extrabold text-primary md:text-3xl">{productKeyData?.length}</dd>
     </div>
 </Link>
 
 <Link href={`/dashboard/product`}>
-    <div className=" rounded-lg bg-blue-50 px-4 py-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
-      <dt className="order-last text-lg font-medium text-gray-500">Total Key Sold</dt>
+    <div className=" rounded-lg bg-blue-50  py-4 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
+      <dt className="order-last text-base font-medium text-gray-500">Total Key Sold</dt>
 
       <dd className="text-4xl font-extrabold text-primary md:text-3xl">{soldKey?.length}</dd>
     </div>
 </Link>
 
 <Link href={`/dashboard/product`}>
-<div className=" rounded-lg bg-blue-50 px-4 py-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
-      <dt className="order-last text-lg font-medium text-gray-500">Total Key Unsold</dt>
+<div className=" rounded-lg bg-blue-50  py-4 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
+      <dt className="order-last text-base font-medium text-gray-500">Total Key Unsold</dt>
 
       <dd className="text-4xl font-extrabold text-primary md:text-3xl">{unsoldKey?.length}</dd>
     </div>
@@ -122,56 +122,56 @@ const page = () => {
 
 
   <Link href={`/dashboard/product`}>
-    <div className=" rounded-lg bg-blue-50 px-4 py-8 text-center
+    <div className=" rounded-lg bg-blue-50  py-4 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border   hover:border-primary cursor-pointer">
-      <p className="order-last text-lg font-medium text-gray-500">Cluster Antivirus Keys</p>
+      <p className="order-last text-base font-medium text-gray-500">Cluster Antivirus Keys</p>
 
-      <p className="text-xl font-extrabold text-primary  md:text-xl ">
+      <p className="text-xl font-extrabold text-primary  md:text-base ">
       Sold: {clusterKey?.length}
         </p>
-      <p className="text-xl font-extrabold text-primary  md:text-xl ">
+      <p className="text-xl font-extrabold text-primary  md:text-base ">
       Unsold: {clusterKey2?.length}
         </p>
     </div>
 </Link>
 
     <Link href={`/dashboard/product`}>
-    <div className=" rounded-lg bg-blue-50 px-4 py-8 text-center
+    <div className=" rounded-lg bg-blue-50  py-4 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
-      <dt className="order-last text-lg font-medium text-gray-500"> Internet Security Keys</dt>
+      <dt className="order-last text-base font-medium text-gray-500"> Internet Security Keys</dt>
 
-      <p className="text-xl font-extrabold text-primary  md:text-xl ">
+      <p className="text-xl font-extrabold text-primary  md:text-base ">
       Sold: {internetKey?.length}
         </p>
-      <p className="text-xl font-extrabold text-primary  md:text-xl ">
+      <p className="text-xl font-extrabold text-primary  md:text-base ">
       Unsold: {internetKey2?.length}
         </p>
     </div>
 </Link>
 
 <Link href={`/dashboard/product`}>
-    <div className=" rounded-lg bg-blue-50 px-4 py-8 text-center
+    <div className=" rounded-lg bg-blue-50  py-4 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
-      <dt className="order-last text-lg font-medium text-gray-500"> Total Security Keys</dt>
+      <dt className="order-last text-base font-medium text-gray-500"> Total Security Keys</dt>
 
-      <p className="text-xl font-extrabold text-primary  md:text-xl ">
+      <p className="text-xl font-extrabold text-primary  md:text-base ">
       Sold: {securityKey?.length}
         </p>
-      <p className="text-xl font-extrabold text-primary  md:text-xl ">
+      <p className="text-xl font-extrabold text-primary  md:text-base ">
       Unsold: {securityKey2?.length}
         </p>
     </div>
 </Link>
 
 <Link href={`/dashboard/product`}>
-    <div className=" rounded-lg bg-blue-50 px-4 py-8 text-center
+    <div className=" rounded-lg bg-blue-50  py-4 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
-      <dt className="order-last text-lg font-medium text-gray-500">Cluster Business  Keys</dt>
+      <dt className="order-last text-base font-medium text-gray-500">Cluster Business  Keys</dt>
 
-      <p className="text-xl font-extrabold text-primary  md:text-xl ">
+      <p className="text-xl font-extrabold text-primary  md:text-base ">
       Sold: {businessKey?.length}
         </p>
-      <p className="text-xl font-extrabold text-primary  md:text-xl ">
+      <p className="text-xl font-extrabold text-primary  md:text-base ">
       Unsold: {businessKey2?.length}
         </p>
     </div>
