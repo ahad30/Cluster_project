@@ -76,46 +76,46 @@ const page = () => {
   <div className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-4">
 
   <Link href={`/dashboard/order`}>
-  <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
+  <div className=" rounded-lg bg-blue-50 px-4 py-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
       <dt className="order-last text-lg font-medium text-gray-500">Total Orders</dt>
 
-      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{orderProductData?.length}</dd>
+      <dd className="text-4xl font-extrabold text-primary md:text-3xl">{orderProductData?.length}</dd>
     </div>
   </Link>
 
   <Link href={`/dashboard/trial`}>
 
-    <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
+    <div className=" rounded-lg bg-blue-50 px-4 py-8 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
       <dt className="order-last text-lg font-medium text-gray-500">Total Trials</dt>
 
-      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{trialData?.length}</dd>
+      <dd className="text-4xl font-extrabold text-primary md:text-3xl">{trialData?.length}</dd>
     </div>
 </Link>
 
 <Link href={`/dashboard/product`}>
 
-    <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center
+    <div className=" rounded-lg bg-blue-50 px-4 py-8 text-center
     transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
       <dt className="order-last text-lg font-medium text-gray-500">Total Product Keys</dt>
 
-      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{productKeyData?.length}</dd>
+      <dd className="text-4xl font-extrabold text-primary md:text-3xl">{productKeyData?.length}</dd>
     </div>
 </Link>
 
 <Link href={`/dashboard/product`}>
-    <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
+    <div className=" rounded-lg bg-blue-50 px-4 py-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
       <dt className="order-last text-lg font-medium text-gray-500">Total Key Sold</dt>
 
-      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{soldKey?.length}</dd>
+      <dd className="text-4xl font-extrabold text-primary md:text-3xl">{soldKey?.length}</dd>
     </div>
 </Link>
 
 <Link href={`/dashboard/product`}>
-<div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
+<div className=" rounded-lg bg-blue-50 px-4 py-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg border    hover:border-primary cursor-pointer">
       <dt className="order-last text-lg font-medium text-gray-500">Total Key Unsold</dt>
 
-      <dd className="text-4xl font-extrabold text-primary md:text-5xl">{unsoldKey?.length}</dd>
+      <dd className="text-4xl font-extrabold text-primary md:text-3xl">{unsoldKey?.length}</dd>
     </div>
   </Link>
 

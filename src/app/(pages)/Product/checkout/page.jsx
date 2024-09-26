@@ -56,6 +56,7 @@ const page = () => {
   return (
   <>
     <section className="bg-gray-900  text-white py-16 relative -z-40">
+
       <div className="container mx-auto text-center">
     <h1
         className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl"
