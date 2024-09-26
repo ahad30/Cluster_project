@@ -54,7 +54,7 @@ const page = () => {
 
   return (
   <>
-    <section className="bg-gray-900  text-white py-16 relative -z-40">
+    <div className="bg-gray-900  text-white py-16 relative -z-40">
 
       <div className="container mx-auto text-center">
     <h1
@@ -71,7 +71,7 @@ const page = () => {
       </h1>
       </div>
       
-    </section>
+    </div>
    
       <ZFormTwo
         isLoading={OIsLoading}
@@ -83,9 +83,10 @@ const page = () => {
         data={OData}
 
       >
-      <div className="bg-gray-100 -mb-8 py-4">
-        <div className="flex flex-col lg:flex-row gap-5 max-w-6xl mx-auto ">
-        <div className="grid grid-cols-1 rounded-lg bg-white p-8 shadow-lg gap-3 mt-10 w-[90%] mx-auto lg:w-[60%] lg:h-[550px]">
+      <div className="bg-gray-100 h-full py-4">
+        <div className="flex flex-col lg:flex-row gap-5 max-w-6xl mx-auto mb-10">
+
+        <div className="grid grid-cols-1 rounded-lg bg-white p-8 shadow-lg gap-3  w-[90%] mx-auto lg:w-[60%] lg:h-[550px] mt-5">
         <p className="text-center lg:text-start text-sm lg:text-lg font-semibold">
          Submit your Information here
 
@@ -142,7 +143,7 @@ const page = () => {
       </button>
         </div>
 
-        <div className="flex  flex-col p-6 rounded-lg bg-white shadow-lg space-y-4 divide-y sm:w-96 w-[90%] mx-auto sm:p-10 lg:h-[550px] lg:mt-9">
+        <div className="flex  flex-col p-6 rounded-lg bg-white shadow-lg space-y-4 divide-y sm:w-96 w-[90%] mx-auto sm:p-10 lg:h-[550px] lg:mt-5">
 	  <h2 className="text-lg font-semibold">Your Order items</h2>
 
 	<div className="pt-4 space-y-2">

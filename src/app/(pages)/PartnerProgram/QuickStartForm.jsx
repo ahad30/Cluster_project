@@ -65,7 +65,7 @@ const QuickStartForm = () => {
   }
 
   return (
-    <div className='w-[90%] lg:max-w-[70%] lg:px-10 mx-auto mt-14 border-2 border-primary py-5'>
+    <div className='w-[90%] lg:max-w-[70%] lg:px-10 mx-auto mt-14 border-2 border-primary py-5 mb-8'>
       <h2 className="lg:text-3xl font-semibold mb-10 text-center">Quick Start</h2>
       <Toaster position="top-center" reverseOrder={false} />
       <form onSubmit={handleSubmit}>
