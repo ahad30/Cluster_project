@@ -13,7 +13,7 @@ const AddProduct = () => {
   const [createProduct, { isLoading: PIsLoading, isError: PIsError, error: PError, isSuccess: PIsSuccess, data }] = useAddProductMutation();
 
   const handleSubmit = (data) => {
-    createProduct(data);
+    createProduct({...data, status: "unsold"});
   };
 
   const handleCloseAndOpen = () => {
@@ -58,7 +58,7 @@ const AddProduct = () => {
           />
 
           {/* Status */}
-          <ZSelect
+          {/* <ZSelect
             name="status"
             label="Status"
             options={[
@@ -67,7 +67,7 @@ const AddProduct = () => {
             ]}
             placeholder="Select status"
    
-          />
+          /> */}
         </div>
       </ZFormTwo>
     </div>

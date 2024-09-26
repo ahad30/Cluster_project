@@ -65,7 +65,7 @@ const EditProduct = ({ selectedProduct }) => {
           />
 
           {/* Status */}
-          <ZSelect
+          {/* <ZSelect
             name="status"
             label="Status"
             options={[
@@ -75,7 +75,7 @@ const EditProduct = ({ selectedProduct }) => {
             value={selectedProduct?.status || ""} // Pre-fill with existing product status
             placeholder="Select status"
 
-          />
+          /> */}
         </div>
       </ZFormTwo>
     </div>

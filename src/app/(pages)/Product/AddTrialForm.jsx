@@ -8,7 +8,6 @@ import { useAddTrialMutation } from "@/redux/Feature/Admin/trial/trialApi";
 import ZEmail from "@/components/Form/ZEmail";
 
 const AddTrialForm = ({ selectedTrial, selectedBusiness }) => {
-  console.log(selectedBusiness)
   const dispatch = useAppDispatch();
   const [
     createTrial,
