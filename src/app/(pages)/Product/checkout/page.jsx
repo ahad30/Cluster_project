@@ -16,7 +16,6 @@ const page = () => {
     if (storedProduct) {
       setProduct(JSON.parse(storedProduct));
     }
-    console.log(storedProduct)
   }, []);
 
 

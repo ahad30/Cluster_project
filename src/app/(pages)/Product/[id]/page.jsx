@@ -621,8 +621,6 @@ Privacy Protection: Privacy protection program is a program that allows removing
   
   ];
 
-
-
   const product = products.find((product) => product?.id == params.id);
 
   const handleTrial = (product) => {
@@ -632,7 +630,6 @@ Privacy Protection: Privacy protection program is a program that allows removing
 
 
   const handleCheckout = () => {
-
     localStorage.setItem('selectedProduct', JSON.stringify(product));
     router.push('/Product/checkout');
   };
@@ -675,6 +672,7 @@ Privacy Protection: Privacy protection program is a program that allows removing
                   </div>
                 </button>
               </div>
+              
               <div onClick={() => handleTrial(product)}
                className="flex justify-center lg:justify-start">
                  <ButtonWithModal  title="Try Trial"></ButtonWithModal>

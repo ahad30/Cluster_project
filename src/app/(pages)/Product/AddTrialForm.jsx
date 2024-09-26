@@ -7,8 +7,8 @@ import { setIsAddModalOpen } from "@/redux/Modal/ModalSlice";
 import { useAddTrialMutation } from "@/redux/Feature/Admin/trial/trialApi";
 import ZEmail from "@/components/Form/ZEmail";
 
-const AddTrialForm = ({ selectedTrial }) => {
-
+const AddTrialForm = ({ selectedTrial, selectedBusiness }) => {
+  console.log(selectedBusiness)
   const dispatch = useAppDispatch();
   const [
     createTrial,
@@ -23,7 +23,7 @@ const AddTrialForm = ({ selectedTrial }) => {
 
   
   const handleSubmit = (data) => {
-    createTrial({ ...data, productName: selectedTrial?.productName });
+    createTrial({ ...data, productName: selectedTrial?.productName || selectedBusiness?.productName  });
   };
 
   const handleCloseAndOpen = () => {
