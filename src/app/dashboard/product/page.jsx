@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import {  Tag } from "antd";
+import { Tag, Radio } from "antd";
 import DashboardTable from "@/components/Table/DashboardTable";
 import { Space, Tooltip } from "antd";
 import { CiEdit } from "react-icons/ci";
@@ -22,23 +22,27 @@ const Product = () => {
   const { data, error, isLoading: productIsLoading } = useGetProductQuery();
   const { isAddModalOpen, isEditModalOpen, isDeleteModalOpen } = useAppSelector((state) => state.modal);
   const [selectedProduct, setSelectedProduct] = useState({});
+  const [filterStatus, setFilterStatus] = useState("all"); // Add state for filtering
+
   const [deleteProduct, { isLoading: dPIsLoading, isError, isSuccess, data: dPData, error: dPError }] = useDeleteProductMutation();
-  
+
   // Mapping product data
   const productData = data?.data?.map((product, index) => ({
     key: index,
     id: product.ID,
-    productKey: product?.productKey, // Updated to use productID
-    name: product?.name, // Updated to productName
-    status: product?.status 
+    productKey: product?.productKey,
+    name: product?.name,
+    status: product?.status,
   }));
 
+  // Filtering products based on the selected filter
+  const filteredData =
+    filterStatus === "sold"
+      ? productData?.filter((product) => product.status === "sold")
+      : filterStatus === "unsold"
+      ? productData?.filter((product) => product.status === "unsold")
+      : productData;
 
-const soldKey = data?.data?.filter(soldKey => soldKey?.status === 'sold')
-const unsoldKey = data?.data?.filter(unsoldKey => unsoldKey?.status === 'unsold')
-
-
-// console.log(productData)
   const handleEditProduct = (productData) => {
     setSelectedProduct(productData);
     dispatch(setIsEditModalOpen());
@@ -50,7 +54,7 @@ const unsoldKey = data?.data?.filter(unsoldKey => unsoldKey?.status === 'unsold'
   };
 
   const handleDeleteProduct = () => {
-    deleteProduct(selectedProduct?.id); // Call the delete mutation with selected productID
+    deleteProduct(selectedProduct?.id);
   };
 
   // Columns for product data
@@ -65,14 +69,12 @@ const unsoldKey = data?.data?.filter(unsoldKey => unsoldKey?.status === 'unsold'
       dataIndex: "productKey",
       key: "productKey",
     },
-
-    
     {
       title: "Status",
       dataIndex: "status",
       key: "status",
       render: (status) => (
-        <Tag color={status === 'sold' ? 'green' : 'red'}>{status}</Tag> // Display status with color
+        <Tag color={status === "sold" ? "green" : "red"}>{status}</Tag>
       ),
     },
     {
@@ -98,27 +100,33 @@ const unsoldKey = data?.data?.filter(unsoldKey => unsoldKey?.status === 'unsold'
   return (
     <>
       <div>
-     
-      <ProductExcelFile/>
+        <ProductExcelFile />
       </div>
-      <div className="flex flex-col lg:flex-row items-center  justify-between my-5">
-      <div className="font-bold mt-4">
-       Total Product Key : {productData?.length}
-      </div> 
-      <div className="font-bold mt-4">
-       Total Sold : {soldKey?.length}
-      </div> 
-      <div className="font-bold mt-4">
-       Total Unsold : {unsoldKey?.length}
-      </div> 
+      <div className="flex flex-col lg:flex-row items-center justify-between my-5">
+        <div className="font-bold mt-4">Key: {productData?.length}</div>
+        <div className="font-bold mt-4"> Sold: {productData?.filter(product => product.status === 'sold').length}</div>
+        <div className="font-bold mt-4"> Unsold: {productData?.filter(product => product.status === 'unsold').length}</div>
+
+        {/* Filter for Sold/Unsold */}
+        <div className="mt-4">
+          <Radio.Group
+            value={filterStatus}
+            onChange={(e) => setFilterStatus(e.target.value)}
+          >
+            <Radio.Button value="all">All</Radio.Button>
+            <Radio.Button value="sold">Sold</Radio.Button>
+            <Radio.Button value="unsold">Unsold</Radio.Button>
+          </Radio.Group>
+        </div>
+
         <div className="flex flex-col lg:flex-row items-center gap-2">
-        <ProductsReportAsCSV data={data}/>
-        <ButtonWithModal title="Add Product Key"></ButtonWithModal>
+          <ProductsReportAsCSV data={data} />
+          <ButtonWithModal title="Add Product Key"></ButtonWithModal>
         </div>
       </div>
 
-      <DashboardTable columns={columns} data={productData} loading={productIsLoading} /> {/* Updated to use product data */}
-      
+      <DashboardTable columns={columns} data={filteredData} loading={productIsLoading} /> {/* Use filtered data */}
+
       {/* AddModal Component */}
       <AddModal isAddModalOpen={isAddModalOpen} title="Add New Product Key">
         <AddProduct />
@@ -126,7 +134,7 @@ const unsoldKey = data?.data?.filter(unsoldKey => unsoldKey?.status === 'unsold'
 
       {/* EditModal Component */}
       <EditModal isEditModalOpen={isEditModalOpen} title="Edit Product">
-        <EditProduct selectedProduct={selectedProduct} /> 
+        <EditProduct selectedProduct={selectedProduct} />
       </EditModal>
 
       {/* DeleteModal Component */}
@@ -139,7 +147,7 @@ const unsoldKey = data?.data?.filter(unsoldKey => unsoldKey?.status === 'unsold'
         onDelete={handleDeleteProduct}
         isDeleteModalOpen={isDeleteModalOpen}
         isError={isError}
-        description={"Deleting this product will remove all associated data."} // Updated message for product
+        description={"Deleting this product will remove all associated data."}
       ></DeleteModal>
     </>
   );
