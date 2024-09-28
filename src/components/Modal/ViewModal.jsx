@@ -1,7 +1,7 @@
 import { Modal } from "antd";
-import {  setIsViewModalOpen } from "../../Redux/Feature/Modal/modalSlice";
-import { useAppDispatch } from "../../Redux/hook";
 import { ReactNode } from "react";
+import { setIsViewModalOpen } from "@/redux/Modal/ModalSlice";
+import { useAppDispatch } from "@/redux/Hook/Hook";
 
 
 const ViewModal = ({ children, isViewModalOpen, title, width }) => {

@@ -2,6 +2,10 @@ export const tags = [
  
   // Admin
   {
+    name: 'Admin', 
+    tag: 'admins', 
+  },
+  {
     name: 'Trial', 
     tag: 'trials', 
   },

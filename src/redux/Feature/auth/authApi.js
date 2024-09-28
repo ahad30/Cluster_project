@@ -1,3 +1,4 @@
+import { getTagsByModuleName } from '@/redux/Tag/Tag';
 import baseApi from '../../Api/baseApi';
 
 const authApi = baseApi.injectEndpoints({
@@ -12,19 +13,21 @@ const authApi = baseApi.injectEndpoints({
         method: "POST",
         body: data,
       }),
+      invalidatesTags: getTagsByModuleName('Admin'), 
     }),
 
     getAdmin: builder.query({
       query: (id) => {
-        const token = localStorage.getItem('authToken'); // Retrieve token from local storage
+        const token = localStorage.getItem('authToken'); 
         return {
           url: `/admins/${id}`,
           method: "GET",
           headers: {
-            Authorization: `Bearer ${token}`, // Add Authorization header
+            Authorization: `Bearer ${token}`,
           },
         };
       },
+      providesTags: getTagsByModuleName('Admin'), 
     }),
 
     updateAdmin: builder.mutation({
@@ -40,6 +43,7 @@ const authApi = baseApi.injectEndpoints({
           body: data,
         };
       },
+      invalidatesTags: getTagsByModuleName('Admin'), 
     }),
 
     changePassword: builder.mutation({
@@ -55,6 +59,7 @@ const authApi = baseApi.injectEndpoints({
           body: data,
         };
       },
+      invalidatesTags: getTagsByModuleName('Admin'), 
     }),
 
   }),

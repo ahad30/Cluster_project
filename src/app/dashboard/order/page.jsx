@@ -1,21 +1,23 @@
 "use client";
 import React, { useState } from "react";
-import { Tag } from "antd";
+import { Button, Tag } from "antd";
 import DashboardTable from "@/components/Table/DashboardTable";
 import { Space, Tooltip } from "antd";
 import { CiEdit } from "react-icons/ci";
 import { AiOutlineDelete } from "react-icons/ai";
 import { useAppDispatch, useAppSelector } from "@/redux/Hook/Hook";
 import ButtonWithModal from "@/components/Button/ButtonWithModal";
-import { setIsDeleteModalOpen, setIsEditModalOpen } from "@/redux/Modal/ModalSlice";
+import { setIsDeleteModalOpen, setIsViewModalOpen } from "@/redux/Modal/ModalSlice";
 import DeleteModal from "@/components/Modal/DeleteModal";
 import moment from "moment"; 
 import { useDeleteOrderMutation, useGetOrderQuery } from "@/redux/Feature/Admin/order/orderApi";
+import ViewModal from "@/components/Modal/ViewModal";
+import ViewOrder from "./ViewOrder/page";
 
 const Order = () => {
   const dispatch = useAppDispatch();
   const { data, error, isLoading: orderIsLoading } = useGetOrderQuery();
-  const { isDeleteModalOpen } = useAppSelector((state) => state.modal);
+  const { isDeleteModalOpen , isViewModalOpen } = useAppSelector((state) => state.modal);
   const [selectedOrder, setSelectedOrder] = useState({});
   const [deleteOrder, { isLoading: dOIsLoading, isError, isSuccess, data: dOData, error: dOError }] = useDeleteOrderMutation();
   
@@ -31,10 +33,15 @@ const Order = () => {
     price: order?.price,
     transactionID: order?.transactionID,
     paymentStatus: order?.paymentStatus,
-    createdAt: moment(order?.createdAt).format("LLL"), // Format createdAt using moment.js
+    createdAt: moment(order?.createdAt).format("LLL")
   }));
 
-console.log(orderData)
+
+  const handleViewModule = (orderData) => {
+    setSelectedOrder(orderData);
+    dispatch(setIsViewModalOpen());
+  };
+
   const handleDeleteConfirmation = (orderData) => {
     setSelectedOrder(orderData);
     dispatch(setIsDeleteModalOpen());
@@ -58,19 +65,9 @@ console.log(orderData)
       key: "name",
     },
     {
-      title: "Email",
-      dataIndex: "email",
-      key: "email",
-    },
-    {
       title: "Phone",
       dataIndex: "phone",
       key: "phone",
-    },
-    {
-      title: "Address",
-      dataIndex: "address",
-      key: "address",
     },
     {
       title: "Product",
@@ -83,11 +80,11 @@ console.log(orderData)
       key: "price",
       render: (price) => `${price} Tk`, // Add currency
     },
-    {
-      title: "Transaction ID",
-      dataIndex: "transactionID",
-      key: "transactionID",
-    },
+    // {
+    //   title: "Transaction ID",
+    //   dataIndex: "transactionID",
+    //   key: "transactionID",
+    // },
     {
       title: "Payment",
       dataIndex: "paymentStatus",
@@ -107,10 +104,20 @@ console.log(orderData)
               <AiOutlineDelete size={20} />
             </Tooltip>
           </a>
+          <a onClick={() => handleViewModule(record)}>
+            <Tooltip title="View Order " placement="top">
+            <Button type="dashed">Details</Button>
+            </Tooltip>
+          </a>
         </Space>
       ),
     },
   ];
+
+
+  if(error){
+    return <div>Error loading data</div>
+  }
 
   return (
     <>
@@ -120,6 +127,12 @@ console.log(orderData)
 
       <DashboardTable columns={columns} data={orderData} loading={orderIsLoading} /> {/* Updated to use order data */}
     
+     <ViewModal isViewModalOpen={isViewModalOpen} width={600}>
+      <ViewOrder selectedOrder={selectedOrder}/>
+     </ViewModal>
+
+
+
 
       {/* DeleteModal Component */}
       <DeleteModal
